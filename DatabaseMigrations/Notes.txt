@@ -1,0 +1,37 @@
+Demo 1: Swap Repositories, Add First Migration, Command Line & Application_Start Migration
+Demo 2: Add Second Migration (add op) 
+Demo 3: Add Third Migration (modify op)
+Demo 4: Sample Data Profile
+
+LATEST
+
+Migrate -a ToDoMvc.dll -db sqlserver -c "Data Source=(localdb)\v11.0;Integrated Security=true;AttachDbFileName=D:\Projects\ToDoMvc\ToDoMvc\App_Data\Database.mdf"
+
+ROLLBACK
+
+Migrate -a ToDoMvc.dll -db sqlserver -c "Data Source=(localdb)\v11.0;Integrated Security=true;AttachDbFileName=D:\Projects\ToDoMvc\ToDoMvc\App_Data\Database.mdf" -t rollback -verbose=true
+
+ROLLBACK TO VERSION
+
+Migrate -a ToDoMvc.dll -db sqlserver -c "Data Source=(localdb)\v11.0;Integrated Security=true;AttachDbFileName=D:\Projects\ToDoMvc\ToDoMvc\App_Data\Database.mdf" -t rollback:toversion --version=1 -verbose=true
+
+PROFILE
+
+Migrate -a ToDoMvc.dll -db sqlserver -c "Data Source=(localdb)\v11.0;Integrated Security=true;AttachDbFileName=D:\Projects\ToDoMvc\ToDoMvc\App_Data\Database.mdf" --profile "Sample Data"
+
+
+Migrate.exe.config:
+<?xml version="1.0"?>
+<configuration>
+	<startup>
+		<supportedRuntime version="v4.0.30319"/>
+	</startup>
+	<runtime>
+	    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+            <dependentAssembly>
+                <assemblyIdentity name="NHibernate" publicKeyToken="aa95f207798dfdb4" culture="neutral" />
+                <bindingRedirect oldVersion="0.0.0.0-3.3.0.65535" newVersion="3.3.1.4000" />
+            </dependentAssembly>
+        </assemblyBinding>
+	</runtime>
+</configuration>
