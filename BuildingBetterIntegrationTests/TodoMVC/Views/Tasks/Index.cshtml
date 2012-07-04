@@ -1,0 +1,96 @@
+﻿@model dynamic
+@{
+    ViewBag.Title = "TodoMVC";
+}
+<div id="todoapp">
+    <div class="title">
+        <h1>Todos</h1>
+    </div>
+    <div class="content">
+        <div id="create-todo">
+            <input id="new-todo" placeholder="What needs to be done?" type="text" />
+            <span class="ui-tooltip-top" style="display: none;">Press Enter to save this task</span>
+        </div>
+        <div id="todos">
+            <ul id="todo-list"></ul>
+        </div>
+    </div>
+</div>
+@section PageScripts {
+@*    <script type="text/x-kendo-template" id="ItemTemplate">
+        <li data-id="#= Id #">
+           <div class="todo #= IsCompleted ? 'done' : '' #">
+            <div class="display">
+              <input class="check" type="checkbox" #= IsCompleted ? 'checked="checked"' : '' # />
+              <label class="todo-content">#= Name #</label>
+              <span class="todo-destroy"></span>
+            </div>
+            <div class="edit">
+              <input class="todo-input" type="text" value="#= Name #" />
+            </div>
+          </div>
+        </li>
+    </script>*@
+    <script type="text/x-kendo-template" id="ItemTemplate">
+        <li data-id="#= Id #">
+           <div class="todo #= Status == 1 ? 'done' : '' #">
+            <div class="display">
+              <input class="check" type="checkbox" #= Status == 1 ? 'checked="checked"' : '' # />
+              <label class="todo-content">#= Name #</label>
+              <span class="todo-destroy"></span>
+            </div>
+            <div class="edit">
+              <input class="todo-input" type="text" value="#= Name #" />
+            </div>
+          </div>
+        </li>
+    </script>
+    <script>
+        $(function () {
+            var itemTemplate = kendo.template($('#ItemTemplate').text());
+
+            $('#new-todo').on('keypress', function (e) {
+                if (e.keyCode != 13) return;
+                var newItem = $(this);
+                $.ajax({
+                    url: '@Url.Action("Add")?name=' + encodeURIComponent(newItem.val()),
+                    dataType: 'json',
+                    success: function (data) {
+                        $('#todo-list').append(itemTemplate(data));
+                        newItem.val('');
+                    }
+                });
+            });
+            $('#todo-list').on('click', '.todo-destroy', function () {
+                var itemRoot = $(this).parents('li');
+                $.ajax({
+                    url: '@Url.Action("Delete")?id=' + encodeURIComponent(itemRoot.data('id')),
+                    dataType: 'json',
+                    success: function () {
+                        itemRoot.remove();
+                    }
+                });
+            });
+            $('#todo-list').on('click', '.check', function () {
+                var itemRoot = $(this).parents('li');
+                $.ajax({
+                    url: '@Url.Action("ToggleComplete")?id=' + encodeURIComponent(itemRoot.data('id')),
+                    dataType: 'json',
+                    success: function () {
+                        itemRoot.children('.todo').toggleClass('done');
+                    }
+                });
+            });
+
+            $.ajax({
+                url: '@Url.Action("Data")',
+                dataType: 'json',
+                success: function (items) {
+                    for (var index in items) {
+                        $('#todo-list').append(itemTemplate(items[index]));
+                    }
+                }
+            });
+        });
+    </script>
+}

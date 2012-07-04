@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:cl="http://schemas.microsoft.com/sqlserver/reporting/2010/01/componentdefinition" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSets>
+    <DataSet Name="DataSet">
+      <SharedDataSet>
+        <SharedDataSetReference>/TodoMVC.Tests/Data Sources/Sample Data Set</SharedDataSetReference>
+        <rd:ReportServerUrl>http://localhost/ReportServer</rd:ReportServerUrl>
+      </SharedDataSet>
+      <Fields>
+		  <Field Name="ID">
+			<DataField>ID</DataField>
+			<rd:TypeName>System.String</rd:TypeName>
+		  </Field>
+		  <Field Name="Name">
+			<DataField>Name</DataField>
+			<rd:TypeName>System.String</rd:TypeName>
+		  </Field>
+		  <Field Name="Status">
+			<DataField>Status</DataField>
+			<rd:TypeName>System.String</rd:TypeName>
+		  </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <ReportItems>
+          <Textbox Name="ReportTitle">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value />
+                    <Style>
+                      <FontFamily>Verdana</FontFamily>
+                      <FontSize>20pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Hello World!</Value>
+                    <Style>
+                      <FontFamily>Verdana</FontFamily>
+                      <FontSize>26pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <ListLevel>1</ListLevel>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:WatermarkTextbox>Title</rd:WatermarkTextbox>
+            <rd:DefaultName>ReportTitle</rd:DefaultName>
+            <Top>0mm</Top>
+            <Height>24.71208mm</Height>
+            <Width>132.55625mm</Width>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="CompanyName">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Tasks: </Value>
+                    <Style>
+                      <FontFamily>Trebuchet MS</FontFamily>
+                      <FontSize>18pt</FontSize>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>=Count(Fields!Id.Value)</Value>
+                    <Style>
+                      <FontFamily>Trebuchet MS</FontFamily>
+                      <FontSize>18pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <ListLevel>1</ListLevel>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Report</rd:DefaultName>
+            <Top>27.7495mm</Top>
+            <Left>0mm</Left>
+            <Height>16.31875mm</Height>
+            <Width>132.55625mm</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="ExecutionTime">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Execution Time:</Value>
+                    <Style>
+                      <FontFamily>Trebuchet MS</FontFamily>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>=Globals!ExecutionTime</Value>
+                    <Style>
+                      <FontFamily>Trebuchet MS</FontFamily>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>ExecutionTime</rd:DefaultName>
+            <Top>71.94048mm</Top>
+            <Left>7.90575mm</Left>
+            <Height>6.35mm</Height>
+            <Width>110.98959mm</Width>
+            <ZIndex>2</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="ReportFolder">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Report Folder: </Value>
+                    <Style />
+                  </TextRun>
+                  <TextRun>
+                    <Value>=Globals!ReportFolder</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>ReportFolder</rd:DefaultName>
+            <Top>56.4127mm</Top>
+            <Left>7.90575mm</Left>
+            <Height>6mm</Height>
+            <Width>110.98959mm</Width>
+            <ZIndex>3</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="ReportName">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Report Name: </Value>
+                    <Style />
+                  </TextRun>
+                  <TextRun>
+                    <Value>=Globals!ReportName</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>ReportName</rd:DefaultName>
+            <Top>49.44533mm</Top>
+            <Left>7.90575mm</Left>
+            <Height>6mm</Height>
+            <Width>110.98959mm</Width>
+            <ZIndex>4</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+        </ReportItems>
+        <Height>84.66667mm</Height>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <BackgroundColor>LightGrey</BackgroundColor>
+        </Style>
+      </Body>
+      <Width>133.35mm</Width>
+      <Page>
+        <PageFooter>
+          <Height>0.26458mm</Height>
+          <PrintOnFirstPage>true</PrintOnFirstPage>
+          <PrintOnLastPage>true</PrintOnLastPage>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </PageFooter>
+        <PageHeight>297.00001mm</PageHeight>
+        <PageWidth>210mm</PageWidth>
+        <LeftMargin>20mm</LeftMargin>
+        <RightMargin>20mm</RightMargin>
+        <TopMargin>20mm</TopMargin>
+        <BottomMargin>20mm</BottomMargin>
+        <ColumnSpacing>0.13cm</ColumnSpacing>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <ReportParameters>
+  </ReportParameters>
+  <rd:ReportUnitType>Mm</rd:ReportUnitType>
+  <rd:ReportServerUrl>http://localhost/ReportServer</rd:ReportServerUrl>
+  <rd:ReportID>31b04172-9627-4a64-99e1-bf7fca2ca83b</rd:ReportID>
+</Report>
