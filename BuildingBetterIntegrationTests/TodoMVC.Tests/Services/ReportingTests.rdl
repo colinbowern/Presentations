@@ -8,18 +8,18 @@
         <rd:ReportServerUrl>http://localhost/ReportServer</rd:ReportServerUrl>
       </SharedDataSet>
       <Fields>
-		  <Field Name="ID">
-			<DataField>ID</DataField>
-			<rd:TypeName>System.String</rd:TypeName>
-		  </Field>
-		  <Field Name="Name">
-			<DataField>Name</DataField>
-			<rd:TypeName>System.String</rd:TypeName>
-		  </Field>
-		  <Field Name="Status">
-			<DataField>Status</DataField>
-			<rd:TypeName>System.String</rd:TypeName>
-		  </Field>
+        <Field Name="ID">
+          <DataField>ID</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Name">
+          <DataField>Name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Status">
+          <DataField>Status</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
       </Fields>
     </DataSet>
   </DataSets>
@@ -73,7 +73,7 @@
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
-          <Textbox Name="CompanyName">
+          <Textbox Name="TaskCount">
             <CanGrow>true</CanGrow>
             <KeepTogether>true</KeepTogether>
             <Paragraphs>
@@ -87,7 +87,7 @@
                     </Style>
                   </TextRun>
                   <TextRun>
-                    <Value>=Count(Fields!Id.Value)</Value>
+                    <Value>=Count(Fields!ID.Value)</Value>
                     <Style>
                       <FontFamily>Trebuchet MS</FontFamily>
                       <FontSize>18pt</FontSize>
@@ -255,8 +255,6 @@
       </Page>
     </ReportSection>
   </ReportSections>
-  <ReportParameters>
-  </ReportParameters>
   <rd:ReportUnitType>Mm</rd:ReportUnitType>
   <rd:ReportServerUrl>http://localhost/ReportServer</rd:ReportServerUrl>
   <rd:ReportID>31b04172-9627-4a64-99e1-bf7fca2ca83b</rd:ReportID>
