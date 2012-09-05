@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.SqlServer.RegSvrEnum</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.RegisteredServerException">
+      <summary>The <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.RegisteredServerException" /> class represents the exception raised when an error occurs during server registration.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegSvrEnum.RegisteredServerException.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.RegisteredServerException" /> class.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegSvrEnum.RegisteredServerException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.RegisteredServerException" /> class with the specified message and specified inner exception.</summary>
+      <param name="info">A <see cref="T:System.Runtime.Serialization.SerializationInfo" /> value system object that specifies the serialization information for the Registered Server exception.</param>
+      <param name="context">An <see cref="T:System.Runtime.Serialization.StreamingContext" /> object that specifies the streaming context for the Registered Server exception.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegSvrEnum.RegisteredServerException.#ctor(System.String)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.RegisteredServerException" /> class with the specified message.</summary>
+      <param name="message">A <see cref="T:System.String" /> value that specifies the message string for the Registered Server exception.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegSvrEnum.RegisteredServerException.#ctor(System.String,System.Exception)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.RegisteredServerException" /> class with the specified message and specified inner exception.</summary>
+      <param name="message">A <see cref="T:System.String" /> value that specifies the message string for the Registered Server exception.</param>
+      <param name="previous">An <see cref="T:System.Exception" /> object that specifies the inner exception for the Registered Server exception.</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionGroupInfo">
+      <summary>Do not reference this member directly in your code. It supports the SQL Server infrastructure. Implements a nameable list of UIConnectionInfo objects.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionGroupInfo.#ctor">
+      <summary>Do not reference this member directly in your code. It supports the SQL Server infrastructure. Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionGroupInfo" /> class. </summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionGroupInfo.#ctor(Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionGroupInfo)">
+      <summary>Do not reference this member directly in your code. It supports the SQL Server infrastructure. Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionGroupInfo" /> class with the specified other information.</summary>
+      <param name="other">Represents the other connection information.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionGroupInfo.#ctor(Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo)">
+      <summary>Do not reference this member directly in your code. It supports the SQL Server infrastructure. Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionGroupInfo" /> class with the specified connection information.</summary>
+      <param name="connectionInfo">The connection information.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionGroupInfo.#ctor(System.Collections.Generic.IEnumerable{Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo})">
+      <summary>Do not reference this member directly in your code. It supports the SQL Server infrastructure. Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionGroupInfo" /> class with the specified collection.</summary>
+      <param name="collection">Represents the collection.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionGroupInfo.#ctor(System.Int32)">
+      <summary>Do not reference this member directly in your code. It supports the SQL Server infrastructure. Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionGroupInfo" /> class with the specified capacity parameter.</summary>
+      <param name="capacity">An integer that represents the capacity of the connection.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionGroupInfo.DeepCopy(System.Boolean)">
+      <summary>Do not reference this member directly in your code. It supports the SQL Server infrastructure. Returns a <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionGroupInfo" /> object that contains copies of the objects from the current UIConnectionGroupInfo object.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionGroupInfo" /> object that contains copies of the objects from the current UIConnectionGroupInfo object.</returns>
+      <param name="withNewConnectionIds">A <see cref="T:System.Boolean" /> that specifies whether the objects in the new collection have the same IDs as the objects in the current collection.</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionGroupInfo.Name">
+      <summary>Do not reference this member directly in your code. It supports the SQL Server infrastructure. Gets or sets a <see cref="T:System.String" /> that specifies the name of the collection.</summary>
+      <returns>A <see cref="T:System.String" /> that specifies the name of the collection.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionGroupInfo.ShallowCopy">
+      <summary>Do not reference this member directly in your code. It supports the SQL Server infrastructure. Returns a <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionGroupInfo" /> object that contains the objects from the current UIConnectionGroupInfo object.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionGroupInfo" /> object that contains the objects from the current UIConnectionGroupInfo object.</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo">
+      <summary>Do not reference this member directly in your code. It supports the SQL Server infrastructure. The <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo" /> class represents the information set in a SQL Server Management Studio connection dialog, and the associated connection to an instance of the SQL Server Database Engine.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.#ctor">
+      <summary>Do not reference this member directly in your code. It supports the SQL Server infrastructure. Initializes a default <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo" /> object for a SQL Server Management Studio connection dialog.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.#ctor(Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo)">
+      <summary>Do not reference this member directly in your code. It supports the SQL Server infrastructure. Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo" /> class with the same properties as an existing <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo" /> object and makes another connection to the associated server.</summary>
+      <param name="lhs">An <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo" /> object that supplies the properties for the new <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo" /> object.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.#ctor(Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo,System.Boolean)">
+      <summary>Do not reference this member directly in your code. It supports the SQL Server infrastructure. Initializes a new <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo" /> object with the properties of an existing <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo" /> object and makes another connection to the associated server.</summary>
+      <param name="lhs">An <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo" /> object that supplies the properties for the new <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo" /> object.</param>
+      <param name="generateNewId">A <see cref="T:System.Boolean" /> value that specifies true if the new connection dialog should get the same ID as the specified dialog, otherwise, false.</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.AdvancedOptions">
+      <summary>Do not reference this member directly in your code. It supports the SQL Server infrastructure. Gets the advanced options set in a connection dialog.</summary>
+      <returns>A NameVlaueCollection object that specifies the advanced options set in the connection dialog.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.ApplicationName">
+      <summary>Do not reference this member directly in your code. It supports the SQL Server infrastructure. Gets or sets the name of the application in a connection dialog.</summary>
+      <returns>The name of the application in a connection dialog.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.AuthenticationType">
+      <summary>Do not reference this member directly in your code. It supports the SQL Server infrastructure. Gets or sets a <see cref="T:System.Int32" /> value that specifies whether the connection dialog should use SQL Server Authentication or Windows Authentication.</summary>
+      <returns>An <see cref="T:System.Int32" /> value that specifies 1 if the connection dialog should use SQL Server Authentication or 0 if it should use Windows Authentication.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.CompareTo(Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo)">
+      <summary>Do not reference this member directly in your code. It supports the SQL Server infrastructure. Used to determine the sort order of the current <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo" /> object in relation to another <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo" /> object.</summary>
+      <returns>Do not reference this member directly in your code. It supports the SQL Server infrastructure. A <see cref="T:System.Int32" /> value that is negative if the current object sorts before the <paramref name="other" /> object, 0 if they sort to the same location, and positive if the current object sorts after the <paramref name="other" /> object.</returns>
+      <param name="other">The <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo" /> object to compare to the current object.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.Copy">
+      <summary>Do not reference this member directly in your code. It supports the SQL Server infrastructure. Creates a new <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo" /> object based on the properties of the current object.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo" /> object based on the properties of the current object.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.DisplayName">
+      <summary>Do not reference this member directly in your code. It supports the SQL Server infrastructure. Gets or sets a <see cref="T:System.String" /> value that specifies the display name of the connection.</summary>
+      <returns>A <see cref="T:System.String" /> value that specifies the display name of the connection.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.EncryptedPassword">
+      <summary>Do not reference this member directly in your code. It supports the SQL Server infrastructure. Gets or sets the encrypted password of the UIConnectionInfo. </summary>
+      <returns>The encrypted password of the UIConnectionInfo.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.Equals(System.Object)">
+      <summary>Do not reference this member directly in your code. It supports the SQL Server infrastructure. Determines whether the specified Object is equal to the current Object.</summary>
+      <returns>true if the specified Object is equal to the current Object; otherwise, false.</returns>
+      <param name="obj">The Object to compare with the current Object</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.GetHashCode">
+      <summary>Do not reference this member directly in your code. It supports the SQL Server infrastructure. Returns the hash code for the specified type.</summary>
+      <returns>A 32-bit signed integer hash code.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.Id">
+      <summary>Do not reference this member directly in your code. It supports the SQL Server infrastructure. Gets the connection identifier.</summary>
+      <returns>An identifier that uniquely identifies this connection.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.LoadFromStream(System.Xml.XmlReader)">
+      <summary>Do not reference this member directly in your code. It supports the SQL Server infrastructure. Loads a connection from the specified stream.</summary>
+      <returns>The connection that has been loaded.</returns>
+      <param name="reader">Reads the next code from the stream.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.op_Equality(Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo,Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo)">
+      <summary>Do not reference this member directly in your code. It supports the SQL Server infrastructure. Determines whether two specified <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo" /> objects are the same.</summary>
+      <returns>true if the two objects are equal; otherwise, false.</returns>
+      <param name="infoA">A <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo" /> object that specifies the first object.</param>
+      <param name="infoB">A <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo" /> object that specifies the second object.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.op_Equality(Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo,System.Object)">
+      <summary>Do not reference this member directly in your code. It supports the SQL Server infrastructure. Determines whether the specified <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo" /> object is the same as the specified <see cref="T:System.Object" />.</summary>
+      <returns>true if the two objects are equal; otherwise, false.</returns>
+      <param name="infoA">A <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo" /> object that specifies the first object.</param>
+      <param name="infoB">A <see cref="T:System.Object" /> that specifies the second object.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.op_Equality(System.Object,Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo)">
+      <summary>Do not reference this member directly in your code. It supports the SQL Server infrastructure. Determines whether the specified <see cref="T:System.Object" /> is the same as the specified <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo" /> object.</summary>
+      <returns>true if the two objects are equal; otherwise, false.</returns>
+      <param name="infoA">An <see cref="T:System.Object" /> that specifies the first object.</param>
+      <param name="infoB">A <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo" /> object that specifies the second object.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.op_Inequality(Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo,Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo)">
+      <summary>Determines whether two <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo" /> objects are different.</summary>
+      <returns>true if the connections are not equal; otherwise, false.</returns>
+      <param name="infoA">A <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo" /> object that specifies the first object.</param>
+      <param name="infoB">A <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo" /> object that specifies that second object.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.op_Inequality(Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo,System.Object)">
+      <summary>Do not reference this member directly in your code. It supports the SQL Server infrastructure. Determines whether the specified <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo" /> object is different than the specified <see cref="T:System.Object" />.</summary>
+      <returns>true if the two objects are different; otherwise, false.</returns>
+      <param name="infoA">A <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo" /> object that specifies the first object.</param>
+      <param name="infoB">An <see cref="T:System.Object" /> that specifies the second object.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.op_Inequality(System.Object,Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo)">
+      <summary>Do not reference this member directly in your code. It supports the SQL Server infrastructure. Determines whether the specified <see cref="T:System.Object" /> is different than the specified <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo" /> object.</summary>
+      <returns>true if the two objects are different; otherwise, false.</returns>
+      <param name="infoA">An <see cref="T:System.Object" /> that specifies the first object.</param>
+      <param name="infoB">A <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo" /> object that specifies that second object.</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.OtherParams">
+      <summary>Do not reference this member directly in your code. It supports the SQL Server infrastructure. Gets or sets the other parameters for the connection.</summary>
+      <returns>The other parameters for the connection.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.Password">
+      <summary>Do not reference this member directly in your code. It supports the SQL Server infrastructure. Gets or sets a <see cref="T:System.String" /> value that specifies the login password for the connection when using SQL Server Authentication.</summary>
+      <returns>A <see cref="T:System.String" /> value that specifies the login password for the connection.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.PersistPassword">
+      <summary>Do not reference this member directly in your code. It supports the SQL Server infrastructure. Gets or sets a <see cref="T:System.Boolean" /> value indicating whether the password of the UIConnectionInfo should be persisted. </summary>
+      <returns>A <see cref="T:System.Boolean" /> value that specifies true if the password should be persisted; otherwise, false.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.SaveToStream(System.Xml.XmlWriter,System.Boolean)">
+      <summary>Do not reference this member directly in your code. It supports the SQL Server infrastructure. Persists connection info to the specified XML stream.</summary>
+      <param name="writer">An XmlWriter for the stream.</param>
+      <param name="saveName">A <see cref="T:System.Boolean" /> that specifies whether to include the <see cref="P:Microsoft.SqlServer.Managment.Smo.RegSvrEnum.UIConnectionInfo.UserName" /> property in the stream.</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.ServerName">
+      <summary>Do not reference this member directly in your code. It supports the SQL Server infrastructure. Gets or sets a <see cref="T:System.String" /> value that specifies the name of the instance of the Database Engine for the connection.</summary>
+      <returns>A <see cref="T:System.String" /> value that specifies the name of the instance of the Database Engine for the connection.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.ServerNameNoDot">
+      <summary>Do not reference this member directly in your code. It supports the SQL Server infrastructure. Gets a <see cref="T:System.String" /> value that specifies the name of the instance of the Database Engine for the connection. If only a period (.) was specified in the dialog, ServerNameNoDot returns (local).</summary>
+      <returns>A <see cref="T:System.String" /> value that specifies the name of the instance of the Database Engine for the connection. If only a period (.) was specified in the dialog, ServerNameNoDot returns (local).</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.ServerType">
+      <summary>Do not reference this member directly in your code. It supports the SQL Server infrastructure. Gets or sets a guid that identifies the type of server the connection uses.</summary>
+      <returns>A guid that identifies the type of server the connection uses.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.ServerVersion">
+      <summary>Do not reference this member directly in your code. It supports the SQL Server infrastructure. Gets or sets a <see cref="T:Microsoft.SqlServer.Management.Common.ServerVersion" /> object that specifies the version of the instance of the Database Engine for the connection.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Common.ServerVersion" /> object that specifies the version of the instance of the Database Engine for the connection.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.UserName">
+      <summary>Do not reference this member directly in your code. It supports the SQL Server infrastructure. Gets or sets a <see cref="T:System.String" /> value that specifies the login name for the connection.</summary>
+      <returns>A <see cref="T:System.String" /> value that specifies the login name for the connection.</returns>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.XmlAdvancedOptions">
+      <summary>Do not reference this member directly in your code. It supports the SQL Server infrastructure.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.XmlAuthenticationType">
+      <summary>Do not reference this member directly in your code. It supports the SQL Server infrastructure.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.XmlDisplayName">
+      <summary>Do not reference this member directly in your code. It supports the SQL Server infrastructure.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.XmlItemTypeAttribute">
+      <summary>Do not reference this member directly in your code. It supports the SQL Server infrastructure.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.XmlPassword">
+      <summary>Do not reference this member directly in your code. It supports the SQL Server infrastructure.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.XmlServerName">
+      <summary>Do not reference this member directly in your code. It supports the SQL Server infrastructure.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.XmlServerType">
+      <summary>Do not reference this member directly in your code. It supports the SQL Server infrastructure.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.XmlStart">
+      <summary>Do not reference this member directly in your code. It supports the SQL Server infrastructure.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.XmlUserName">
+      <summary>Do not reference this member directly in your code. It supports the SQL Server infrastructure.</summary>
+    </member>
+  </members>
+</doc>

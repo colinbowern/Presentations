@@ -1,1 +1,0 @@
-The latest release of the NuGet package distributed a 32-bit only FluentMigrator.Runner.dll.  We need an Any CPU compiled version so this is a snapshot of the GitHub source code compiled to Any CPU.
