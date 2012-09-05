@@ -1,0 +1,137 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <title>SignalR Chat</title>
+    <meta name="charset" content="utf-8" />
+    <link rel="stylesheet" href="/Styles/Bootstrap/Bootstrap.css" />
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2012.2.710/styles/kendo.dataviz.min.css" />    <link rel="stylesheet" href="/Styles/Site.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="span4">
+                <div id="SignInForm" class="well">
+                    <h2>Identify Yourself</h2>
+                    <label>What is your name?</label>
+                    <input id="Name" type="text" />
+                    <button id="SignIn" class="btn">Sign In</button>
+                </div>
+                <div id="ChatBox" class="well">
+                    <h2>User Name</h2>
+                    <label>What do you want to say?</label>
+                    <textarea id="Message" rows="5"></textarea>
+                    <button id="Send" class="btn btn-primary">Send</button>
+                    <button id="Disconnect" class="btn">Disconnect</button>
+                </div>
+                <div id="UserStatistics">
+                </div>
+            </div>
+            <div class="span8">
+                <ol id="Messages">
+                </ol>
+            </div>
+        </div>
+    </div>
+    <script src="/Scripts/jquery-1.8.0.js"></script>
+    <script src="/Scripts/jquery.signalR-0.5.3.js"></script>
+    <script src="http://cdn.kendostatic.com/2012.2.710/js/kendo.all.min.js"></script>    <script src="/SignalR/Hubs"></script>
+    <script>
+        var talkr = function ($) {
+            // Private Fields
+            var connection = $.connection.chat;
+
+            // Private Methods
+            function open(name) {
+                $.connection.hub.start(function () {
+                    connection.join(name);
+                });
+            }
+
+            connection.broadcast = function (message) {
+                var data = JSON.parse(message);
+                appendMessage('[' + data.Name + '] ' + data.Body);
+            }
+
+            connection.refreshStats = function (message) {
+                var data = JSON.parse(message);
+                var chart = $('#UserStatistics').data('kendoChart');
+                chart.options.transitions = false;
+                chart.dataSource.data(data);
+            }
+
+            function send(message) {
+                connection.sendMessage(message);
+                appendMessage(message);
+            }
+
+            function close() {
+                window.location.href = window.location.href;
+            }
+
+            function appendMessage(message) {
+                $('<li />')
+                    .text(message)
+                    .appendTo($('#Messages'));
+            }
+
+            // Public Methods
+            return {
+                open: open,
+                close: close,
+                send: send
+            };
+        }(jQuery);
+
+        $(function () {
+            $('#SignIn').click(function () {
+                var name = $('#Name').val();
+                talkr.open(name);
+                $('#ChatBox h2').text(name);
+                $('#SignInForm').hide();
+                $('#ChatBox').show();
+                $('#UserStatistics').show();
+            });
+
+            $('#Send').click(function () {
+                var message = $('#Message');
+                talkr.send(message.val());
+                message.val('');
+            });
+
+            $('#Disconnect').click(function () {
+                talkr.close();
+            });
+
+            $("#UserStatistics").kendoChart({
+                theme: "default",
+                dataSource: [],
+                title: {
+                    text: "User Count by Transport"
+                },
+                legend: {
+                    position: "bottom",
+                    labels: {
+                        template: "#= text # (#= dataItem.count #)"
+                    }
+                },
+                seriesDefaults: {
+                    labels: {
+                        visible: true,
+                        format: "{0}"
+                    }
+                },
+                series: [{
+                    name: 'Count',
+                    type: "pie",
+                    field: 'count',
+                    categoryField: 'transport'
+                }],
+                tooltip: {
+                    visible: true,
+                    format: "{0}"
+                }
+            });
+        });
+    </script>
+</body>
+</html>

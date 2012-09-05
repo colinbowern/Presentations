@@ -1,0 +1,103 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <title>Socket Chat</title>
+    <meta name="charset" content="utf-8" />
+    <link rel="stylesheet" href="/Styles/Bootstrap/Bootstrap.css" />
+    <link rel="stylesheet" href="/Styles/Site.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="span4">
+                <div id="SignInForm" class="well">
+                    <h2>Identify Yourself</h2>
+                    <label>What is your name?</label>
+                    <input id="Name" type="text" />
+                    <button id="SignIn" class="btn">Sign In</button>
+                </div>
+                <div id="ChatBox" class="well">
+                    <h2>User Name</h2>
+                    <label>What do you want to say?</label>
+                    <textarea id="Message" rows="5"></textarea>
+                    <button id="Send" class="btn btn-primary">Send</button>
+                    <button id="Disconnect" class="btn">Disconnect</button>
+                </div>
+            </div>
+            <div class="span8">
+                <ol id="Messages">
+                </ol>
+            </div>
+        </div>
+    </div>
+    <script src="/Scripts/jquery-1.7.2.js"></script>
+    <script>
+        var talkr = function ($) {
+            var connection;
+
+            function open(name) {
+                connection = $(new WebSocket('ws://' + document.location.host + '/Chat.ashx?Name=' + name))
+                    .on('error', error)
+                    .on('close', closed)
+                    .on('message', receive)[0];
+            }
+
+            function send(message) {
+                connection.send(message);
+                appendMessage(message);
+            }
+
+            function receive(e) {
+                var data = JSON.parse(e.originalEvent.data);
+                appendMessage('[' + data.Name + '] ' + data.Body);
+            }
+
+            function close() {
+                connection.close();
+            }
+
+            function closed() {
+                $('#ChatBox').hide();
+                $('#SignInForm').show();
+            }
+
+            function error(e) {
+                alert('ERROR: ' + e.originalEvent.data);
+            }
+
+            function appendMessage(message) {
+                $('<li />')
+                    .text(message)
+                    .appendTo($('#Messages'));
+            }
+
+            // Public Methods
+            return {
+                open: open,
+                close: close,
+                send: send
+            };
+        }(jQuery);
+
+        $(function () {
+            $('#SignIn').click(function () {
+                var name = $('#Name').val();
+                talkr.open(name);
+                $('#ChatBox h2').text(name);
+                $('#SignInForm').hide();
+                $('#ChatBox').show();
+            });
+
+            $('#Send').click(function () {
+                var message = $('#Message');
+                talkr.send(message.val());
+                message.val('');
+            });
+
+            $('#Disconnect').click(function () {
+                talkr.close();
+            });
+        });
+    </script>
+</body>
+</html>
