@@ -1,0 +1,686 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.SqlServer.Management.Collector</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.SqlServer.Management.Collector.CollectionItem">
+      <summary>The <see cref="T:Microsoft.SqlServer.Management.Collector.CollectionItem" /> class creates an instance of a collection item.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionItem.#ctor(Microsoft.SqlServer.Management.Collector.CollectionSet,System.String)">
+      <summary>Creates an instance of a collection item given the collection set name and an item name.</summary>
+      <param name="set">A <see cref="T:System.Name" /> value that specifies the parent collection set.</param>
+      <param name="name">A <see cref="T:System.String" /> value that specifies the name of the collection item.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionItem.Alter">
+      <summary>Alters a collection item by applying the changes to the configuration store.</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectionItem.CollectionFrequency">
+      <summary>Gets or sets the collection frequency for this item if the collection set is running in CollectionMode = "continuous".</summary>
+      <returns>Returns a <see cref="T:System.TimeSpan" /> value.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionItem.Discover(Microsoft.SqlServer.Management.Sdk.Sfc.ISfcDependencyDiscoveryObjectSink)">
+      <summary>This method is for internal use only.</summary>
+      <param name="sink">An <see cref="T:IsfcDependencyDiscoveryObjectSink" /> object</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionItem.GetObjectFactory">
+      <summary>Instantiates an instance of the constructor used for collection items.</summary>
+      <returns>An instance of the constructor used for collection items.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectionItem.Id">
+      <summary>Gets the collection item Id.</summary>
+      <returns>Returns a <see cref="T:System.Int32" /> value which is the local ID for the collection item.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectionItem.IdentityKey">
+      <summary>Gets the identity key for the collection item.</summary>
+      <returns>The <see cref="T:Microsoft.SqlServer.Management.Collector.CollectionItem.Key" /> object.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionItem.MarkForDrop(System.Boolean)">
+      <summary>This method marks a collection item for dropping if the collection item has been changed.</summary>
+      <param name="dropOnAlter">A <see cref="T:Boolean" /> value that indicates whether or not a collection item has changed.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionItem.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcAlterable#ScriptAlter">
+      <summary>This method is for internal use only.</summary>
+      <returns>An ISfcScript object that contains the script.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionItem.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcRenamable#Rename(Microsoft.SqlServer.Management.Sdk.Sfc.SfcKey)">
+      <summary>This method is for internal use only.</summary>
+      <param name="newKey">The SfcKey object that contains the new name.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionItem.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcRenamable#ScriptRename(Microsoft.SqlServer.Management.Sdk.Sfc.SfcKey)">
+      <summary>This method is for internal use only.</summary>
+      <returns>An ISfcScript object that contains the script.</returns>
+      <param name="newKey">The SfcKey object that contains the new name.</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectionItem.Name">
+      <summary>Gets or sets the collection item name.</summary>
+      <returns>A <see cref="T:System.String" /> value that contains the name of the collection item.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectionItem.Parameters">
+      <summary>Gets or sets collection item parameters.</summary>
+      <returns>Returns a <see cref="T:System.String" /> value.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectionItem.Parent">
+      <summary>Gets or sets the parent object in the object model hierarchy.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Collector.CollectionSet" /> object that specifies the parent in the object model hierarchy.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionItem.Rename(System.String)">
+      <summary>Renames a collection item.</summary>
+      <param name="newName">A <see cref="T:System.String" /> value that is the new name for the collection item.</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectionItem.TypeName">
+      <summary>Gets or sets the name of the collector type that the collection item implements.</summary>
+      <returns>Returns a <see cref="T:System.String" /> value that is the name of the collector type.</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Collector.CollectionItem.Key">
+      <summary>The <see cref="T:Microsoft.SqlServer.Management.Collector.CollectionItem.Key" /> class inherits from SfcAbstractKey and is used for identification key operations.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionItem.Key.#ctor(Microsoft.SqlServer.Management.Collector.CollectionItem.Key)">
+      <summary>Creates an instance of a <see cref="T:" /><see cref="Microsoft.SqlServer.Management.Collector.CollectionItem.Key" /> object.</summary>
+      <param name="other">A <see cref="T:Key" /> object.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionItem.Key.#ctor(System.String)">
+      <summary>Creates an instance of a key given the key name.</summary>
+      <param name="name">A <see cref="T:System.String" /> value that is the key name.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionItem.Key.Equals(Microsoft.SqlServer.Management.Sdk.Sfc.SfcKey)">
+      <summary>Instantiates an instance of the <see cref="T:" /><see cref="Microsoft.SqlServer.Management.Collector.CollectionItem.Key.Equals" /> class that is used for boolean operations.</summary>
+      <returns>A <see cref="T:Key" /> object that is the key.</returns>
+      <param name="key">A <see cref="T:Key" /> object.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionItem.Key.Equals(System.Object)">
+      <summary>Performs a boolean operation to determine if the object passed as a parameter is a key</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that returns TRUE if the object is key.</returns>
+      <param name="obj">A <see cref="T:System.Object" /> object</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionItem.Key.Equals(System.Object,System.Object)">
+      <summary>Does a boolean comparison of two objects passed as parameters.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that returns TRUE when both objects are not NULL AND are the same.</returns>
+      <param name="obj1">A <see cref="T:System.Object" /></param>
+      <param name="obj2">A <see cref="T:System.Object" /></param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionItem.Key.GetHashCode">
+      <summary>Gets the hash code for a key.</summary>
+      <returns>A <see cref="T:System.Int" /> that is the hash code.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionItem.Key.GetUrnFragment">
+      <summary>Gets a urn fragment.</summary>
+      <returns>A <see cref="T:System.String" /> value that is the urn fragment.</returns>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Collector.CollectionItem.Key.name">
+      <summary>Declares the name variable.</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectionItem.Key.Name">
+      <summary>Gets or sets the key name.</summary>
+      <returns>A <see cref="T:System.String" /> that is the key name.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionItem.Key.op_Equality(Microsoft.SqlServer.Management.Collector.CollectionItem.Key,Microsoft.SqlServer.Management.Collector.CollectionItem.Key)">
+      <summary>Does a boolean equality comparision between the left hand side of the key and the right hand side of the key.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that returns TRUE when:both sides are not NULL AND lhs is a key AND rhs is a key AND the keys are equal</returns>
+      <param name="lhs">A <see cref="T:Key" /> object containing the left hand side of the key.</param>
+      <param name="rhs">A <see cref="T:Key" /> object containing the right hand side of the key.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionItem.Key.op_Equality(Microsoft.SqlServer.Management.Collector.CollectionItem.Key,System.Object)">
+      <summary>Does a boolean equality comparision between the object sent as a parameter and the left hand side of the key.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that returns TRUE when:both sides are NULLboth sides are not NULL AND lhs is a key AND the keys are equal</returns>
+      <param name="lhs">A <see cref="T:Key" /> object containing the left hand side of the key.</param>
+      <param name="obj">A <see cref="T:Key" /> object for comparison.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionItem.Key.op_Equality(System.Object,Microsoft.SqlServer.Management.Collector.CollectionItem.Key)">
+      <summary>Does a boolean equality comparison between the object sent as a parameter and the right hand side of the key.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that returns TRUE when:Both sides are NULLBoth sides are not NULL AND rhs is a key AND the keys are equal</returns>
+      <param name="obj">A <see cref="T:Key" /> object for comparison.</param>
+      <param name="rhs">A <see cref="T:Key" /> object containing the right hand side of the key.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionItem.Key.op_Inequality(Microsoft.SqlServer.Management.Collector.CollectionItem.Key,Microsoft.SqlServer.Management.Collector.CollectionItem.Key)">
+      <summary>Does a boolean inequality comparision between the left hand side of the key and the right hand side of the key.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that returns TRUE when:one side is NULL OR lhs is a not key OR rhs is not a key AND the keys are not equal</returns>
+      <param name="lhs">A <see cref="T:Key" /> object containing the left hand side of the key.</param>
+      <param name="rhs">A <see cref="T:Key" /> object containing the right hand side of the key.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionItem.Key.op_Inequality(Microsoft.SqlServer.Management.Collector.CollectionItem.Key,System.Object)">
+      <summary>Does a boolean inequality comparision between the object sent as a parameter and the left hand side of the key.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that returns TRUE when:both sides are not NULLboth sides are NULL AND lhs is a not a key AND the keys are not equal</returns>
+      <param name="lhs">A <see cref="T:Key" /> object containing the left hand side of the key.</param>
+      <param name="obj">A <see cref="T:Key" /> object for comparison.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionItem.Key.op_Inequality(System.Object,Microsoft.SqlServer.Management.Collector.CollectionItem.Key)">
+      <summary>Does a boolean inequality comparision between the object sent as a parameter and the right hand side of the key.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that returns TRUE when:both sides are not NULLboth sides are NULL AND lhs is a not a key AND the keys are not equal</returns>
+      <param name="obj">A <see cref="T:Key" /> object for comparison.</param>
+      <param name="rhs">A <see cref="T:Key" /> object containing the right hand side of the key.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionItem.Key.ToString">
+      <summary>Gets a string representation of the key for the purpose of a default comparison.</summary>
+      <returns>A <see cref="T:System.String" /> value that is the string representation of the key.</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Collector.CollectionItemCollection">
+      <summary>The <see cref="T:Microsoft.SqlServer.Management.Collector.CollectionItemCollection" /> class is a collection class for collection item objects. It is derived from the SFC::SfcCollectionBase class.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionItemCollection.#ctor(Microsoft.SqlServer.Management.Collector.CollectionSet)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Management.Collector.CollectionItemCollection" /> class.</summary>
+      <param name="parent">A <see cref="T:CollectionSet" /> object that identifies the collection set to which a collection item belongs.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionItemCollection.AddCollectionItem(Microsoft.SqlServer.Management.Collector.CollectionItem)">
+      <summary>Adds a collection item to the collection set.</summary>
+      <param name="item">A <see cref="T:CollectionItem" /> object.</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectionItemCollection.Item(System.String)">
+      <summary>Gets the name of the collection item.</summary>
+      <returns>A <see cref="T:System.Sting" /> value that is the name of the collection item.</returns>
+      <param name="name">The name of the collection item.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionItemCollection.RemoveCollectionItem(Microsoft.SqlServer.Management.Collector.CollectionItem)">
+      <summary>Removes a collection item from the collection set.</summary>
+      <param name="item">A <see cref="T:CollectionItem" /> object.</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Collector.CollectionSet">
+      <summary>The <see cref="T:Microsoft.SqlServer.Management.Collector.CollectionSet" /> class is derived from SFC::SfcInstanceBase and implements SFC::ICreatable, SFC::IDropable, and SFC::IAlterable.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.#ctor">
+      <summary>Instantiates a collection set object.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.#ctor(Microsoft.SqlServer.Management.Collector.CollectorConfigStore,System.String)">
+      <summary>Initialize an instance of a <see cref="T:CollectionSet" /> given a <see cref="T:CollectorConfigStore" /> object as a parent and a collection set name.</summary>
+      <param name="store">A <see cref="CollectorConfigStore" /> object.</param>
+      <param name="name">A <see cref="T:System.String" /> that is the name of the collection set. This name is unique for each data collector store.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.Alter">
+      <summary>Alter collection set information in the configuration store. </summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectionSet.CollectionItems">
+      <summary>Gets the collection items in a collection set.</summary>
+      <returns>Returns the <see cref="CollectionItemCollection" /> object that contains the collection items.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectionSet.CollectionMode">
+      <summary>Gets or sets the collection mode for the collection set.</summary>
+      <returns>Enumerates the <see cref="T:CollectionSet.CollectionModes" /> type and returns an object that contains the collection mode setting for the collection set.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.Create">
+      <summary>Creates a collection set.</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectionSet.DaysUntilExpiration">
+      <summary>Gets or sets the number of days that the collected data is saved in the management data warehouse.</summary>
+      <returns>A <see cref="T:System.Int16" /> value that is the number of days.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectionSet.Description">
+      <summary>Gets or sets the description of the collection set.</summary>
+      <returns>Gets a <see cref="T:System.String" /> value that is the description of the collection set.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.Drop">
+      <summary>Drops a collection set.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.EnumCollectionSetExecutionHistory">
+      <summary>An enumerator that gets the history records for specific collection set.</summary>
+      <returns>A <see cref="T:System.DataTable" /> that contains the history records.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.EnumCollectionSetExecutionHistory(System.Int64)">
+      <summary>This method is for internal use only.</summary>
+      <returns>A DataTable object.</returns>
+      <param name="parentLogId">A <see cref="T:System.Int64" /> value that is the log id for the parent collection set.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.EnumCollectionSetExecutionHistoryDetail(System.Int64)">
+      <summary>This method is for internal use only.</summary>
+      <returns>A <see cref="T:System.DataTable" /> that contains the detailed history records.</returns>
+      <param name="logId">A <see cref="T:System.Int64" /> value that is the log id for a collection set.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.GetLastUploadTime">
+      <summary>Gets the last time that collection set data was uploaded.</summary>
+      <returns>A DateTime object that specifies when the collection set data was uploaded.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.GetObjectFactory">
+      <summary>Gets the object factory constructor for the <see cref="CollectorConfigStore" /> object.</summary>
+      <returns>Returns an object factory for the <see cref="T:CollectionSet" /> class.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectionSet.Id">
+      <summary>Gets the local ID for the collection set.</summary>
+      <returns>A <see cref="T:System.Int32" /> value that is the ID.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectionSet.IdentityKey">
+      <summary>Gets the identity key for the collection set.</summary>
+      <returns>The <see cref="T:Key" /> object for the collection set.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectionSet.IsRunning">
+      <summary>Gets the <see cref="T:System.Boolean" /> property value that indicates whether or not the collection set is running.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that specifies if the collection is running.If True, the collection set is running.If False, the collection set is not running.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectionSet.IsSystem">
+      <summary>Gets the <see cref="T:System.Boolean" /> property value that indicates whether or the collection set is a system collection set.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that specifies that the collection set is a system collection set.If True, the collection set is a system collection set.If False, the collection set is not a system collection set.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectionSet.LoggingLevel">
+      <summary>Gets or sets the logging level for the collection set.</summary>
+      <returns>A <see cref="T:System.SmallInt" /> value that indicates the logging level used for the collection set.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcCreatable#ScriptCreate">
+      <summary>Produces the script to create this object to storage in its current state. Do not reference this member directly in your code. It supports the SQL Server infrastructure.</summary>
+      <returns>Returns <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.ISfcScript" />. An ISfcScript object that contains the script.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcDiscoverObject#Discover(Microsoft.SqlServer.Management.Sdk.Sfc.ISfcDependencyDiscoveryObjectSink)">
+      <summary>Allows the object to indicate relationships for dependency discovery requests via the passed sink. Do not reference this member directly in your code. It supports the SQL Server infrastructure.</summary>
+      <param name="sink">He passed sink.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcDroppable#ScriptDrop">
+      <summary>Produces the script to drop this object from storage. Do not reference this member directly in your code. It supports the SQL Server infrastructure.</summary>
+      <returns>Returns <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.ISfcScript" />. An ISfcScript object that contains the script.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcRenamable#Rename(Microsoft.SqlServer.Management.Sdk.Sfc.SfcKey)">
+      <summary>Renames this object to the specified key and updates the storage. Do not reference this member directly in your code. It supports the SQL Server infrastructure.</summary>
+      <param name="newKey">The SfcKey object that contains the new name.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcRenamable#ScriptRename(Microsoft.SqlServer.Management.Sdk.Sfc.SfcKey)">
+      <summary>Produces the script to rename this object to the specified key. Do not reference this member directly in your code. It supports the SQL Server infrastructure.</summary>
+      <returns>Returns <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.ISfcScript" />. An ISfcScript object that contains the script.</returns>
+      <param name="newKey">The SfcKey object that contains the new name.</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectionSet.Name">
+      <summary>Gets or sets the name of the collection set.</summary>
+      <returns>A <see cref="T:System.String" /> value that is the collection set name.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectionSet.Parent">
+      <summary>Gets or sets the parent store that this collection set belongs to.</summary>
+      <returns>A <see cref="T:CollectorConfigStore" /> object that identifies the parent store for the collection set.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectionSet.ProxyName">
+      <summary>Gets or sets the name of the SQL Server Agent proxy account under which the collection set executes.</summary>
+      <returns>A <see cref="T:System.String" /> value that is the name of the proxy account.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.Rename(System.String)">
+      <summary>Renames a collection set.</summary>
+      <param name="newName">A <see cref="T:System.String" /> value that is the new name of the collection set.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.RunOnce">
+      <summary>Specifies the collection set is to be run once.</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectionSet.ScheduleName">
+      <summary>Gets or sets the name of the SQL Server Agent schedule that is associated to the collection set.</summary>
+      <returns>A <see cref="T:System.String" /> value that is the name of the schedule.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.ScriptAlter">
+      <summary>This method is for internal use only.</summary>
+      <returns>An ISfcScript object.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.Start">
+      <summary>Starts a collection set.</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectionSet.State">
+      <summary>Gets the state of the collection set.</summary>
+      <returns>Returns the current state of the collection set, which is either running or stopped.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.Stop">
+      <summary>Stops a collection set.</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectionSet.TargetName">
+      <summary>Gets or sets the name of the target that the collection set will collect data from.</summary>
+      <returns>A <see cref="T:System.String" /> value that is the target name.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectionSet.UId">
+      <summary>Gets or sets the globally unique ID for the collection set.</summary>
+      <returns>A <see cref="T:System.Guid" /> value that is the GUID for the collection set.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.Upload">
+      <summary>Uploads a collection set on demand.</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Collector.CollectionSet.CollectionModes">
+      <summary>The <see cref="T:Microsoft.SqlServer.Management.Collector.CollectionSet.CollectionModes" /> class enumerates the collection set collection modes.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Collector.CollectionSet.CollectionModes.Cached">
+      <summary>Cached mode, data is collected and uploaded on a different schedule.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Collector.CollectionSet.CollectionModes.NonCached">
+      <summary>Noncached mode, data is collected and uploaded on the same schedule.</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Collector.CollectionSet.ExecutionStatus">
+      <summary>Enumerates the collection set to get the current execution status.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Collector.CollectionSet.ExecutionStatus.Running">
+      <summary>Indicates that the collection set is running.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Collector.CollectionSet.ExecutionStatus.Finished">
+      <summary>Indicates the collection set finished collection and upload tasks.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Collector.CollectionSet.ExecutionStatus.Failed">
+      <summary>Indicates that the collect set failed.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Collector.CollectionSet.ExecutionStatus.Warning">
+      <summary>Indicates that there is an error and a warning was generated.</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Collector.CollectionSet.Key">
+      <summary>The <see cref="T:Microsoft.SqlServer.Management.Collector.CollectionSet.Key" /> class inherits from SfcAbstractKey and is used for identification key operations</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.Key.#ctor(Microsoft.SqlServer.Management.Collector.CollectionSet.Key)">
+      <summary>Creates an instance of a <see cref="T:Microsoft.SqlServer.Management.Collector.CollectionSet.Key" /> object.</summary>
+      <param name="other">A <see cref="T:Key" /> object.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.Key.#ctor(System.String)">
+      <summary>Creates an instance of a key given the key name.</summary>
+      <param name="name">A <see cref="T:System.String" /> value that is the key name.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.Key.Equals(Microsoft.SqlServer.Management.Sdk.Sfc.SfcKey)">
+      <summary>Instantiates an instance of the <see cref="T:Microsoft.SqlServer.Management.Collector.CollectionSet.Key.Equals" /> class that is used for Boolean operations.</summary>
+      <returns>A <see cref="T:Key" /> object that is the key.</returns>
+      <param name="key">A <see cref="T:Key" /> object.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.Key.Equals(System.Object)">
+      <summary>Performs a Boolean operation to determine if the object passed as a parameter is a key.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that returns TRUE if the object is a key.</returns>
+      <param name="obj">A <see cref="T:System.Object" /> object</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.Key.Equals(System.Object,System.Object)">
+      <summary>Does a Boolean comparison of two objects passed as parameters.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that returns TRUE when both objects are not NULL AND are the same.</returns>
+      <param name="obj1">A <see cref="T:System.Object" /></param>
+      <param name="obj2">A <see cref="T:System.Object" /></param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.Key.GetHashCode">
+      <summary>Gets the hash code for a key.</summary>
+      <returns>A <see cref="T:System.Int" /> that is the hash code.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.Key.GetUrnFragment">
+      <summary>Gets a urn fragment.</summary>
+      <returns>A <see cref="T:System.String" /> value that is the urn fragment.</returns>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Collector.CollectionSet.Key.name">
+      <summary>Configures the name property for the key.</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectionSet.Key.Name">
+      <summary>Gets or sets the key name.</summary>
+      <returns>A <see cref="T:System.String" /> value that is the key name.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.Key.op_Equality(Microsoft.SqlServer.Management.Collector.CollectionSet.Key,Microsoft.SqlServer.Management.Collector.CollectionSet.Key)">
+      <summary>Does a Boolean equality comparison between the left hand side of the key and the right hand side of the key.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that returns TRUE when:both sides are not NULL AND lhs is a key AND rhs is a key AND the keys are equal</returns>
+      <param name="lhs">A <see cref="T:Key" /> object containing the left hand side of the key.</param>
+      <param name="rhs">A <see cref="T:Key" /> object containing the right hand side of the key.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.Key.op_Equality(Microsoft.SqlServer.Management.Collector.CollectionSet.Key,System.Object)">
+      <summary>Does a Boolean equality comparison between the object sent as a parameter and the left hand side of the key.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that returns TRUE when:both sides are NULLboth sides are not NULL AND lhs is a key AND the keys are equal</returns>
+      <param name="lhs">A <see cref="T:Key" /> object containing the left hand side of the key.</param>
+      <param name="obj">A <see cref="T:Key" /> object for comparison.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.Key.op_Equality(System.Object,Microsoft.SqlServer.Management.Collector.CollectionSet.Key)">
+      <summary>Does a boolean equality comparison between the object sent as a parameter and the right hand side of the key.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that returns TRUE when:both sides are NULLboth sides are not NULL AND rhs is a key AND the keys are equal</returns>
+      <param name="obj">A <see cref="T:Key" /> object for comparison.</param>
+      <param name="rhs">A <see cref="T:Key" /> object containing the right hand side of the key.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.Key.op_Inequality(Microsoft.SqlServer.Management.Collector.CollectionSet.Key,Microsoft.SqlServer.Management.Collector.CollectionSet.Key)">
+      <summary>Does a boolean inequality comparison between the left hand side of the key and the right hand side of the key.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that returns TRUE when:one side is NULL OR lhs is a not key OR rhs is not a key AND the keys are not equal</returns>
+      <param name="lhs">A <see cref="T:Key" /> object containing the left hand side of the key.</param>
+      <param name="rhs">A <see cref="T:Key" /> object containing the right hand side of the key.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.Key.op_Inequality(Microsoft.SqlServer.Management.Collector.CollectionSet.Key,System.Object)">
+      <summary>Does a Boolean inequality comparison between the object sent as a parameter and the left hand side of the key.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that returns TRUE when:both sides are not NULLboth sides are NULL AND lhs is a not a key AND the keys are not equal</returns>
+      <param name="lhs">A <see cref="T:Key" /> object containing the left hand side of the key.</param>
+      <param name="obj">A <see cref="T:Key" /> object for comparison.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.Key.op_Inequality(System.Object,Microsoft.SqlServer.Management.Collector.CollectionSet.Key)">
+      <summary>Does a Boolean inequality comparison between the object sent as a parameter and the right hand side of the key.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that returns TRUE when:both sides are not NULLboth sides are NULL AND lhs is a not a key AND the keys are not equal</returns>
+      <param name="obj">A <see cref="T:Key" /> object for comparison.</param>
+      <param name="rhs">A <see cref="T:Key" /> object containing the right hand side of the key.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.Key.ToString">
+      <summary>Gets a string representation of the key for the purpose of a default comparison.</summary>
+      <returns>A <see cref="T:System.String" /> value that is the string representation of the key.</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Collector.CollectionSet.RuntimeExecutionMode">
+      <summary>The RuntimeExecutionMode enumeration contains values that are used to specify the runtime execution mode</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Collector.CollectionSet.RuntimeExecutionMode.Collection">
+      <summary> The runtime execution mode is collection.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Collector.CollectionSet.RuntimeExecutionMode.Upload">
+      <summary> The runtime execution mode is upload. </summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Collector.CollectionSetCollection">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Collector.CollectionSetCollection" /> is a SFC collection class for collection sets.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSetCollection.#ctor(Microsoft.SqlServer.Management.Collector.CollectorConfigStore)">
+      <summary>Instantiates a new collection set based on the <see cref="T:CollectorConfigStore" /> object that is provided as a parent for the collection set.</summary>
+      <param name="parent">The parent object of the collection set.</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectionSetCollection.Item(System.String)">
+      <summary>Gets a collection set based on the name that is provided.</summary>
+      <returns>A <see cref="T:CollectionSetCollection" /> object that is the collection set.</returns>
+      <param name="name">A <see cref="T:System.String" /> value that is the collection set name.</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Collector.CollectionSetExtender">
+      <summary> Allows adding the new properties to a <see cref="T:Microsoft.SqlServer.Management.Collector.CollectionSet" /> and it also helps to establish dependencies between extended property and the original one</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSetExtender.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Management.Collector.CollectionSetExtender" /> class.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSetExtender.#ctor(Microsoft.SqlServer.Management.Collector.CollectionSet)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Management.Collector.CollectionSetExtender" /> class.</summary>
+      <param name="collectionSet"> The <see cref="T:Microsoft.SqlServer.Management.Collector.CollectionSet" /> which this instance will extend.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSetExtender.#ctor(Microsoft.SqlServer.Management.Collector.CollectorConfigStore,System.String)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Management.Collector.CollectionSetExtender" /> class.</summary>
+      <param name="collectorConfigStore"> The <see cref="T:Microsoft.SqlServer.Management.Collector.CollectorConfigStore" /> to associate with this instance.</param>
+      <param name="name"> The name of the <see cref="T:Microsoft.SqlServer.Management.Collector.CollectionSet" />which this instance will extend. </param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Collector.CollectorConfigStore">
+      <summary>The <see cref="T:Microsoft.SqlServer.Management.Collector.CollectorConfigStore" /> class implements the configuration store for the data collector.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.#ctor">
+      <summary>Initializes a <see cref="T:Microsoft.SqlServer.Management.Collector.CollectorConfigStore" /> object.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.#ctor(Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection)">
+      <summary>Initializes a <see cref="T:Microsoft.SqlServer.Management.Collector.CollectorConfigStore" /> object.</summary>
+      <param name="connection">A <see cref="T:SqlStoreConnection" /> object that contains connection information.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Alter">
+      <summary>Changes the configuration settings of the configuration store.</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.CacheDirectory">
+      <summary>Gets or sets the path and folder name for the cache directory.</summary>
+      <returns>A <see cref="T:System.String" /> value that contains the directory path and folder name.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.CacheWindow">
+      <summary>Gets or sets the number of upload tries for data that is collected.</summary>
+      <returns>A <see cref="T:System.Int" /> value that is the number of upload retries.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.CollectionSets">
+      <summary>Gets the collection sets that are in the configuration store.</summary>
+      <returns>A <see cref="T:CollectionSetObject" /> that contains the collection sets.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.DisableCollector">
+      <summary>Disables the data collector.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.EnableCollector">
+      <summary>Enables the data collector.</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Enabled">
+      <summary>Gets the <see cref="T:System.Boolean" /> property value that indicates whether or not the data collector is enabled.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that specifies if the data collector is enabled.If True, the data collector is enabled.If False, the data collector is not enabled.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.EnumTypes">
+      <summary>Enumerates the names of the collector types in the configuration store.</summary>
+      <returns>A <see cref="T:StringCollection" /> value that contains the names of the collector types that are installed.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.IdentityKey">
+      <summary>Gets the identity key for the configuration store.</summary>
+      <returns>A Key object.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.MDWDatabase">
+      <summary>Gets or sets the name of the database that holds the collected data.</summary>
+      <returns>A <see cref="T:System.String" /> value that is the database name.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.MDWInstance">
+      <summary>Gets or sets the instance where the management data warehouse resides.</summary>
+      <returns>A <see cref="T:System.String" /> value that is the instance name.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcAlterable#ScriptAlter">
+      <summary>This method is for internal use only.</summary>
+      <returns>An ISfcScript object.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcDomain#GetExecutionEngine">
+      <summary>This method is for internal use only.</summary>
+      <returns>An ISfcExecutionEngine object.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcDomain#GetKey(Microsoft.SqlServer.Management.Sdk.Sfc.IUrnFragment)">
+      <summary>This method is for internal use only.</summary>
+      <returns>An <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.SfcKey" /> object.</returns>
+      <param name="urnFragment">A <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.IUrnFragment" /> value.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcDomain#GetType(System.String)">
+      <summary>This method is for internal use only.</summary>
+      <returns>A <see cref="T:System.Type" /> that is the collector type.</returns>
+      <param name="typeName">A <see cref="T:System.String" /> value that is the type name.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcDomain#GetTypeMetadata(System.String)">
+      <summary>This method is for internal use only.</summary>
+      <returns>An SfcTypeMetadata object specifying the metadata for the collector type.</returns>
+      <param name="typeName">A <see cref="T:System.String" /> value that is the collector type name.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcDomain#UseSfcStateManagement">
+      <summary>This property is for internal use only.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcDomainLite#DomainInstanceName">
+      <summary>This property is for internal use only.</summary>
+      <returns>A <see cref="T:System.String" /> value that specifies the instance name.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcDomainLite#DomainName">
+      <summary>This property is for internal use only.</summary>
+      <returns>A <see cref="T:System.String" /> value that specifies the domain name.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcDomainLite#GetLogicalVersion">
+      <summary>This property is for internal use only.</summary>
+      <returns>Returns a <see cref="T:System.Int32" /> value.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcHasConnection#ConnectionContext">
+      <summary>This property is for internal use only.</summary>
+      <returns>An SfcConnectionContext object.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcHasConnection#GetConnection">
+      <summary>Gets the server connection to the backing storage. Do not reference this member directly in your code. It supports the SQL Server infrastructure.</summary>
+      <returns>Returns <see cref="T:Microsoft.SqlServer.Management.Common.ISfcConnection" />.  An ISfcConnection object that contains the server connection.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcHasConnection#GetConnection(Microsoft.SqlServer.Management.Sdk.Sfc.SfcObjectQueryMode)">
+      <summary>Gets the server connection to the backing storage that supports the specified query processing mode.</summary>
+      <returns>Returns <see cref="T:Microsoft.SqlServer.Management.Common.ISfcConnection" />. An ISfcConnection object that contains the server connection.</returns>
+      <param name="activeQueriesMode">An SfcObjectQueryMode value that specifies the query processing mode.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcHasConnection#SetConnection(Microsoft.SqlServer.Management.Common.ISfcConnection)">
+      <summary>Sets the active connection for the domain root. Do not reference this member directly in your code. It supports the SQL Server infrastructure.</summary>
+      <param name="connection">An ISfcConnection object that represents the connection to use.</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Key">
+      <summary>The <see cref="T:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Key" /> class inherits from DomainRootKey and is used for identification key operations.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Key.#ctor">
+      <summary>Instantiates an instance of the <see cref="T:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Key" /> class.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Key.Equals(Microsoft.SqlServer.Management.Sdk.Sfc.SfcKey)">
+      <summary>Instantiates an instance of the <see cref="T:" /><see cref="Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Key.Equals" /> class that is used for boolean operations.</summary>
+      <returns>A <see cref="T:Key" /> object that is the key.</returns>
+      <param name="key">A <see cref="T:Key" /> object.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Key.Equals(System.Object)">
+      <summary>Performs a boolean operation to determine if the object passed as a parameter is a key.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that returns TRUE if the object is a key.</returns>
+      <param name="obj">A <see cref="T:System.Object" /> object.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Key.Equals(System.Object,System.Object)">
+      <summary>Does a boolean comparison of two objects passed as parameters.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that returns TRUE when both objects are not NULL AND are the same.</returns>
+      <param name="obj1">A <see cref="T:System.Object" /></param>
+      <param name="obj2">A <see cref="T:System.Object" /></param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Key.GetHashCode">
+      <summary>Gets the hash code for a key.</summary>
+      <returns>A <see cref="T:System.Int" /> that is the hash code.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Key.GetUrnFragment">
+      <summary>Gets a urn fragment.</summary>
+      <returns>A <see cref="T:System.String" /> value that is the urn fragment.</returns>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Key.name">
+      <summary>Configures the name property for the key.</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Key.Name">
+      <summary>Gets or sets the key name.</summary>
+      <returns>A <see cref="T:System.String" /> value that is the key name.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Key.op_Equality(Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Key,Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Key)">
+      <summary>Does a boolean equality comparision between the left hand side of the key and the right hand side of the key.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that returns TRUE when:both sides are not NULL AND lhs is a key AND rhs is a key AND the keys are equal</returns>
+      <param name="lhs">A <see cref="T:Key" /> object containing the left hand side of the key.</param>
+      <param name="rhs">A <see cref="T:Key" /> object containing the right hand side of the key.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Key.op_Equality(Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Key,System.Object)">
+      <summary>Does a boolean equality comparision between the object sent as a parameter and the left hand side of the key.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that returns TRUE when:both sides are NULLboth sides are not NULL AND lhs is a key AND the keys are equal</returns>
+      <param name="lhs">A <see cref="T:Key" /> object containing the left hand side of the key.</param>
+      <param name="obj">A <see cref="T:Key" /> object for comparison.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Key.op_Equality(System.Object,Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Key)">
+      <summary>Does a boolean equality comparision between the object sent as a parameter and the right hand side of the key.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that returns TRUE when:both sides are NULLboth sides are not NULL AND rhs is a key AND the keys are equal</returns>
+      <param name="obj">A <see cref="T:Key" /> object for comparison.</param>
+      <param name="rhs">A <see cref="T:Key" /> object containing the right hand side of the key.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Key.op_Inequality(Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Key,Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Key)">
+      <summary>Does a boolean inequality comparision between the left hand side of the key and the right hand side of the key.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that returns TRUE when:one side is NULL OR lhs is a not key OR rhs is not a key AND the keys are not equal</returns>
+      <param name="lhs">A <see cref="T:Key" /> object containing the left hand side of the key.</param>
+      <param name="rhs">A <see cref="T:Key" /> object containing the right hand side of the key.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Key.op_Inequality(Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Key,System.Object)">
+      <summary>Does a boolean inequality comparision between the object sent as a parameter and the left hand side of the key.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that returns TRUE when:both sides are not NULLboth sides are NULL AND lhs is a not a key AND the keys are not equal</returns>
+      <param name="lhs">A <see cref="T:Key" /> object containing the left hand side of the key.</param>
+      <param name="obj">A <see cref="T:Key" /> object for comparison.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Key.op_Inequality(System.Object,Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Key)">
+      <summary>Does a boolean inequality comparision between the object sent as a parameter and the right hand side of the key.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that returns TRUE when:both sides are not NULLboth sides are NULL AND lhs is a not a key AND the keys are not equal</returns>
+      <param name="obj">A <see cref="T:Key" /> object for comparison.</param>
+      <param name="rhs">A <see cref="T:Key" /> object containing the right hand side of the key.</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Collector.CollectorException">
+      <summary>The <see cref="T:Microsoft.SqlServer.Management.Collector.CollectorException" /> class is the base class for all data collector exceptions.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectorException.#ctor">
+      <summary>Creates an instance of the exception.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectorException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>Instantiates an instance of the <see cref="T:Microsoft.SqlServer.Management.Collector.CollectorException" /> class, passing <paramref name="info" /> and <paramref name="context" /> as parameters.</summary>
+      <param name="info">
+        <see cref="T:System.Runtime.Serialization.SerializationInfo" />
+      </param>
+      <param name="context">
+        <see cref="T:System.Runtime.Serialization.StreamingContext" />
+      </param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectorException.#ctor(System.String)">
+      <summary>The error message.</summary>
+      <param name="message">
+        <see cref="T:System.String" /> value that is the error message.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectorException.#ctor(System.String,System.Exception)">
+      <summary>Creates a collection object and passes the error message and the exception that is causing the error.</summary>
+      <param name="message">A <see cref="T:System.String" /> value that is the error message.</param>
+      <param name="innerException">A <see cref="T:System.Exception" /> that is a throwing exception.</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectorException.HelpLink">
+      <summary>Gets the link to the Microsoft SQL Server help web site based on the exception.</summary>
+      <returns>A <see cref="T:System.String" /> value that contains the url for the Microsoft SQL Server help web site.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectorException.ProdVer">
+      <summary>Gets the version of the product.</summary>
+      <returns>A <see cref="T:System.String" /> value that contains product version information.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectorException.SetHelpContext(System.String)">
+      <summary>Sets the help context based on the resource string that is passed.</summary>
+      <returns>An object of type <see cref="T:Microsoft.SqlServer.Management.Collector.CollectorException" /> containing data collector exceptions.</returns>
+      <param name="resource">A <see cref="T:System:String" /> value that is the name of the resource that threw the exception.</param>
+    </member>
+  </members>
+</doc>

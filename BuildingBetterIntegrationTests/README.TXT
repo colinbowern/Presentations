@@ -1,14 +1,13 @@
 TodoMVC Development Notes
 =========================
 To develop on this project you will need the following items:
-* Visual Studio 2010 Premium Service Pack 1 or later
-  - Set the AssemblyReferenceResolveMode property in C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\FxCopCmd.exe.config to StrongNameIgnoringVersion to fix an assembly resolution issue with Ninject (http://davesbox.com/archive/2008/06/14/reference-resolutions-changes-in-code-analysis-and-fxcop-part-2.aspx)
+* Visual Studio 2012 Premium or later
+  - Set the AssemblyReferenceResolveMode property in C:\Program Files (x86)\Microsoft Visual Studio 11.0\Team Tools\Static Analysis Tools\FxCop\FxCopCmd.exe.config to StrongNameIgnoringVersion to fix an assembly resolution issue with Ninject (http://davesbox.com/archive/2008/06/14/reference-resolutions-changes-in-code-analysis-and-fxcop-part-2.aspx)
 * IIS Express
 * SQL Server Developer Edition
   - Reporting Services installed to /ReportManager and /ReportServer endpoints
   - Your user account has administrative access to the server
 * SQL Server LocalDB
-  - KB2544514: Update 4.0.2 for Microsoft .NET Framework 4 – Runtime Update        
 * ReSharper with XUnit Test Runner (see XUnitContrib project)
 
 Creating a Development Server Certificate

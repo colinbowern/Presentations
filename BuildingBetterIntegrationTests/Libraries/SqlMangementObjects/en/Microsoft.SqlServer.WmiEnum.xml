@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+	<assembly>
+		<name>Microsoft.SqlServer.WmiEnum</name>
+	</assembly>
+	<members>
+		<member name="T:Microsoft.SqlServer.Management.Smo.Wmi.ManagedServiceType">
+			<summary>The <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ManagedServiceType"></see> enumeration contains values that are used to specify the types of service that can be managed with Windows Management Instrumentation (WMI).</summary>
+		</member>
+		<member name="F:Microsoft.SqlServer.Management.Smo.Wmi.ManagedServiceType.AnalysisServer">
+			<summary>Analysis Services.</summary>
+		</member>
+		<member name="F:Microsoft.SqlServer.Management.Smo.Wmi.ManagedServiceType.NotificationServer">
+			<summary>SQL Server Notification Server.</summary>
+		</member>
+		<member name="F:Microsoft.SqlServer.Management.Smo.Wmi.ManagedServiceType.ReportServer">
+			<summary>Report Server Windows service. </summary>
+		</member>
+		<member name="F:Microsoft.SqlServer.Management.Smo.Wmi.ManagedServiceType.Search">
+			<summary>Microsoft Search service.</summary>
+		</member>
+		<member name="F:Microsoft.SqlServer.Management.Smo.Wmi.ManagedServiceType.SqlAgent">
+			<summary>SQL  Server Agent service.</summary>
+		</member>
+		<member name="F:Microsoft.SqlServer.Management.Smo.Wmi.ManagedServiceType.SqlBrowser">
+			<summary>SQL Server Browser service.</summary>
+		</member>
+		<member name="F:Microsoft.SqlServer.Management.Smo.Wmi.ManagedServiceType.SqlServer">
+			<summary>SQL Server service.</summary>
+		</member>
+		<member name="F:Microsoft.SqlServer.Management.Smo.Wmi.ManagedServiceType.SqlServerIntegrationService">
+			<summary>SQL Server Integration service.</summary>
+		</member>
+		<member name="T:Microsoft.SqlServer.Management.Smo.Wmi.PropertyType">
+			<summary>The <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.PropertyType"></see> enumeration contains values that are used to specify the data type of property for any of the Windows Management Instrumentation (WMI) property objects.</summary>
+		</member>
+		<member name="F:Microsoft.SqlServer.Management.Smo.Wmi.PropertyType.FlagValue">
+			<summary>The property is a flag value.</summary>
+		</member>
+		<member name="F:Microsoft.SqlServer.Management.Smo.Wmi.PropertyType.NumericValue">
+			<summary>The property is a numeric value.</summary>
+		</member>
+		<member name="F:Microsoft.SqlServer.Management.Smo.Wmi.PropertyType.StringValue">
+			<summary>The property is a string value.</summary>
+		</member>
+		<member name="T:Microsoft.SqlServer.Management.Smo.Wmi.ServiceErrorControl">
+			<summary>The <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServiceErrorControl"></see> enumeration contains values that are used to specify the severity of the error if the SQL Server service fails to start during startup.</summary>
+		</member>
+		<member name="F:Microsoft.SqlServer.Management.Smo.Wmi.ServiceErrorControl.Critical">
+			<summary>The error is critical.</summary>
+		</member>
+		<member name="F:Microsoft.SqlServer.Management.Smo.Wmi.ServiceErrorControl.Ignore">
+			<summary>The error is ignored.</summary>
+		</member>
+		<member name="F:Microsoft.SqlServer.Management.Smo.Wmi.ServiceErrorControl.Normal">
+			<summary>The error is normal severity.</summary>
+		</member>
+		<member name="F:Microsoft.SqlServer.Management.Smo.Wmi.ServiceErrorControl.Severe">
+			<summary>The error is severe.</summary>
+		</member>
+		<member name="F:Microsoft.SqlServer.Management.Smo.Wmi.ServiceErrorControl.Unknown">
+			<summary>The status of the error is unknown.</summary>
+		</member>
+		<member name="T:Microsoft.SqlServer.Management.Smo.Wmi.ServiceStartMode">
+			<summary>The <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServiceStartMode"></see> enumeration contains values that are used to specify the method used to start the SQL Server service.</summary>
+		</member>
+		<member name="F:Microsoft.SqlServer.Management.Smo.Wmi.ServiceStartMode.Auto">
+			<summary>The SQL Server service is started automatically.</summary>
+		</member>
+		<member name="F:Microsoft.SqlServer.Management.Smo.Wmi.ServiceStartMode.Boot">
+			<summary>The SQL Server service is started when the system is started.</summary>
+		</member>
+		<member name="F:Microsoft.SqlServer.Management.Smo.Wmi.ServiceStartMode.Disabled">
+			<summary>The SQL Server service is disabled and cannot be started.</summary>
+		</member>
+		<member name="F:Microsoft.SqlServer.Management.Smo.Wmi.ServiceStartMode.Manual">
+			<summary>The SQL Server service is started manually.</summary>
+		</member>
+		<member name="F:Microsoft.SqlServer.Management.Smo.Wmi.ServiceStartMode.System">
+			<summary>The SQL Server service is started by the system.</summary>
+		</member>
+		<member name="T:Microsoft.SqlServer.Management.Smo.Wmi.ServiceState">
+			<summary>The <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServiceState"></see> enumeration contains values that are used to specify the status of the SQL Server service.</summary>
+		</member>
+		<member name="F:Microsoft.SqlServer.Management.Smo.Wmi.ServiceState.ContinuePending">
+			<summary>The SQL Server service is waiting to continue.</summary>
+		</member>
+		<member name="F:Microsoft.SqlServer.Management.Smo.Wmi.ServiceState.Paused">
+			<summary>The SQL Server service is paused.</summary>
+		</member>
+		<member name="F:Microsoft.SqlServer.Management.Smo.Wmi.ServiceState.PausePending">
+			<summary>The SQL Server service is waiting to pause.</summary>
+		</member>
+		<member name="F:Microsoft.SqlServer.Management.Smo.Wmi.ServiceState.Running">
+			<summary>The SQL Server service is running.</summary>
+		</member>
+		<member name="F:Microsoft.SqlServer.Management.Smo.Wmi.ServiceState.StartPending">
+			<summary>The SQL Server service is waiting to start.</summary>
+		</member>
+		<member name="F:Microsoft.SqlServer.Management.Smo.Wmi.ServiceState.Stopped">
+			<summary>The SQL Server service is stopped.</summary>
+		</member>
+		<member name="F:Microsoft.SqlServer.Management.Smo.Wmi.ServiceState.StopPending">
+			<summary>The SQL Server service is waiting to stop.</summary>
+		</member>
+		<member name="F:Microsoft.SqlServer.Management.Smo.Wmi.ServiceState.Unknown">
+			<summary>The status of the SQL Server service is unknown.</summary>
+		</member>
+	</members>
+</doc>

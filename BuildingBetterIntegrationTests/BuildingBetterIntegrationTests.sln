@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Source\Core\Core.csproj", "{95469139-2DBB-4534-8570-60346781BCAF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegrationTests", "Source\IntegrationTests\IntegrationTests.csproj", "{47A3B83C-94A0-4C6A-9464-3B1354CF41F5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{95469139-2DBB-4534-8570-60346781BCAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95469139-2DBB-4534-8570-60346781BCAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95469139-2DBB-4534-8570-60346781BCAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95469139-2DBB-4534-8570-60346781BCAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47A3B83C-94A0-4C6A-9464-3B1354CF41F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47A3B83C-94A0-4C6A-9464-3B1354CF41F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47A3B83C-94A0-4C6A-9464-3B1354CF41F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47A3B83C-94A0-4C6A-9464-3B1354CF41F5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

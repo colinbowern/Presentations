@@ -1,0 +1,1265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.SqlServer.Management.Utility</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.SqlServer.Management.Utility.Computer">
+      <summary>The <see cref="T:Microsoft.SqlServer.Management.Utility.Computer" /> type represents a computer in the Utility domain, including certain physical properties that indicate the computer's performance and loading. </summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Computer.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Management.Utility.Computer" /> class.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Computer.#ctor(Microsoft.SqlServer.Management.Utility.Utility,System.String)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Management.Utility.Computer" /> class with the specified parent Utility object and the specified name.</summary>
+      <param name="parent">A <see cref="T:Microsoft.SqlServer.Management.Utility.Utility" /> object value that is the parent of the <see cref="T:Microsoft.SqlServer.Management.Utility.Computer" /> object. </param>
+      <param name="name">A <see cref="T:Server.String" /> value that specifies the name of the computer.</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Computer.CpuMaxClockSpeed">
+      <summary>Gets the maximum CPU clock speed.</summary>
+      <returns>An <see cref="T:System.Int32" /> value that specifies the maximum clock speed.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Computer.CpuName">
+      <summary>Gets the CPU name.</summary>
+      <returns>A string value that contains the CPU name.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Computer.GetObjectFactory">
+      <summary>Gets the factory object used to create new instances.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.SfcObjectFactory" /> object that is used to create new instances.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Computer.ID">
+      <summary>Gets the ID value that uniquely identifies the computer.</summary>
+      <returns>A <see cref="T:System.Int32" /> value that specifies the ID value that uniquely identifies the computer. </returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Computer.IdentityKey">
+      <summary>Gets the key value that uniquely identifies the <see cref="T:Microsoft.SqlServer.Management.Utility.Computer" /> object.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Utility.Computer.Key" /> value that uniquely identifies the object. </returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Computer.IsClustered">
+      <summary>Gets the <see cref="T:System.Boolean" /> value that determines whether the computer is in a cluster.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that specifies whether the computer is in a cluster. If True, the computer is in a cluster. Otherwise, False. </returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Computer.Name">
+      <summary>Gets the name of the computer.</summary>
+      <returns>A <see cref="T:System.String" /> value that specifies the name of the computer. </returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Computer.Parent">
+      <summary>Gets the Utility object that is the parent of the <see cref="T:Microsoft.SqlServer.Management.Utility.Computer" /> object.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Utility.Utility" /> value that specifies the parent of the <see cref="T:Microsoft.SqlServer.Management.Utility.Computer" /> object. </returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Computer.ProcessorUtilization">
+      <summary>Gets the processor utilization in percentage points.</summary>
+      <returns>A <see cref="T:System.Double" /> value that specifies the processor utilization in percentage points. </returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Computer.Volumes">
+      <summary>Represents a collection of <see cref="T:Microsoft.SqlServer.Management.Utility.Volume" /> objects. </summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Utility.VolumneCollection" /> object that represents all the <see cref="T:Microsoft.SqlServer.Management.Utility.Volume" /> objects defined on the computer. </returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Utility.Computer.Key">
+      <summary>The <see cref="T:Microsoft.SqlServer.Management.Utility.Computer.Key" /> class represents the key that identifies the <see cref="T:Microsoft.SqlServer.Management.Utility.Computer" /> class.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Computer.Key.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Management.Utility.Computer.Key" /> class that has the specified name.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Computer.Key.#ctor(Microsoft.SqlServer.Management.Utility.Computer.Key)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Management.Utility.Computer.Key" /> class based on the specified key.</summary>
+      <param name="other">A <see cref="T:Microsoft.SqlServer.Management.Utility.Computer.Key" /> value that specifies the other key.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Computer.Key.#ctor(System.String)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Management.Utility.Computer.Key" /> class that has the specified name.</summary>
+      <param name="name">A <see cref="T:System.String" /> value that specifies the name of the key.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Computer.Key.Equals(Microsoft.SqlServer.Management.Sdk.Sfc.SfcKey)">
+      <summary>Determines whether the two specified objects are equal. </summary>
+      <returns>A <see cref="T:System.Boolean" /> value that specifies whether the specified key is equal to the referenced object key. If True, the key values are equal. Otherwise, False.</returns>
+      <param name="key">A <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.SfcKey" /> value that specifies one object.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Computer.Key.Equals(System.Object)">
+      <summary>Determines whether the specified object key is equal to the referenced string value. </summary>
+      <returns>A <see cref="T:System.Boolean" /> value that specifies whether the specified key is equal to the referenced object key. If True, the key values are equal. Otherwise, False.</returns>
+      <param name="obj">A <see cref="T:System.Object" /> value that specifies the object to compare.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Computer.Key.Equals(System.Object,System.Object)">
+      <summary>Determines whether the two specified objects are equal. </summary>
+      <returns>A <see cref="T:System.Boolean" /> value that specifies whether the specified key is equal to the referenced object key. If True, the key values are equal. Otherwise, False.</returns>
+      <param name="obj1">A <see cref="T:System.Object" /> value that specifies one object.</param>
+      <param name="obj2">A <see cref="T:System.Object" /> value that specifies another object.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Computer.Key.GetHashCode">
+      <summary>Gets the hash code for the object.</summary>
+      <returns>A <see cref="T:System.Int32" /> value that specifies the hash code.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Computer.Key.GetUrnFragment">
+      <summary>Gets the URN path partial string that represents the computer. </summary>
+      <returns>A <see cref="T:System.String" /> value that contains the URN fragment.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Computer.Key.Name">
+      <summary>Gets the name of the <see cref="T:Microsoft.SqlServer.Management.Utility.Computer" /> key.</summary>
+      <returns>A <see cref="T:System.String" /> value that specifies the name of the key value.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Computer.Key.op_Equality(Microsoft.SqlServer.Management.Utility.Computer.Key,Microsoft.SqlServer.Management.Utility.Computer.Key)">
+      <summary>Determines whether the specified object key is equal to the second object key.</summary>
+      <returns>A <see cref="T:System.Boolean" /> which is true if the two operands are equal, otherwise false.</returns>
+      <param name="leftOperand">A <see cref="T:Microsoft.SqlServer.Management.Utility.Computer.Key" /> to compare for equality.</param>
+      <param name="rightOperand">A second <see cref="T:Microsoft.SqlServer.Management.Utility.Computer.Key" /> to compare for equality.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Computer.Key.op_Equality(Microsoft.SqlServer.Management.Utility.Computer.Key,System.Object)">
+      <summary>Determines whether the specified object key is equal to the object.</summary>
+      <returns>A <see cref="T:System.Boolean" /> which is true if the two operands are equal, otherwise false.</returns>
+      <param name="leftOperand">A <see cref="T:Microsoft.SqlServer.Management.Utility.Computer.Key" /> to compare for equality.</param>
+      <param name="obj">A <see cref="T:System.Object" /> to compare for equality.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Computer.Key.op_Equality(System.Object,Microsoft.SqlServer.Management.Utility.Computer.Key)">
+      <summary>Determines whether the specified object is equal to the object key.</summary>
+      <returns>A <see cref="T:System.Boolean" /> which is true if the two operands are equal, otherwise false.</returns>
+      <param name="obj">A <see cref="T:System.Object" /> to compare for equality.</param>
+      <param name="rightOperand">A <see cref="T:Microsoft.SqlServer.Management.Utility.Computer.Key" /> to compare for equality.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Computer.Key.op_Inequality(Microsoft.SqlServer.Management.Utility.Computer.Key,Microsoft.SqlServer.Management.Utility.Computer.Key)">
+      <summary>Determines whether the specified object key is not equal to the second object key.</summary>
+      <returns>A <see cref="T:System.Boolean" /> which is true if the two operands are not equal, otherwise false.</returns>
+      <param name="leftOperand">A <see cref="T:Microsoft.SqlServer.Management.Utility.Computer.Key" /> to compare.</param>
+      <param name="rightOperand">A second <see cref="T:Microsoft.SqlServer.Management.Utility.Computer.Key" /> to compare.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Computer.Key.op_Inequality(Microsoft.SqlServer.Management.Utility.Computer.Key,System.Object)">
+      <summary>Determines whether the specified object key is not equal to the object.</summary>
+      <returns>A <see cref="T:System.Boolean" /> which is true if the two operands are not equal, otherwise false.</returns>
+      <param name="leftOperand">A <see cref="T:Microsoft.SqlServer.Management.Utility.Computer.Key" /> to compare.</param>
+      <param name="obj">A <see cref="T:System.Object" /> to compare.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Computer.Key.op_Inequality(System.Object,Microsoft.SqlServer.Management.Utility.Computer.Key)">
+      <summary>Determines whether the specified object is  not equal to the object key.</summary>
+      <returns>A <see cref="T:System.Boolean" /> which is true if the two operands are not equal, otherwise false.</returns>
+      <param name="obj">A <see cref="T:System.Object" /> to compare.</param>
+      <param name="rightOperand">A <see cref="T:Microsoft.SqlServer.Management.Utility.Computer.Key" /> to compare.</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Utility.ComputerCollection">
+      <summary>The <see cref="T:Microsoft.SqlServer.Management.Utility.ComputerCollection" /> class represents a collection of <see cref="T:Microsoft.SqlServer.Management.Utility.Computer" /> objects that represent all the computers managed in the Utility domain. </summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.ComputerCollection.#ctor(Microsoft.SqlServer.Management.Utility.Utility)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Management.Utility.ComputerCollection" /> class on the specified Utility domain.</summary>
+      <param name="parent">A <see cref="T:Microsoft.SqlServer.Management.Utility.Utility" /> object that specifies the parent of the collection.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.ComputerCollection.#ctor(Microsoft.SqlServer.Management.Utility.Utility,System.Collections.Generic.IComparer{System.String})">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Management.Utility.CollectionCollection" /> class on the specified Utility domain and with the specified comparer interface.</summary>
+      <param name="parent">A <see cref="T:Microsoft.SqlServer.Management.Utility.Utility" /> object that specifies the parent of the collection.</param>
+      <param name="customComparer">A <see cref="T:System.Collections.Generic.IComparer&lt;string&gt;" /> object that specifies the custom comparer interface.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.ComputerCollection.Contains(System.String)">
+      <summary>Determines whether the referenced collection contains the specified string.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that determines whether the collection contains the specified string. If True, it contains the string.</returns>
+      <param name="name">A <see cref="T:System.String" /> value that specifies the computer name to search for in the collection.</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ComputerCollection.Item(System.String)">
+      <summary>Returns the object with the specified name in the collection</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Utility.Computer" /> object value that represents the computer with the specified name.</returns>
+      <param name="name">A <see cref="T:System.String" /> value that specifies the name of the computer.</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Utility.DatabaseState">
+      <summary>Database state enumeration.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Utility.DatabaseState.Unknown">
+      <summary>Database is in an unknown state.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Utility.DatabaseState.Available">
+      <summary>Database is online.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Utility.DatabaseState.Unavailable">
+      <summary>Database is not online.</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Utility.DataFileAdapter">
+      <summary>The <see cref="T:Microsoft.SqlServer.Management.Utility.DataFileAdapter" /> type represents information about a data file. </summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.DataFileAdapter.#ctor(Microsoft.SqlServer.Management.Smo.DataFile)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Management.Utility.DataFileAdapter" /> class with the specified file.</summary>
+      <param name="file">A <see cref="T:Microsoft.SqlServer.Management.Smo.DataFile" /> object value that specifies the data file. </param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.DataFileAdapter.SpaceUtilization">
+      <summary>Gets the parent action sequence.</summary>
+      <returns>An <see cref="T:System.Int64" /> value that specifies the data file utilization in bytes. </returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Utility.DeployedDac">
+      <summary>The <see cref="T:Microsoft.SqlServer.Management.Utility.DeployedDac" /> type represents a database application structure, in the form of a DAC package that has been installed on to a computer running an instance of SQL Server. </summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.DeployedDac.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Management.Utility.DeployedDac" /> class.</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.DeployedDac.Collation">
+      <summary>Gets the collation used by the DAC database.</summary>
+      <returns>A <see cref="T:System.String" /> value that contains the collation information for the DAC database. </returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.DeployedDac.CompatibilityLevel">
+      <summary>Gets the compatibility level for the DAC database</summary>
+      <returns>A <see cref="T:System.String" /> value that specifies the compatibility level of the DAC database.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.DeployedDac.ComputerName">
+      <summary>Gets the name of the computer on which the DAC package was deployed.</summary>
+      <returns>A <see cref="T:System.String" /> value that specifies the name the computer on which the DAC package was deployed. </returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.DeployedDac.ComputerProcessorHealthState">
+      <summary>Gets the computer processor health state.</summary>
+      <returns>A <see cref="T:Microsoft.Sql.Management.Utility.HealthState" /> value that indicates the current health state of the computer processor.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.DeployedDac.ContainsOverUtilizedFileGroups">
+      <summary>Gets a value that indicates whether the deployed DAC contains an over utilized file groups.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that indicates whether the deployed DAC contains an over utilized file groups. If true, the deployed DAC contains an over utilized file groups. Otherwise, false.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.DeployedDac.ContainsOverUtilizedVolumes">
+      <summary>Gets a value that indicates whether the deployed DAC contains an over utilized volumes.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that indicates whether the deployed DAC contains an over utilized volumes. If true, the deployed DAC contains an over utilized volumes. Otherwise, false.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.DeployedDac.ContainsUnderUtilizedFileGroups">
+      <summary>Gets a value that indicates whether the deployed DAC contains an under utilized file groups.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that indicates whether the deployed DAC contains an under utilized file groups. If true, the deployed DAC contains an under utilized file groups. Otherwise, false.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.DeployedDac.ContainsUnderUtilizedVolumes">
+      <summary>Gets a value that indicates whether the deployed DAC contains an under utilized volumes.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that indicates whether the deployed DAC contains an under utilized volumes. If true, the deployed DAC contains an under utilized volumes. Otherwise, false.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.DeployedDac.CreateIdentityKey">
+      <summary>Creates an <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.SfcKey" /> object.</summary>
+      <returns>An an <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.SfcKey" /> object.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.DeployedDac.DacProcessorHealthState">
+      <summary>Gets the server instance processor health state.</summary>
+      <returns>A <see cref="T:Microsoft.Sql.Management.Utility.HealthState" /> value that indicates the current health state of the DAC processor.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.DeployedDac.DatabaseName">
+      <summary>Gets the name of the database that was deployed from the DAC package.</summary>
+      <returns>A <see cref="T:System.String" /> value that specifies the name of the database deployed from the DAC package. </returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.DeployedDac.DatabaseState">
+      <summary>Gets the state of the database that was deployed from the DAC package.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Utility.DatabaseState" /> object that represents the state of the database that was deployed from the DAC package.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.DeployedDac.DeployedDate">
+      <summary>Gets the time and date when the DAC package was deployed on the instance of SQL Server.</summary>
+      <returns>A <see cref="T:System.DateTime" /> value that specifies the cache directory where temporary files can be stored during deployment onto the instance of SQL Server. </returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.DeployedDac.Description">
+      <summary>Gets the textual description <see cref="T:Microsoft.SqlServer.Management.Utility.DeployedDac" /> object.</summary>
+      <returns>A <see cref="T:System.String" /> value that specifies the description of the <see cref="T:Microsoft.SqlServer.Management.Utility.DeployedDac" /> object. </returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.DeployedDac.EncryptionEnabled">
+      <summary>Gets a value that indicates whether the DAC database is encrypted.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that specifies whether encryption is enabled for the DAC database. If true, encryption is enabled. Otherwise, false.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.DeployedDac.FileSpaceHealthState">
+      <summary>Gets the file space health state.</summary>
+      <returns>A <see cref="T:Microsoft.Sql.Management.Utility.HealthState" /> value that indicates the current health state of the file space.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.DeployedDac.GetChildCollection(System.String)">
+      <summary>Throws a <see cref="T:Microsoft.SqlServer.Management.Utility.UtilityException" />. There is no such collection.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Utility.UtilityException" /> object.</returns>
+      <param name="elementType">A string value that specifies the element type.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.DeployedDac.GetObjectFactory">
+      <summary>Gets the factory object used to create new instances.</summary>
+      <returns>Returns <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.SfcObjectFactory" /> object that is used to create new instances.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.DeployedDac.Id">
+      <summary>Gets the ID value that uniquely identifies the <see cref="T:Microsoft.SqlServer.Management.Utility.DeployedDac" /> object.</summary>
+      <returns>A <see cref="T:System.Int32" /> value that specifies the ID value identifying the <see cref="T:Microsoft.SqlServer.Management.Utility.DeployedDac" /> object. </returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.DeployedDac.IsPolicyOverridden">
+      <summary>Gets a value that indicates whether any policy is overridden for this object.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that indicates whether one of the <see cref="T:Microsoft.SqlServer.Management.Utility.DeployedDac" /> policies has been overridden. If true, a policy has been overridden. Otherwise, false.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.DeployedDac.LastReportedTime">
+      <summary>Gets the last time reported by the deployed DAC.</summary>
+      <returns>A <see cref="T:System.DateTimeOffset" /> value that specifies the time and date last reported.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.DeployedDac.Name">
+      <summary>Gets the name of the deployed DAC.</summary>
+      <returns>A <see cref="T:System.String" /> value that specifies the name of the deployed DAC. </returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.DeployedDac.Parent">
+      <summary>Gets the SQL Server Utility object that is the parent of the <see cref="T:Microsoft.SqlServer.Management.Utility.DeployedDac" /> object.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Utility.Utility" /> value that specifies the parent of the <see cref="T:Microsoft.SqlServer.Management.Utility.DeployedDac" /> object. </returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.DeployedDac.ProcessorUtilization">
+      <summary>Gets the processor utilization in percentage points.</summary>
+      <returns>A <see cref="T:System.Double" /> value that specifies the processor utilization in percentage points. </returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.DeployedDac.RecoveryModel">
+      <summary>Gets a value indicating which type of recovery model is used by the DAC database.</summary>
+      <returns>A <see cref="T:System.Int" /> value that indicates which recovery model will be used. This value corresponds to one of the values enumerated by the <see cref="T:Microsoft.Sql.Management.Smo.RecoveryModel" /> enumeration. Full = 1, BulkLogged = 2, and Simple = 3.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.DeployedDac.ServerInstanceName">
+      <summary>Gets the name of the instance of SQL Server on which the DAC package has been deployed in the form of ServerName\InstanceName.</summary>
+      <returns>A <see cref="T:System.String" /> value that specifies the name of the SQL Server instance running on the computer on which the DAC package has been deployed in the form of ServerName\InstanceName. </returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.DeployedDac.Trustworthy">
+      <summary>Gets a value that indicates whether the instance of SQL Server trusts the <see cref="T:Microsoft.SqlServer.Management.Utility.DeployedDac" /> and the contents within it.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that indicates whether the <see cref="T:Microsoft.SqlServer.Management.Utility.DeployedDac" /> is trusted. If true, the <see cref="T:Microsoft.SqlServer.Management.Utility.DeployedDac" /> is trusted. Otherwise, false.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.DeployedDac.VolumeSpaceHealthState">
+      <summary>Gets the volume space health state.</summary>
+      <returns>A <see cref="T:Microsoft.Sql.Management.Utility.HealthState" /> value that indicates the current health state of the volume space.</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Utility.DeployedDac.Key">
+      <summary>The <see cref="T:Microsoft.SqlServer.Management.Utility.DeployedDac.Key" /> class represents the key that identifies the <see cref="T:Microsoft.SqlServer.Management.Utility.DeployedDac" /> class.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.DeployedDac.Key.#ctor(System.String,System.String)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Management.Utility.DeployedDac.Key" /> class that has the specified name.</summary>
+      <param name="keyName">A <see cref="T:System.String" /> value that specifies the name of the key.</param>
+      <param name="keyServerInstanceName">A <see cref="T:System.String" /> value that specifies the name of the server instance associated with the key.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.DeployedDac.Key.Equals(Microsoft.SqlServer.Management.Sdk.Sfc.SfcKey)">
+      <summary>Determines whether the two specified objects are equal. </summary>
+      <returns>A <see cref="T:System.Boolean" /> value that specifies whether the specified key is equal to the referenced object key. If True, the key values are equal. Otherwise, False.</returns>
+      <param name="key">A <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.SfcKey" /> value that specifies one object.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.DeployedDac.Key.Equals(System.Object)">
+      <summary>Determines whether the specified object key is equal to the referenced string value. </summary>
+      <returns>A <see cref="T:System.Boolean" /> value that specifies whether the specified key is equal to the referenced object key. If True, the key values are equal. Otherwise, False.</returns>
+      <param name="obj">A <see cref="T:System.Object" /> value that specifies the object to compare.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.DeployedDac.Key.GetHashCode">
+      <summary>Gets the hash code for the object.</summary>
+      <returns>A <see cref="T:System.Int32" /> value that specifies the hash code.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.DeployedDac.Key.GetUrnFragment">
+      <summary>Gets the URN path partial string that represents the deployed DAC. </summary>
+      <returns>A <see cref="T:System.String" /> value that contains the URN fragment.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.DeployedDac.Key.Name">
+      <summary>Gets the name of the <see cref="T:Microsoft.SqlServer.Management.Utility.DeployedDac" /> key.</summary>
+      <returns>A <see cref="T:System.String" /> value that specifies the name of the key value.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.DeployedDac.Key.ServerInstanceName">
+      <summary>Gets the name of the server instance associated with the key.</summary>
+      <returns>A <see cref="T:System.String" /> value that specifies the name of the server instance associated with the key.</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Utility.DeployedDacCollection">
+      <summary>The <see cref="T:Microsoft.SqlServer.Management.Smo.DeployedDacCollection" /> class represents a collection of <see cref="T:Microsoft.SqlServer.Management.Smo.DeployedDac" /> objects that represent all the deployed DACs in the Utility domain. </summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.DeployedDacCollection.#ctor(Microsoft.SqlServer.Management.Utility.Utility)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Management.Utility.DeployedDacCollection" /> class on the specified imported object.</summary>
+      <param name="parent">A <see cref="T:Microsoft.SqlServer.Management.Utility.ImportedObject" /> object that specifies the parent of the collection.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.DeployedDacCollection.#ctor(Microsoft.SqlServer.Management.Utility.Utility,System.Collections.Generic.IComparer{System.String})">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Management.Utility.DeployedDacCollection" /> class on the specified imported object and with the specified comparer interface.</summary>
+      <param name="parent">A <see cref="T:Microsoft.SqlServer.Management.Utility.ImportedObject" /> object that specifies the parent of the collection.</param>
+      <param name="customComparer">A <see cref="T:System.Collections.Generic.IComparer&lt;string&gt;" /> object that specifies the custom comparer interface.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.DeployedDacCollection.Contains(System.String,System.String)">
+      <summary>Determines whether the referenced collection contains the specified string.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that determines whether the collection contains the specified string. If True, it contains the string. Otherwise, False.</returns>
+      <param name="name">A <see cref="T:System.String" /> value that specifies the deployed DAC name to search for in the collection.</param>
+      <param name="serverInstanceName">A <see cref="T:System.String" /> value that specifies the name of the server instance.</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.DeployedDacCollection.Item(System.String,System.String)">
+      <summary>Returns the object with the specified name in the collection</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Utility.DeployedDac" /> object value that represents the deployed DAC with the specified name.</returns>
+      <param name="name">A <see cref="T:System.String" /> value that specifies the name of the computer.</param>
+      <param name="serverInstanceName">A <see cref="T:System.String" /> value that specifies the name of the server instance.</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Utility.HealthState">
+      <summary>The <see cref="T:Microsoft.SqlServer.Management.Utility.HealthState" /> enumeration contains values that are used to specify the state of the deployment.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Utility.HealthState.None">
+      <summary>The state of the operation is unspecified.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Utility.HealthState.Steady">
+      <summary>The operation is in a steady state.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Utility.HealthState.Warning">
+      <summary>The operation is in a warning state.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Utility.HealthState.Critical">
+      <summary>The operation is in a critical state.</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Utility.IDataFilePerformanceFacet">
+      <summary>The <see cref="T:Microsoft.SqlServer.Management.Fabric.IDataFilePerformanceFacet" /> is an interface that represents the data file performance. This is used in determining performance based policies.</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.IDataFilePerformanceFacet.SpaceUtilization">
+      <summary>Gets the space used by the file in bytes.</summary>
+      <returns>A <see cref="T:System.Int64" /> value that specifies the space used in bytes.</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Utility.ILogFilePerformanceFacet">
+      <summary>The <see cref="T:Microsoft.SqlServer.Management.Fabric.ILogFilePerformanceFacet" /> is an interface that represents the log file performance. This is used in determining performance-based policies.</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ILogFilePerformanceFacet.SpaceUtilization">
+      <summary>Gets the space utilization of the log file.</summary>
+      <returns>A <see cref="T:System.Double" /> value that specifies the log file space utilization </returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Utility.LogFileAdapter">
+      <summary>The <see cref="T:Microsoft.SqlServer.Management.Utility.LogFileAdapter" /> interface describes the extended properties that must be implemented by log file adapters.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.LogFileAdapter.#ctor(Microsoft.SqlServer.Management.Smo.LogFile)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Management.Utility.LogFileAdapter" /> class for the specified log file.</summary>
+      <param name="file">A <see cref="T:Microsoft.SqlServer.Management.Smo.LogFile" /> value that specifies the log file that will be associated with the adapter.</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.LogFileAdapter.SpaceUtilization">
+      <summary>Gets the percentage amount of space used by the log file adapter.</summary>
+      <returns>A <see cref="T:System.Double" /> value that indicates the percentage of space used.</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Utility.ManagedInstance">
+      <summary>The <see cref="T:Microsoft.SqlServer.Management.Utility.ManagedInstance" /> type represents an instance of SQL Server that is managed by the SQL Server Utility services to control policy, and deployments.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.ManagedInstance.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Management.Utility.ManagedInstance" /> class.</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.AgentProxyAccount">
+      <summary>Gets the SQL Server Agent proxy account used to run scheduled jobs on the instance of SQL Server.</summary>
+      <returns>A <see cref="T:System.String" /> value that specifies the name of the SQL Server Agent proxy account. </returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.BackupDirectory">
+      <summary>Gets the backup directory for the server instance.</summary>
+      <returns>A <see cref="T:System.String" /> value that specifies the server's backup directory.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.CacheDirectory">
+      <summary>Gets the cache directory where temporary files can be stored during deployment onto the instance of SQL Server.</summary>
+      <returns>A <see cref="T:System.String" /> value that specifies the cache directory where temporary files can be stored during deployment onto the instance of SQL Server. </returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.Collation">
+      <summary>Gets the collation for the server instance.</summary>
+      <returns>A <see cref="T:System.String" /> value that specifies the collation used by the managed instance.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.ComputerNamePhysicalNetBIOS">
+      <summary>Gives the physical NetBIOS for the server instance.</summary>
+      <returns>A <see cref="T:System.String" /> value containing the physical NetBIOS information for the server instance.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.ComputerProcessorHealthState">
+      <summary>Gets the computer processor health state.</summary>
+      <returns>A <see cref="T:Microsoft.Sql.Management.Utility.HealthState" /> value that indicates the current health state of the computer processor.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.ContainsOverUtilizedDatabases">
+      <summary>Gets a value that indicates whether the server instance contains an over utilized databases.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that indicates whether the server instance contains an over utilized databases. If True, the server instance contains an over utilized databases. Otherwise, False.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.ContainsOverUtilizedVolumes">
+      <summary>Gets a value that indicates whether the server instance contains an over utilized volumes.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that indicates whether the server instance contains an over utilized volumes. If True, the server instance contains an over utilized volumes. Otherwise, False.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.ContainsUnderUtilizedDatabases">
+      <summary>Gets a value that indicates whether the server instance contains an under utilized databases.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that indicates whether the server instance contains an under utilized databases. If True, the server instance contains an under utilized databases. Otherwise, False.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.ContainsUnderUtilizedVolumes">
+      <summary>Gets a value that indicates whether the server instance contains an under utilized volumes.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that indicates whether the server instance contains an under utilized volumes. If True, the server instance contains an under utilized volumes. Otherwise, False.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.CpuMaxClockSpeed">
+      <summary>Gets the maximum clock speed of the CPU.</summary>
+      <returns>Gets an <see cref="T:System.Int32" /> value that contains the maximum clock speed of the CPU.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.CpuName">
+      <summary>Gets the name of the CPU.</summary>
+      <returns>A string value that contains the name of the CPU.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.ManagedInstance.CreateIdentityKey">
+      <summary>Creates an <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.SfcKey" /> object.</summary>
+      <returns>An <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.SfcKey" /> object.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.DateCreated">
+      <summary>Gets the time and date when the <see cref="T:Microsoft.SqlServer.Management.Utility.ManagedInstance" /> object was created.</summary>
+      <returns>A <see cref="T:System.DateTime" /> system value that specifies the date and time when the <see cref="T:Microsoft.SqlServer.Management.Utility.ManagedInstance" /> object was created. </returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.Edition">
+      <summary>Gets the edition of the instance of SQL Server.</summary>
+      <returns>A <see cref="T:System.String" /> value that specifies the edition of the SQL Server instance.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.EngineEdition">
+      <summary>Gets the engine edition for the instance of SQL Server.</summary>
+      <returns>A <see cref="T:System.Int32" /> value that specifies the engine edition. </returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.FileSpaceHealthState">
+      <summary>Gets the file space health state.</summary>
+      <returns>A <see cref="T:Microsoft.Sql.Management.Utility.HealthState" /> value that indicates the current health state of the file space.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.ManagedInstance.GetChildCollection(System.String)">
+      <summary>Throws a <see cref="T:Microsoft.SqlServer.Management.Utility.UtilityException" />. There is no such collection.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Utility.UtilityException" /> object.</returns>
+      <param name="elementType">A string value that specifies the element type.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.ManagedInstance.GetObjectFactory">
+      <summary>Gets the factory object used to create new instances.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.SfcObjectFactory" /> object that is used to create new instances.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.ID">
+      <summary>Gets ID value that uniquely identifies the managed instance of SQL Server.</summary>
+      <returns>A <see cref="T:System.Int32" /> value that specifies the ID value that uniquely identifies the managed instance. </returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.IdentityKey">
+      <summary>Gets the key value that identifies the managed instance.</summary>
+      <returns>An <see cref="T:Microsoft.SqlServer.Management.Utility.managedInstance.Key" /> value that specifies the key value that identifies the managed instance.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.InstanceName">
+      <summary>Gets the name of the instance of SQL Server.</summary>
+      <returns>A <see cref="T:System.String" /> value that specifies the name of the instance of SQL Server. </returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.IsCaseSensitive">
+      <summary>Gets a value that indicates whether the server instance is case-sensitive.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that indicates whether the server instance is case-sensitive. If True, the server instance is case-sensitive. Otherwise, False.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.IsClustered">
+      <summary>Gets a value that indicates whether the server instance is part of a clustered server.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that indicates whether the server instance is part of a cluster. If True, the server instance is clustered. Otherwise, False.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.IsPolicyOverridden">
+      <summary>Gets a value that indicates whether any of the server instance policies have been overridden.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that indicates whether the server instance policies have been overridden. If True, the server instance has overridden policies. Otherwise, False.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.Language">
+      <summary>Gets the language used by the managed instance of SQL Server.</summary>
+      <returns>A string value that specifies the language.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.LastReportedTime">
+      <summary>Gets the latest reported time for the properties of the server instance object.</summary>
+      <returns>A <see cref="T:System.DateTime" /> value that specifies the date and time when the properties of the server instance were last reported. </returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.ManagementState">
+      <summary>Gets the current state of instance of SQL Server with regard to being managed by the SQL Server Utility service.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Utility.ManagedState" /> value that specifies the management state of the instance of SQL Server. </returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.ManagedInstance.Microsoft#SqlServer#Management#Common#ICreatable#Create">
+      <summary>Tests whether the state is managed and creates a server and connection if in the managed state.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.ManagedInstance.Microsoft#SqlServer#Management#Common#IDroppable#Drop">
+      <summary>Tests whether state is managed and drops the instance if it is managed.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.ManagedInstance.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcCreatable#ScriptCreate">
+      <summary>Creates an <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.ISfcScript" /> object.</summary>
+      <returns>An <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.ISfcScript" /> object.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.ManagedInstance.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcDroppable#ScriptDrop">
+      <summary>Drops an <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.ISfcScript" /> object.</summary>
+      <returns>An <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.ISfcScript" /> object.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.Name">
+      <summary>Gets or sets the name of the managed instance.</summary>
+      <returns>A <see cref="T:System.String" /> value that specifies the name of the managed instance. </returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.NetName">
+      <summary>Gets the NetBIOS name of the network on which the server instance is running.</summary>
+      <returns>A <see cref="T:System.String" /> value that specifies the NetBIOS name of the server instance network.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.OSVersion">
+      <summary>Gets the operating system version of the managed instance of SQL Server.</summary>
+      <returns>A string value that specifies the operating system version.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.Parent">
+      <summary>Gets or sets the Utility object that is the parent of the <see cref="T:Microsoft.SqlServer.Management.Utility.ManagedInstance" /> object.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Utility.Utility" /> value that specifies the parent of the ManagedInstance object. </returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.PhysicalMemory">
+      <summary>Gets the physical memory of the managed instance of SQL Server.</summary>
+      <returns>An <see cref="T:System.Int32" /> that contains the managed instance of SQL Server.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.ManagedInstance.PostCreate(System.Object)">
+      <summary>Sets the ID property of the base type to the execution result.</summary>
+      <param name="executionResult">A <see cref="T:System.Object" /> that contains the result of the create action.</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.Processors">
+      <summary>Gets the number of processors for the managed instance of SQL Server.</summary>
+      <returns>An <see cref="T:System.Int32" /> that contains the number of processors for the managed instance of SQL Server.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.ProductLevel">
+      <summary>Gets the product level of the server instance.</summary>
+      <returns>A <see cref="T:System.String" /> value that specifies the level of the server instance version. </returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.ManagedInstance.Remove(Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection)">
+      <summary>Gets the parent <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection" /> object.</summary>
+      <param name="sqlStoreConnection">A <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection" /> object.</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.ServerProcessorHealthState">
+      <summary>Gets the server instance processor health state.</summary>
+      <returns>A <see cref="T:Microsoft.Sql.Management.Utility.HealthState" /> value that indicates the current health state of the server instance processor.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.ServerType">
+      <summary>Gets the type of the server instance.</summary>
+      <returns>An <see cref="T:System.Int32" /> value that specifies the server type. The <see cref="T:System.Int32" /> values correspond to the members of the <see cref="T:Microsoft.SqlServerm.Management.Smo.ServerType" /> enumeration.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.ServerUrn">
+      <summary>Gets the uniform resource name (URN) of the server instance.</summary>
+      <returns>A <see cref="T:System.String" /> containing the server's URN.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.Version">
+      <summary>Specifies the version of the server instance.</summary>
+      <returns>A <see cref="T:System.String" /> containing the version of the server instance.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.VolumeSpaceHealthState">
+      <summary>Gets the volume space health state.</summary>
+      <returns>A <see cref="T:Microsoft.Sql.Management.Utility.HealthState" /> value that indicates the current health state of the server instance volume space.</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Utility.ManagedInstance.Key">
+      <summary>The <see cref="T:Microsoft.SqlServer.Management.Utility.ManagedInstance.Key" /> class represents the key that identifies the <see cref="T:Microsoft.SqlServer.Management.Utility.ManagedInstance" /> class.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.ManagedInstance.Key.#ctor(System.String)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Management.Utility.ManagedInstance.Key" /> class that has the specified name.</summary>
+      <param name="managedInstanceName">A <see cref="T:System.String" /> value that specifies the name of the key.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.ManagedInstance.Key.GetUrnFragment">
+      <summary>Gets the URN path partial string that represents the managed instance. </summary>
+      <returns>A <see cref="T:System.String" /> value that contains the URN fragment.</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Utility.ManagedInstanceCollection">
+      <summary>Represents a collection of managed instances of in the Utility.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.ManagedInstanceCollection.#ctor(Microsoft.SqlServer.Management.Utility.Utility)">
+      <summary>Creates a new <see cref="T:Microsoft.SqlServer.Management.Utility.ManagedInstanceCollection" /> instance with the specified parent <see cref="T:Microsoft.SqlServer.Management.Utility" />.</summary>
+      <param name="parent">Specifies the <see cref="T:Microsoft.SqlServer.Management.Utility" /> object that is the parent of the <see cref="T:Microsoft.SqlServer.Management.Utility.ManagedInstanceCollection" /></param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.ManagedInstanceCollection.#ctor(Microsoft.SqlServer.Management.Utility.Utility,System.Collections.Generic.IComparer{System.String})">
+      <summary>Creates a new <see cref="T:Microsoft.SqlServer.Management.Utility.ManagedInstanceCollection" /> instance with the specified parent <see cref="T:Microsoft.SqlServer.Management.Utility" /> and custom object comparer object.</summary>
+      <param name="parent">Specifies the <see cref="T:Microsoft.SqlServer.Management.Utility" /> object that is the parent of the <see cref="T:Microsoft.SqlServer.Management.Utility.ManagedInstanceCollection" /></param>
+      <param name="customComparer">Contains an object implementing the <see cref="T:System.Collections.Generic.IComparer`1" /> interface that is used to compare managed instances within the collection. </param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.ManagedInstanceCollection.Contains(System.String)">
+      <summary>Returns a value indicating whether the collection contains the managed instance with the specified name.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that indicates whether the specified managed instance is present in the collection. If true, the instance is present. Otherwise, false.</returns>
+      <param name="name">A <see cref="T:System.String" /> value that specifies the name of the managed instance to check</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstanceCollection.Item(System.String)">
+      <summary>Returns the managed instance with the specified name from the <see cref="T:Microsoft.SqlServer.Management.Utility.ManagedInstanceCollection" />.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Utility.ManagedInstance" /> object with the specified name. If the object with the specified name is not part of the collection, this method will return null.</returns>
+      <param name="name">A <see cref="T:System.String" /> value that specifies the name of the managed instance to get from the collection.</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Utility.ManagementState">
+      <summary>Enumerates the possible states of a <see cref="T:Microsoft.SqlServer.Management.Utility.ManagedInstance" /> object.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Utility.ManagementState.Unknown">
+      <summary>The state is unknown.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Utility.ManagementState.Discovered">
+      <summary>The instance has been detected.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Utility.ManagementState.Manageable">
+      <summary>The instance has been validated as manageable</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Utility.ManagementState.ManagementPending">
+      <summary>The operation to make the instance managed has been initiated, but is currently pending.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Utility.ManagementState.Managed">
+      <summary>The instance is managed.</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Utility.NameKey">
+      <summary>Identifies <see cref="N:Microsoft.SqlServer.Utility" /> objects that use a name property as an Sfc key.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.NameKey.#ctor(System.String)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Management.Utility.NameKey" /> class with the specified key name.</summary>
+      <param name="keyName">A <see cref="T:System.String" /> value that contains the key name.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.NameKey.Equals(Microsoft.SqlServer.Management.Sdk.Sfc.SfcKey)">
+      <summary>Determines whether the object represented by the current <see cref="T:Microsoft.SqlServer.Management.Utility.NameKey" /> is equal to the object represented by the specified key.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that indicates whether the two objects are equal. If True, both objects are equal; otherwise, False.</returns>
+      <param name="key">Specifies the SfcKey for the object to compare to the current <see cref="T:Microsoft.SqlServer.Management.Utility.NameKey" />.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.NameKey.Equals(System.Object)">
+      <summary>Determines whether the object represented by the <see cref="T:Microsoft.SqlServer.Management.Utility.NameKey" /> is equal to the specified <see cref="T:System.Object" />.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that indicates whether the two objects are equal. If True, both objects are equal; otherwise, False.</returns>
+      <param name="obj">A <see cref="T:System.Object" /> to compare against the object represented by the <see cref="T:Microsoft.SqlServer.Management.Utility.NameKey" />.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.NameKey.Equals(System.Object,System.Object)">
+      <summary>Determines whether the two specified objects are equal.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that indicates whether the two objects are equal. If True, both objects are equal; otherwise, False.</returns>
+      <param name="obj1">Specifies the first object to compare.</param>
+      <param name="obj2">Specifies the second object to compare.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.NameKey.GetHashCode">
+      <summary>Returns the hash code for this <see cref="T:Microsoft.SqlServer.Management.Utility.NameKey" />.</summary>
+      <returns>A 32-bit signed integer that contains the hash code for this <see cref="T:Microsoft.SqlServer.Management.Utility.NameKey" /> instance.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.NameKey.Name">
+      <summary>Gets the name of the object represented by the <see cref="T:Microsoft.SqlServer.Management.Utility.NameKey" />.</summary>
+      <returns>A <see cref="T:System.String" /> value that contains the key name.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.NameKey.op_Equality(Microsoft.SqlServer.Management.Utility.NameKey,Microsoft.SqlServer.Management.Utility.NameKey)">
+      <summary>Determines whether the objects represented by the two specified <see cref="T:Microsoft.SqlServer.Managment.Utility.NameKey" /> values are the same.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that is true if the two objects are the same, otherwise false.</returns>
+      <param name="leftOperand">A <see cref="T:Microsoft.SqlServer.Managment.Utility.NameKey" /> object that represents the first object to compare.</param>
+      <param name="rightOperand">A <see cref="T:Microsoft.SqlServer.Managment.Utility.NameKey" /> object that represents the second object to compare.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.NameKey.op_Equality(Microsoft.SqlServer.Management.Utility.NameKey,System.Object)">
+      <summary>Determines whether the object represented by the specified <see cref="T:Microsoft.SqlServer.Managment.Utility.NameKey" /> is the same as the specified <see cref="T:System.Object" />.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that is true if the two objects are the same, otherwise false.</returns>
+      <param name="leftOperand">A <see cref="T:Microsoft.SqlServer.Managment.Utility.NameKey" /> object that represents the first object to compare.</param>
+      <param name="obj">A <see cref="T:System.Object" /> that specifies the second object to compare.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.NameKey.op_Equality(System.Object,Microsoft.SqlServer.Management.Utility.NameKey)">
+      <summary>Determines whether the the specified <see cref="T:System.Object" /> is the same as the object represented by the specified <see cref="T:Microsoft.SqlServer.Managment.Utility.NameKey" /> .</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that is true if the two objects are the same, otherwise false.</returns>
+      <param name="obj">A <see cref="T:System.Object" /> that specifies the first object to compare.</param>
+      <param name="rightOperand">A <see cref="T:Microsoft.SqlServer.Managment.Utility.NameKey" /> object that represents the second object to compare.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.NameKey.op_Inequality(Microsoft.SqlServer.Management.Utility.NameKey,Microsoft.SqlServer.Management.Utility.NameKey)">
+      <summary>Determines whether the objects represented by the two specified <see cref="T:Microsoft.SqlServer.Managment.Utility.NameKey" /> values are different.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that is true if the two objects are different, otherwise false.</returns>
+      <param name="leftOperand">A <see cref="T:Microsoft.SqlServer.Managment.Utility.NameKey" /> object that represents the first object to compare.</param>
+      <param name="rightOperand">A <see cref="T:Microsoft.SqlServer.Managment.Utility.NameKey" /> object that represents the second object to compare.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.NameKey.op_Inequality(Microsoft.SqlServer.Management.Utility.NameKey,System.Object)">
+      <summary>Determines whether the object represented by the specified <see cref="T:Microsoft.SqlServer.Managment.Utility.NameKey" /> is different than the specified <see cref="T:System.Object" />.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that is true if the two objects are different, otherwise false.</returns>
+      <param name="leftOperand">A <see cref="T:Microsoft.SqlServer.Managment.Utility.NameKey" /> object that represents the first object to compare.</param>
+      <param name="obj">A <see cref="T:System.Object" /> that specifies the second object to compare.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.NameKey.op_Inequality(System.Object,Microsoft.SqlServer.Management.Utility.NameKey)">
+      <summary>Determines whether the the specified <see cref="T:System.Object" /> is different than the object represented by the specified <see cref="T:Microsoft.SqlServer.Managment.Utility.NameKey" /> .</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that is true if the two objects are different, otherwise false.</returns>
+      <param name="obj">A <see cref="T:System.Object" /> that specifies the first object to compare.</param>
+      <param name="rightOperand">A <see cref="T:Microsoft.SqlServer.Managment.Utility.NameKey" /> object that represents the second object to compare.</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Utility.Utility">
+      <summary>The <see cref="T:Microsoft.SqlServer.Management.Utility.Utility" /> class represents a utility control point (UCP) that defines methods and properties to manage one or more remote instances of SQL Server.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Utility.#ctor">
+      <summary>Initializes a new, default instance of the <see cref="T:Microsoft.SqlServer.Management.Utility.Utility" /> class.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Utility.#ctor(Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Management.Utility.Utility" /> class with the specified connection to SqlStore.</summary>
+      <param name="connection">A SqlStoreConnection object that contains connection information.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Utility.Alter">
+      <summary>Updates any <see cref="T:Microsoft.SqlServer.Management.Utility.Utility" /> property changes on the instance of SQL Server.</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.Computers">
+      <summary>Gets the collection of computers running managed instances.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Utility.ComputerCollection" /> value containing the collection of computers running managed instances of SQL Server.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Utility.Connect(Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection)">
+      <summary>Returns a <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection" /> object specified by <paramref name="connection" />.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection" /> object</returns>
+      <param name="connection">A <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection" /> object.</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.CreatedBy">
+      <summary>Gets the authentication credentials for the user who created the <see cref="T:Microsoft.SqlServer.Management.Utility.Utility" />.</summary>
+      <returns>A <see cref="T:System.String" /> value that contains the authentication credentials of the user who created the <see cref="T:Microsoft.SqlServer.Management.Utility.Utility" />.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Utility.CreateUtility(System.String,Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection)">
+      <summary>Creates a <see cref="T:Microsoft.SqlServer.Management.Utility.Utility" /> object.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Utility.Utility" /> object.</returns>
+      <param name="utilityName">A string value that specifies the name of the utility.</param>
+      <param name="sqlStoreConnection">A <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection" /> object.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Utility.CreateUtility(System.String,Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection,System.String,Microsoft.SqlServer.Common.SqlSecureString)">
+      <summary>Creates a <see cref="T:Microsoft.SqlServer.Management.Utility.Utility" /> object.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Utility.Utility" /> object.</returns>
+      <param name="utilityName">A string value that specifies the name of the utility.</param>
+      <param name="sqlStoreConnection">A <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection" /> object.</param>
+      <param name="agentProxyAccount">A string value that specifies the agent proxy account.</param>
+      <param name="agentProxyPassword">A <see cref="T:Microsoft.SqlServer.Common.SqlSecureString" /> object that contains the password.</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.DateCreated">
+      <summary>Gets the date and time when the SQL Server Utility was created.</summary>
+      <returns>A <see cref="T:System.DateTime" /> value that specifies the date and time when the SQL Server Utility was created.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.DeployedDacCount">
+      <summary>Gets the number of deployed DACs on the instances of SQL Server managed by the SQL Server Utility.</summary>
+      <returns>An <see cref="T:System.Int32" /> value that specifies how many DACs are deployed on the instances managed by this SQL Server Utility.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.DeployedDacHealthyCount">
+      <summary>Gets the number of healthy deployed DACs on the instances of SQL Server managed by the SQL Server Utility.</summary>
+      <returns>An <see cref="T:System.Int32" /> value that specifies how many healthy DACs are deployed on the instances managed by this SQL Server Utility.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.DeployedDacManagementPendingCount">
+      <summary>Gets the number of deployed DAC instances that have a pending management status.</summary>
+      <returns>An <see cref="T:System.Int32" /> value specifying the number of instances.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.DeployedDacOnOverutilizedComputerCount">
+      <summary>Gets the number of DACs that are deployed on managed instances run on overutilized computers.</summary>
+      <returns>An <see cref="T:System.Int32" /> value that specifies how many DACs are deployed on managed instances run on overutilized computers.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.DeployedDacOnUnderutilizedComputerCount">
+      <summary>Gets the number of DACs that are deployed on managed instances run on underutilized computers.</summary>
+      <returns>An <see cref="T:System.Int32" /> value that specifies how many DACs are deployed on managed instances run on underutilized computers.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.DeployedDacOverutilizedCount">
+      <summary>Gets the number of overutilized deployed DACs.</summary>
+      <returns>An <see cref="T:System.Int32" /> value specifying the number of instances.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.DeployedDacs">
+      <summary>Gets the number of DACs that are deployed on managed instances.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Utility.DeployedDacCollection" /> containing a list of the DACs that are deployed on managed instances.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.DeployedDacUnderutilizedCount">
+      <summary>Gets the number of deployed, underutilized DACs on all the managed instances.</summary>
+      <returns>An <see cref="T:System.Int32" /> value that specifies how many underutilized DACs are deployed on the managed instances.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.DeployedDacUnhealthyCount">
+      <summary>Gets the number of deployed unhealthy DACs on all the managed instances.</summary>
+      <returns>An <see cref="T:System.Int32" /> value that specifies how many unhealthy DACs are deployed on the managed instances.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.DeployedDacWithFilesOnOverutilizedVolumeCount">
+      <summary>Gets the number of deployed DACs that have files on overutilized volumes.</summary>
+      <returns>An <see cref="T:System.Int32" /> value that specifies how many deployed DACs have files on overutilized volumes.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.DeployedDacWithFilesOnUnderutilizedVolumeCount">
+      <summary>Gets the number of deployed DACs that have files on underutilized volumes.</summary>
+      <returns>An <see cref="T:System.Int32" /> value that specifies how many deployed DACs have files on underutilized volumes.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.DeployedDacWithOverutilizedFileCount">
+      <summary>Gets the number of deployed DACs that have overutilized files.</summary>
+      <returns>An <see cref="T:System.Int32" /> value that specifies how many deployed DACs have files on underutilized volumes.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.DeployedDacWithOverutilizedProcessorCount">
+      <summary>Gets the number of deployed DACs that operate over overutilized processors.</summary>
+      <returns>An <see cref="T:System.Int32" /> value that specifies how many deployed DACs operate over overutilized processors.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.DeployedDacWithUnderutilizedFileCount">
+      <summary>Gets the number of deployed DACs that have underutilized files.</summary>
+      <returns>An <see cref="T:System.Int32" /> value that specifies how many deployed DACs have underutilized files.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.DeployedDacWithUnderutilizedProcessorCount">
+      <summary>Gets the number of deployed DACs that operate on underutilized processors.</summary>
+      <returns>An <see cref="T:System.Int32" /> value that specifies how many deployed DACs operate on underutilized processors.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.Description">
+      <summary>Gets or sets a <see cref="T:System.String" /> describing the UCP.</summary>
+      <returns>A <see cref="T:System.String" /> value that contains a description of the UCP.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Utility.EnrollInstance(Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection)">
+      <summary>Enrolls a <see cref="T:Microsoft.SqlServer.Management.Utility.Utility" /> object with the connection supplied by <paramref name="sqlStoreConnection" /> parameter.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Utility.ManagedInstance" /> object.</returns>
+      <param name="sqlStoreConnection">A <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection" /> object.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Utility.EnrollInstance(Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection,System.String,Microsoft.SqlServer.Common.SqlSecureString)">
+      <summary>Enrolls a <see cref="T:Microsoft.SqlServer.Management.Utility.Utility" /> object with the connection supplied by <paramref name="sqlStoreConnection" /> parameter.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Utility.ManagedInstance" /> object.</returns>
+      <param name="sqlStoreConnection">A <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection" /> object.</param>
+      <param name="agentProxyAccount">A string value that specifies the agent proxy account.</param>
+      <param name="agentProxyPassword">A <see cref="T:Microsoft.SqlServer.Common.SqlSecureString" /> object that contains the password.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Utility.IsLoginUtilityReader(Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection)">
+      <summary>Validates whether the login used in the connection has the utility reader role. </summary>
+      <returns>A <see cref="T:System.Boolean" /> value indicating whether the login has the reader role. If true, the login has the role. Otherwise, false.</returns>
+      <param name="storeConnection">Specifies the connection.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Utility.IsUtilityControlPoint(Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection)">
+      <summary>Determines whether the specified server is a utility control point (UCP).</summary>
+      <returns>A <see cref="T:System.Boolean" /> value specifying whether the server is a UCP. If true, the server is a UCP. Otherwise, false.</returns>
+      <param name="storeConnection">A <see cref="T:Microsoft.SqlServer.Management.Dmf.SqlStoreConnection" /> that specifies the server to test.</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.ManagedInstanceCount">
+      <summary>Gets the number of instances of SQL Server managed by the UCP.</summary>
+      <returns>An <see cref="T:System.Int32" /> value specifying the number of instances of SQL Server that are managed by the UCP.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.ManagedInstanceHealthyCount">
+      <summary>Gets the number of healthy instances of SQL Server managed by the UCP.</summary>
+      <returns>An <see cref="T:System.Int32" /> value specifying the number of healthy instances of SQL Server that are managed by the UCP.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.ManagedInstanceManagementPendingCount">
+      <summary>Gets the number of instances of SQL Server that have a pending management status.</summary>
+      <returns>An <see cref="T:System.Int32" /> value specifying the number of instances.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.ManagedInstanceOnOverutilizedComputerCount">
+      <summary>Gets the number of managed instances of SQL Server that are running on overutilized computers.</summary>
+      <returns>An <see cref="T:System.Int32" /> value specifying the number of managed instances of SQL Server that are running on overutilized computers.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.ManagedInstanceOnUnderutilizedComputerCount">
+      <summary>Gets the number of managed instances of SQL Server that are running on underutilized computers.</summary>
+      <returns>An <see cref="T:System.Int32" /> value specifying the number of managed instances of SQL Server that are running on underutilized computers.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.ManagedInstanceOverutilizedCount">
+      <summary>Gets the number of overutilized managed instances of SQL Server.</summary>
+      <returns>An <see cref="T:System.Int32" /> value specifying the number of instances.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.ManagedInstances">
+      <summary>Gets a collection containing each instance of SQL Server managed by this <see cref="T:Microsoft.SqlServer.Management.Utility.Utility" />.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Utility.ManagedInstanceCollection" /> that contains all of the instances of SQL Server managed by this Utility.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.ManagedInstanceUnderutilizedCount">
+      <summary>Gets the number of managed instances of SQL Server that are underutilized.</summary>
+      <returns>An <see cref="T:System.Int32" /> value specifying the number of managed instances of SQL Server that are underutilized.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.ManagedInstanceUnhealthyCount">
+      <summary>Gets the number of unhealthy managed instances of SQL Server.</summary>
+      <returns>An <see cref="T:System.Int32" /> value specifying the number of unhealthy managed instances of SQL Server.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.ManagedInstanceWithFilesOnOverutilizedVolumeCount">
+      <summary>Gets the number of managed instances of SQL Server that have files on overutilized volumes.</summary>
+      <returns>An <see cref="T:System.Int32" /> value specifying the number of managed instances of SQL Server that have files on overutilized volumes.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.ManagedInstanceWithFilesOnUnderutilizedVolumeCount">
+      <summary>Gets the number of managed instances of SQL Server that have files on underutilized volumes.</summary>
+      <returns>An <see cref="T:System.Int32" /> value specifying the number of managed instances of SQL Server that have files on overutilized volumes.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.ManagedInstanceWithOverutilizedFileCount">
+      <summary>Gets the number of managed instances of SQL Server that have overutilized files.</summary>
+      <returns>An <see cref="T:System.Int32" /> value specifying the number of managed instances of SQL Server with overutilized files.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.ManagedInstanceWithOverutilizedProcessorCount">
+      <summary>Gets the number of managed instances of SQL Server that are executed on overutilized processors.</summary>
+      <returns>An <see cref="T:System.Int32" /> value specifying the number of managed instances of SQL Server that are executed on overutilized processors.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.ManagedInstanceWithUnderutilizedFileCount">
+      <summary>Gets the number of managed instances of SQL Server with underutilized files.</summary>
+      <returns>An <see cref="T:System.Int32" /> value specifying the number of managed instances of SQL Server with underutilized files.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.ManagedInstanceWithUnderutilizedProcessorCount">
+      <summary>Gets the number of managed instances of SQL Server that are executed on underutilized processors.</summary>
+      <returns>An <see cref="T:System.Int32" /> value specifying the number of managed instances of SQL Server that are executed on underutilized processors.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.MdwDatabaseName">
+      <summary>Gets or sets the name of the utility management data warehouse (UMDW) database.</summary>
+      <returns>A <see cref="T:System.String" /> value containing the name of the UMDW database.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.MdwRetentionLengthInDaysForDaysHistory">
+      <summary>Gets or sets the length, in days, that data will be retained in the Management Data Warehouse (MDW) history table for per-day entries.</summary>
+      <returns>An <see cref="T:System.Int32" /> value specifying the length, in days, that data will be retained in the Management Data Warehouse (MDW) history table.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.MdwRetentionLengthInDaysForHoursHistory">
+      <summary>Gets or sets the length in days that data will be retained in the utility management data warehouse (UMDW) history table for per-hour entries.</summary>
+      <returns>An <see cref="T:System.Int32" /> value specifying the length, in days, that data will be retained in the UMDW history table.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.MdwRetentionLengthInDaysForMinutesHistory">
+      <summary>Gets or sets the length in days that data will be retained in the utility management data warehouse (UMDW) history table for per-minute entries.</summary>
+      <returns>An <see cref="T:System.Int32" /> value specifying the length, in days, that data will be retained in the UMDW history table.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Utility.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcDomain#GetExecutionEngine">
+      <summary>Gets a new execution engine interface.</summary>
+      <returns>An <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.ISfcExecutionEngine" /> object.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Utility.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcDomain#GetKey(Microsoft.SqlServer.Management.Sdk.Sfc.IUrnFragment)">
+      <summary>Gets a new <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.SfcKey" /> object.</summary>
+      <returns>An <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.SfcKey" /> object.</returns>
+      <param name="urnFragment">An <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.IUrnFragment" /> object.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Utility.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcDomain#GetType(System.String)">
+      <summary>Gets the <see cref="T:System.Type" /> of the utility.</summary>
+      <returns>A <see cref="T:System.Type" /> object.</returns>
+      <param name="typeName">A string value that specifies the name of the type. </param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Utility.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcDomain#GetTypeMetadata(System.String)">
+      <summary>Gets the <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.SfcTypeMetadata" />.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.SfcTypeMetadata" /> object.</returns>
+      <param name="typeName">A string value that specifies the name of the type.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Utility.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcDomain#UseSfcStateManagement">
+      <summary>Returns True.</summary>
+      <returns>A Boolean value that is always True.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Utility.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcDomain2#GetUrnSkeletonsFromType(System.Type)">
+      <summary>Gets a list of string values that contain the URN skeletons.</summary>
+      <returns>A generic list of type string.</returns>
+      <param name="inputType">A <see cref="T:System.Type" /> object. </param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcDomainLite#DomainInstanceName">
+      <summary>Gets the domain instance name.</summary>
+      <returns>A string value that specified the domain instance name.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcDomainLite#DomainName">
+      <summary>Gets the domain name.</summary>
+      <returns>A string value that specifies the domain name.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Utility.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcDomainLite#GetLogicalVersion">
+      <summary>Gets an integer value that specifies the logical version.</summary>
+      <returns>An integer value. The method always returns 1.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcHasConnection#ConnectionContext">
+      <summary>Gets the <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.SfcConnectionContext" />.</summary>
+      <returns>An <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.SfcConnectionContext" /> object</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Utility.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcHasConnection#GetConnection">
+      <summary>Gets the <see cref="T:Microsoft.SqlServer.Management.Common.ISfcConnection" />.</summary>
+      <returns>An <see cref="T:Microsoft.SqlServer.Management.Common.ISfcConnection" /> object.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Utility.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcHasConnection#GetConnection(Microsoft.SqlServer.Management.Sdk.Sfc.SfcObjectQueryMode)">
+      <summary>Gets the <see cref="T:Microsoft.SqlServer.Management.Common.ISfcConnection" />.</summary>
+      <returns>An <see cref="T:Microsoft.SqlServer.Management.Common.ISfcConnection" /> object.</returns>
+      <param name="mode">An <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.SfcObjectQueryMode" /> object.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Utility.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcHasConnection#SetConnection(Microsoft.SqlServer.Management.Common.ISfcConnection)">
+      <summary>Sets the <see cref="T:Microsoft.SqlServer.Management.Common.ISfcConnection" />.</summary>
+      <param name="connection">The <see cref="T:Microsoft.SqlServer.Management.Common.ISfcConnection" /> object.</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.Name">
+      <summary>Gets the name of the connected SQL Store server.</summary>
+      <returns>A <see cref="T:System.String" /> containing the SQL Store server name.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.OverUtilizationOccurenceFrequency">
+      <summary>Gets or sets the occurrence frequency that is used to computer over-utilization health states over the specified trailing window.</summary>
+      <returns>An <see cref="T:System.Int32" /> value that specifies the occurrence frequency percentage that is used to computer over-utilization health states for volatile resources, such as the processor and I/O.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.OverUtilizationTrailingWindow">
+      <summary>Gets or sets the trailing window, in hours, used to compute health states.</summary>
+      <returns>An <see cref="T:System.Int32" /> value that specifies the length, in hours, of the trailing window that is used to compute over-utilization health states for volatile resources such as the processor or I/O.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.PolicyStore">
+      <summary>Gets the <see cref="T:Microsoft.SqlServer.Management.Dmf.PolicyStore" /> object that defines the policies of the SQL Store connection. </summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Dmf.PolicyStore" /> object that defines the policies of the SQL Store connection.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Utility.Refresh">
+      <summary>Refreshes the SQL Server Utility properties.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Utility.ScriptAlter">
+      <summary>Alters the properties of the base object if it has been changed.</summary>
+      <returns>The modified <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.ISfcScript" />.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.SqlStoreConnection">
+      <summary>Gets or sets the SQL Store connection </summary>
+      <returns>A <see cref="T:Microsoft.SQlServer.Management.Sdk.Sfc.SqlStoreConnection" /> value that contains the SQL Store connection information.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.TotalStorageCapacity">
+      <summary>Gets the storage capacity of the Utility.</summary>
+      <returns>A <see cref="T:System.Double" /> value that specifies the storage capacity, in megabytes, of the <see cref="T:Microsoft.SqlServer.Management.Utility.Utility" />.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.TotalStorageUtilization">
+      <summary>Gets the amount of SQL Server Utility storage that is currently used.</summary>
+      <returns>A <see cref="T:System.Double" /> value that specifies the amount of storage, in megabytes, that is currently used.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.UnderUtilizationOccurenceFrequency">
+      <summary>Gets or sets the occurrence frequency that is used to computer underutilization health states over the specified trailing window.</summary>
+      <returns>An <see cref="T:System.Int32" /> value that specifies the occurrence frequency percentage that is used to computer underutilization health states for volatile resources, such as the processor and I/O.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.UnderUtilizationTrailingWindow">
+      <summary>Gets or sets the trailing window, in hours, used to compute health states.</summary>
+      <returns>An <see cref="T:System.Int32" /> value that specifies the length, in hours, of the trailing window that is used to compute underutilization health states for volatile resources such as the processor or I/O.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.UtilityName">
+      <summary>Gets the name of the utility control point (UCP).</summary>
+      <returns>A <see cref="T:System.String" /> containing the UCP name.</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Utility.Utility.Key">
+      <summary>The <see cref="T:Microsoft.SqlServer.Management.Utility.Utility.Key" /> class defines methods and properties that are used to identify the <see cref="T:Microsoft.SqlServer.Management.Utility.Utility" /> within the System File Checker (SFC).</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Utility.Key.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Management.Utility.Utility.Key" /> class.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Utility.Key.Equals(Microsoft.SqlServer.Management.Sdk.Sfc.SfcKey)">
+      <summary>Determines the specified key is equal to the <see cref="T:Microsoft.SqlServer.Management.Utility.Utility.Key" />.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value indicating whether the specified object is equal to the <see cref="T:Microsoft.SqlServer.Management.Utility.Utility.Key" />. If the object is equal to the <see cref="T:Microsoft.SqlServer.Management.Utility.Utility.Key" />, this method returns true. Otherwise, false.</returns>
+      <param name="key">Specifies the key to compare to the current <see cref="T:Microsoft.SqlServer.Management.Utility.Utility.Key" /> instance.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Utility.Key.Equals(System.Object)">
+      <summary>Determines the specified object is equal to the <see cref="T:Microsoft.SqlServer.Management.Utility.Utility.Key" />.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value indicating whether the specified object is equal to the <see cref="T:Microsoft.SqlServer.Management.Utility.Utility.Key" />. If the object is equal to the <see cref="T:Microsoft.SqlServer.Management.Utility.Utility.Key" />, this method returns true. Otherwise, false.</returns>
+      <param name="obj">Specifies the <see cref="T:System.Object" /> to compare to the <see cref="T:Microsoft.SqlServer.Management.Utility.Utility.Key" />.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Utility.Key.Equals(System.Object,System.Object)">
+      <summary>Determines the specified objects are equal.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value indicating whether the two objects are equal. Returns true if the objects are the same and not null. Otherwise, false.</returns>
+      <param name="obj1">Specifies the first <see cref="T:System.Object" /> to be compared.</param>
+      <param name="obj2">Specifies the second <see cref="T:System.Object" /> to be compared.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Utility.Key.GetHashCode">
+      <summary>Returns the hash code for this instance.</summary>
+      <returns>A 32-bit signed integer that is the hash code for this instance.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Utility.Key.GetUrnFragment">
+      <summary>Identified for informational purposes only. Not supported. Future compatibility is not guaranteed.</summary>
+      <returns>A <see cref="T:System.String" /> containing an URN fragment.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Utility.Key.op_Equality(Microsoft.SqlServer.Management.Utility.Utility.Key,Microsoft.SqlServer.Management.Utility.Utility.Key)">
+      <summary>Determines whether the specified left and right-hand sides of the key are equal.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that indicates whether the two values are equal. Returns true if both parameters are null, or if both parameters are not null and are equal. Otherwise, false.</returns>
+      <param name="leftOperand">A <see cref="T:Microsoft.SqlServer.Management.Utility.Key" /> object containing the left-hand side of the key to compare.</param>
+      <param name="rightOperand">A <see cref="T:Microsoft.SqlServer.Management.Utility.Key" /> object containing the right-hand side of the key to compare.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Utility.Key.op_Equality(Microsoft.SqlServer.Management.Utility.Utility.Key,System.Object)">
+      <summary>Determines whether the specified object and the left-hand side of the key are equal.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that indicates whether the two values are equal. Returns true if both parameters are null, or if both parameters are not null and are equal. Otherwise, false.</returns>
+      <param name="leftOperand">A <see cref="T:Microsoft.SqlServer.Management.Utility.Key" /> object containing the left-hand side of the key to compare.</param>
+      <param name="obj">A <see cref="T:System.Object" /> containing the object to compare.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Utility.Key.op_Equality(System.Object,Microsoft.SqlServer.Management.Utility.Utility.Key)">
+      <summary>Determines whether the specified object and the right-hand side of the key are equal.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that indicates whether the two values are equal. Returns true if both parameters are null, or if both parameters are not null and are equal. Otherwise, false.</returns>
+      <param name="obj">A <see cref="T:System.Object" /> containing the object to compare.</param>
+      <param name="rightOperand">A <see cref="T:Microsoft.SqlServer.Management.Utility.Key" /> object containing the right-hand side of the key to compare.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Utility.Key.op_Inequality(Microsoft.SqlServer.Management.Utility.Utility.Key,Microsoft.SqlServer.Management.Utility.Utility.Key)">
+      <summary>Determines whether the specified right and left-hand sides of the key are unequal.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that indicates whether the two values are unequal. Returns true if one parameter is null and the other is not, or if the two parameters are unequal. Otherwise, false.</returns>
+      <param name="leftOperand">A <see cref="T:Microsoft.SqlServer.Management.Utility.Key" /> object containing the left-hand side of the key to compare.</param>
+      <param name="rightOperand">A <see cref="T:Microsoft.SqlServer.Management.Utility.Key" /> object containing the right-hand side of the key to compare.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Utility.Key.op_Inequality(Microsoft.SqlServer.Management.Utility.Utility.Key,System.Object)">
+      <summary>Determines whether the specified object and the left-hand side of the key are unequal.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that indicates whether the two values are unequal. Returns true if one parameter is null and the other is not, or if the two parameters are unequal. Otherwise, false.</returns>
+      <param name="leftOperand">A <see cref="T:Microsoft.SqlServer.Management.Utility.Key" /> object containing the left-hand side of the key to compare.</param>
+      <param name="obj">A <see cref="T:System.Object" /> containing the object to compare.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Utility.Key.op_Inequality(System.Object,Microsoft.SqlServer.Management.Utility.Utility.Key)">
+      <summary>Determines whether the specified object and the right-hand side of the key are unequal.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that indicates whether the two values are unequal. Returns true if one parameter is null and the other is not, or if the two parameters are unequal. Otherwise, false.</returns>
+      <param name="obj">A <see cref="T:System.Object" /> containing the object to compare.</param>
+      <param name="rightOperand">A <see cref="T:Microsoft.SqlServer.Management.Utility.Key" /> object containing the right-hand side of the key to compare.</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Utility.UtilityException">
+      <summary>The <see cref="T:Microsoft.SqlServer.Management.Utility.UtilityException" /> class defines methods and properties that record utility exception information. It is the base class for all utility exception types.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.UtilityException.#ctor">
+      <summary>Initializes a new, default instance of the <see cref="T:Microsoft.SqlServer.Management.Utility.UtilityException" /> class with the default property values.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.UtilityException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>Initializes a new, default instance of the <see cref="T:Microsoft.SqlServer.Management.Utility.UtilityException" /> class with serialized data.</summary>
+      <param name="info">Holds the serialized object data about the exception being thrown. </param>
+      <param name="context">Contains contextual information about the source or destination.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.UtilityException.#ctor(System.String)">
+      <summary>Initializes a new, default instance of the <see cref="T:Microsoft.SqlServer.Management.Utility.UtilityException" /> class with the specified error message.</summary>
+      <param name="message">Contains a message describing the error.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.UtilityException.#ctor(System.String,System.Exception)">
+      <summary>Initializes a new, default instance of the <see cref="T:Microsoft.SqlServer.Management.Utility.UtilityException" /> class with the specified error message and inner exception.</summary>
+      <param name="message">A <see cref="T:System.String" /> value that contains a message describing the error. </param>
+      <param name="innerException">An <see cref="T:System.Exception" /> that is the cause of the current exception, or a null reference if no inner exception is specified.</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.UtilityException.HelpLink">
+      <summary>Gets a link to the SQL Server Help Web site.</summary>
+      <returns>A <see cref="T:System.String" /> containing a link to the SQL Server Help Web site.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.UtilityException.Init">
+      <summary>Initializes the exception properties.</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.UtilityException.ProdVer">
+      <summary>Gets the product version of SQL Server.</summary>
+      <returns>A <see cref="T:System.String" /> value that specifies the product version.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.UtilityException.SetHelpContext(System.String)">
+      <summary>Defines the Help context identifier for the exception.</summary>
+      <returns>A string that represents the Help context.</returns>
+      <param name="resource">A <see cref="T:System.String" /> value that represents the Help context for the <see cref="T:Microsoft.SqlServer.Management.Utility.UtilityException" /> object.</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Utility.Volume">
+      <summary>The <see cref="T:Microsoft.SqlServer.Management.Fabric.Volume" /> type represents information about a volume or disk partition on a computer in the SQL Server Utility domain. </summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Volume.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Management.Fabric.Volume" /> class.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Volume.#ctor(Microsoft.SqlServer.Management.Utility.Computer,System.String)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Management.Fabric.Volume" /> class with the specified connection.</summary>
+      <param name="parent">A <see cref="T:Microsoft.SqlServer.Management.Fabric.Computer" /> value that specifies the computer that is the parent of the <see cref="T:Microsoft.SqlServer.Management.Fabric.Volume" /> object. </param>
+      <param name="name">A <see cref="T:System.String" /> value that specifies the name of the volume.</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Volume.DeviceId">
+      <summary>Gets the device Id of the volume instance.</summary>
+      <returns>A string value that contains the device Id.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Volume.GetObjectFactory">
+      <summary>Gets the factory object used to create new instances.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.SfcObjectFactory" /> object that is used to create new instances.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Volume.ID">
+      <summary>Gets the ID value that uniquely identifies the volume.</summary>
+      <returns>A <see cref="T:System.Int32" /> system value that is the ID value that uniquely identifies the volume.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Volume.IdentityKey">
+      <summary>Gets the <see cref="T:Microsoft.SqlServer.Management.Fabric.Voukme.Key" /> value that uniquely identifies the volume.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Fabric.Voukme.Key" /> system value that is the ID value that uniquely identifies the volume.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Volume.Name">
+      <summary>Gets the <see cref="T:System.String" /> value that specifies the name of the volume.</summary>
+      <returns>A <see cref="T:System.String" /> value that specifies the name of the volume.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Volume.Parent">
+      <summary>Gets the <see cref="T:Microsoft.SqlServer.Management.Fabric.Computer" /> object value that specifies is the parent of the <see cref="T:Microsoft.SqlServer.Management.Fabric.Volume" /> object.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Fabric.Computer" /> object value that is the parent of the <see cref="T:Microsoft.SqlServer.Management.Fabric.Volume" /> object.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Volume.TotalSpace">
+      <summary>Gets the total storage capacity of the volume in megabytes. </summary>
+      <returns>A <see cref="T:System.Double" /> object value that represents the total storage capacity of the volume in megabytes.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Volume.TotalSpaceUsed">
+      <summary>Gets the total used storage on the volume in megabytes. </summary>
+      <returns>A <see cref="T:System.Double" /> object value that represents the total used storage on the volume in megabytes.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Volume.TotalSpaceUtilization">
+      <summary>Gets the space used as a percentage of the total storage capacity of the volume. </summary>
+      <returns>A <see cref="T:System.Double" /> object value that specifies the spaced used as a percentage of the total storage capacity of the volume.</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Utility.Volume.Key">
+      <summary>The <see cref="T:Microsoft.SqlServer.Management.Utility.Volume.Key" /> class represents the key that identifies the <see cref="T:Microsoft.SqlServer.Management.Utility.Volume" /> class.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Volume.Key.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Management.Utility.Volume.Key" /> class that has the specified name.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Volume.Key.#ctor(Microsoft.SqlServer.Management.Utility.Volume.Key)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Management.Utility.Volume.Key" /> class based on the specified key.</summary>
+      <param name="other">A <see cref="T:Microsoft.SqlServer.Management.Utility.Volume.Key" /> value that specifies the other key.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Volume.Key.#ctor(System.String)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Management.Utility.Volume.Key" /> class that has the specified name.</summary>
+      <param name="name">A <see cref="T:System.String" /> value that specifies the name of the key.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Volume.Key.Equals(Microsoft.SqlServer.Management.Sdk.Sfc.SfcKey)">
+      <summary>Determines whether the specified object key is equal to the referenced object key.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that specifies whether the specified key is equal to the referenced object key. If True, the key values are equal. Otherwise, False.</returns>
+      <param name="key">A <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.SfcKey" /> value that specifies one object.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Volume.Key.Equals(System.Object)">
+      <summary>Determines whether the specified object key is equal to the referenced string value. </summary>
+      <returns>A <see cref="T:System.Boolean" /> value that specifies whether the specified key is equal to the referenced object key. If True, the key values are equal. Otherwise, False.</returns>
+      <param name="obj">A <see cref="T:System.Object" /> value that specifies the object to compare.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Volume.Key.Equals(System.Object,System.Object)">
+      <summary>Determines whether the two specified objects are equal. </summary>
+      <returns>A <see cref="T:System.Boolean" /> value that specifies whether the specified key is equal to the referenced object key. If True, the key values are equal. Otherwise, False.</returns>
+      <param name="obj1">A <see cref="T:System.Object" /> value that specifies one object.</param>
+      <param name="obj2">A <see cref="T:System.Object" /> value that specifies another object.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Volume.Key.GetHashCode">
+      <summary>Gets the hash code for the object.</summary>
+      <returns>A <see cref="T:System.Int32" /> value that specifies the hash code.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Volume.Key.GetUrnFragment">
+      <summary>Gets the URN path partial string that represents the volume. </summary>
+      <returns>A <see cref="T:System.String" /> value that contains the URN fragment.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Volume.Key.Name">
+      <summary>Gets the name of the <see cref="T:Microsoft.SqlServer.Management.Utility.Volume" /> key.</summary>
+      <returns>A <see cref="T:System.String" /> value that specifies the name of the key value.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Volume.Key.op_Equality(Microsoft.SqlServer.Management.Utility.Volume.Key,Microsoft.SqlServer.Management.Utility.Volume.Key)">
+      <summary>Determines whether the two key objects have the same value using specified operands.</summary>
+      <returns>true if the objects are the same; otherwise, false. </returns>
+      <param name="leftOperand">The operand object to the left of the equality operator.</param>
+      <param name="rightOperand">The operand object to the right of the equality operator.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Volume.Key.op_Equality(Microsoft.SqlServer.Management.Utility.Volume.Key,System.Object)">
+      <summary>Determines whether the specified object and the left-hand side of the key are equal.</summary>
+      <returns>true if the two objects are equal; otherwise, false.</returns>
+      <param name="leftOperand">A key object that contains the left-hand side of the key to compare.</param>
+      <param name="obj">An object that contains the object to compare.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Volume.Key.op_Equality(System.Object,Microsoft.SqlServer.Management.Utility.Volume.Key)">
+      <summary>Determines whether the specified object and the right-hand side of the key are equal.</summary>
+      <returns>true if the two objects are equal; otherwise, false.</returns>
+      <param name="obj">An object that contains the object to compare.</param>
+      <param name="rightOperand">A key object that contains the right-hand side of the key to compare.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Volume.Key.op_Inequality(Microsoft.SqlServer.Management.Utility.Volume.Key,Microsoft.SqlServer.Management.Utility.Volume.Key)">
+      <summary>Determines whether the two specified key objects have different values using specified operands.</summary>
+      <returns>true if the two objects are different; otherwise, false. </returns>
+      <param name="leftOperand">The operand object to the left of the inequality operator.</param>
+      <param name="rightOperand">The operand object to the right of the inequality operator.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Volume.Key.op_Inequality(Microsoft.SqlServer.Management.Utility.Volume.Key,System.Object)">
+      <summary>Determines whether the specified object and the left-hand side of the key are unequal.</summary>
+      <returns>true if the two objects are unequal; otherwise, false.</returns>
+      <param name="leftOperand">A key object that contains the left-hand side of the key to compare.</param>
+      <param name="obj">An object that contains the object to compare.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Volume.Key.op_Inequality(System.Object,Microsoft.SqlServer.Management.Utility.Volume.Key)">
+      <summary>Determines whether the specified object and the right-hand side of the key are unequal.</summary>
+      <returns>true if the two objects are unequal; otherwise, false.</returns>
+      <param name="obj">An object that contains the object to compare.</param>
+      <param name="rightOperand">A key object that contains the right-hand side of the key to compare.</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Utility.VolumeCollection">
+      <summary>The <see cref="T:Microsoft.SqlServer.Management.Utility.VolumeCollection" /> class represents a collection of <see cref="T:Microsoft.SqlServer.Management.Utility.Volume" /> objects that represent all the volumes on a computer. </summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.VolumeCollection.#ctor(Microsoft.SqlServer.Management.Utility.Computer)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Management.Utility.VolumeCollection" /> class on the specified computer.</summary>
+      <param name="parent">A <see cref="T:Microsoft.SqlServer.Management.Utility.Computer" /> object that specifies the parent of the collection.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.VolumeCollection.#ctor(Microsoft.SqlServer.Management.Utility.Computer,System.Collections.Generic.IComparer{System.String})">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Management.Utility.VolumeCollection" /> class on the specified computer and with the specified comparer interface.</summary>
+      <param name="parent">A <see cref="T:Microsoft.SqlServer.Management.Utility.Computer" /> object that specifies the parent of the collection.</param>
+      <param name="customComparer">A <see cref="T:System.Collections.Generic.IComparer&lt;string&gt;" /> object that specifies the custom comparer interface.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.VolumeCollection.Contains(System.String)">
+      <summary>Determines whether the referenced collection contains the specified string.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that determines whether the collection contains the specified string. If True, it contains the string.</returns>
+      <param name="name">A <see cref="T:System.String" /> value that specifies the volume name to search for in the collection.</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.VolumeCollection.Item(System.String)">
+      <summary>Returns the object with the specified name in the collection</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Utility.Volume" /> object that represents the volume with the specified name.</returns>
+      <param name="name">A <see cref="T:System.String" /> value that specifies the name of the computer.</param>
+    </member>
+  </members>
+</doc>

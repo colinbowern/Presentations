@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.SqlServer.DmfSqlClrWrapper</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.SqlServer.Management.Dmf.PolicyEvaluationWrapper">
+      <summary>Represents a wrapper class for the policy evaluation.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Dmf.PolicyEvaluationWrapper.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Management.Dmf.PolicyEvaluationWrapper" /> class.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Dmf.PolicyEvaluationWrapper.EvaluateAutomatedPolicy(System.String,System.Data.SqlTypes.SqlXml,System.Int64@)">
+      <summary>Evaluates an automated policy. </summary>
+      <returns>An <see cref="T:System.Int32" /> value that determines the success of the policy evaluation.</returns>
+      <param name="policy">A <see cref="T:System.String" /> value that specifies the policy to evaluate.</param>
+      <param name="eventData">A <see cref="T:Microsoft.Data.SqlTypes.SqlXml" /> system object value that contains the events generated when evaluating the policy.</param>
+      <param name="historyId">An <see cref="T:System.Int64" /> value that contains the evaluation history ID value.</param>
+    </member>
+  </members>
+</doc>

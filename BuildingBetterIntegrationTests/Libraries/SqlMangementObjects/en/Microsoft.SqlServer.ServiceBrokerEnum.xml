@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.SqlServer.ServiceBrokerEnum</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.SqlServer.Management.Smo.Broker.DialogEndPointState">
+      <summary>The <see cref="T:Microsoft.SqlServer.Management.Smo.Broker.DialogEndPointState" /> enumeration contains constant values that specify the state of the endpoint at the service.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.Broker.DialogEndPointState.Open">
+      <summary>The dialog is open and communicating normally.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.Broker.DialogEndPointState.OpenWait">
+      <summary>The endpoint has been created. It is waiting for a response from the opposite endpoint. </summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.Broker.DialogEndPointState.Disabled">
+      <summary>The endpoint has been disabled. </summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.Broker.DialogEndPointState.ClosingWait">
+      <summary>The endpoint is closed and inoperable. It is waiting for the opposite endpoint to close.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.Broker.DialogEndPointState.ErrorWait">
+      <summary>The endpoint has declared an error and is waiting for a response from the opposite endpoint. </summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.Broker.DialogEndPointState.ClosedWait">
+      <summary>The endpoint is closed and is waiting for replay timeout to expire.</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.Broker.DialogType">
+      <summary>The <see cref="T:Microsoft.SqlServer.Management.Smo.Broker.DialogType" /> enumeration contains constant values that specify the type of dialog between Service Broker endpoints.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.Broker.DialogType.Regular2Way">
+      <summary>A regular two-way dialog.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.Broker.DialogType.MonologPublish">
+      <summary>Identified for informational purposes only. Not supported. Future compatibility is not guaranteed.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.Broker.DialogType.MonologReceive">
+      <summary>Identified for informational purposes only. Not supported. Future compatibility is not guaranteed.</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.Broker.MessageSource">
+      <summary>The <see cref="T:Microsoft.SqlServer.Management.Smo.Broker.MessageSource" /> enumeration contains constant values that specify which endpoint sent the message.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.Broker.MessageSource.Initiator">
+      <summary>Specifies the message was sent by the dialog initiator endpoint.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.Broker.MessageSource.Target">
+      <summary>Specifies the message was sent by the target endpoint.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.Broker.MessageSource.InitiatorAndTarget">
+      <summary>Specifies the message was sent by either the initiator endpoint or the target endpoint.</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.Broker.MessageTypeValidation">
+      <summary>The <see cref="T:Microsoft.SqlServer.Management.Smo.Broker.MessageTypeValidation" /> enumeration contains constant values that specify the types of validation performed on the Service Broker message body.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.Broker.MessageTypeValidation.None">
+      <summary>Validation is not performed.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.Broker.MessageTypeValidation.XmlSchemaCollection">
+      <summary>The message body must contain XML that passes validation by the XML schema collection specified for the message type.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.Broker.MessageTypeValidation.Empty">
+      <summary>The message body must be NULL for this message type.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.Broker.MessageTypeValidation.Xml">
+      <summary>The message body must contain well-formed XML data.</summary>
+    </member>
+  </members>
+</doc>

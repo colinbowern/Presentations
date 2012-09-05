@@ -1,0 +1,774 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.SqlServer.SqlWmiManagement</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocol">
+      <summary>The <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocol" /> class represents a network protocol installed on a client instance that allows communication with the instance of SQL Server over a network.</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocol.DisplayName">
+      <summary>Gets or sets the display name of the referenced protocol.</summary>
+      <returns>A <see cref="T:System.String" /> value that specifies the display name of the protocol.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocol.IsEnabled">
+      <summary>Gets or sets the <see cref="T:System.Boolean" /> property that specifies whether the client network protocol is enabled or disabled.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that specifies whether the client network protocol is enabled or disabled.If True, the client network protocol is enabled.If False (default), the client network protocol is disabled.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocol.NetLibInfo">
+      <summary>Gets the network library information file for the referenced protocol.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.NetLibInfo" /> object value that specifies the network library information file.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocol.NetworkLibrary">
+      <summary>Gets the network library file name for the referenced protocol.</summary>
+      <returns>A <see cref="T:System.String" /> value that specifies the network library file name for the referenced protocol.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocol.Order">
+      <summary>Gets or sets the order in which the referenced protocol is listed and applied in relation to the other currently supported protocols.</summary>
+      <returns>An <see cref="T:System.Int32" /> value that specifies the order of the referenced protocol in the list of currently supported protocols.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocol.Parent">
+      <summary>Gets the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer" /> object that is the parent of the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocol" /> object.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer" /> object that is the parent of the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocol" /> object.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocol.Refresh">
+      <summary>Refreshes the objects and properties on the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocol" /> object.</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocolCollection">
+      <summary>The <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocolCollection" /> class represents a collection of <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocol" /> objects that represent all the client protocols defined on the parent object.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocolCollection.Contains(System.String)">
+      <summary>Checks whether the specified key value exists in the collection.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that specifies whether the key value exists in the collection.If True, the key value exists in the collection.If False, the key value does not exist in the collection.</returns>
+      <param name="key">A <see cref="T:System.String" /> value that specifies the key value to check the existence of in the collection.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocolCollection.CopyTo(Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocol[],System.Int32)">
+      <summary>Copies the collection objects to a one-dimensional array beginning at the index value specified.</summary>
+      <param name="array">An array of <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocol" /> objects.</param>
+      <param name="index">An <see cref="T:System.Int32" /> value that specifies the index position to start the copy.</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocolCollection.Count">
+      <summary>Gets the number of <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocol" /> objects in the referenced collection. </summary>
+      <returns>An int32 value that specifies the number of <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocol" /> objects in the referenced collection. </returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocolCollection.GetEnumerator">
+      <summary>Gets an enumerator that can iterate through the list of objects.</summary>
+      <returns>A <see cref="T:System.Collections.IEnumerator" /> object value that specifies that can be used to iterate through the collection.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocolCollection.Item(System.Int32)">
+      <summary>Gets a <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocol" /> object in the collection by index number.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocol" /> object value that represents the client protocol.</returns>
+      <param name="index">An <see cref="T:System.Int32" /> value that specifies the position of the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocol" /> object in the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocolCollection" /> collection.</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocolCollection.Item(System.String)">
+      <summary>Gets a <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocol" /> object in the collection by name.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocol" /> object value that represents the client protocol.</returns>
+      <param name="name">A <see cref="T:System.String" /> value that specifies the name of the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocol" /> object in the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocolCollection" /> collection.</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocolCollection.Parent">
+      <summary>Gets the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer" /> object that is the parent of the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocolCollection" /> object.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer" /> object that is the parent of the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocolCollection" /> object.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocolCollection.System#Collections#ICollection#CopyTo(System.Array,System.Int32)">
+      <summary>Copies the collection objects to a one-dimensional array beginning at the index value specified.</summary>
+      <param name="array">An array of <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocol" /> objects.</param>
+      <param name="index">An <see cref="T:System.Int32" /> value that specifies the index position to start the copy.</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocolProperty">
+      <summary>The <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocolProperty" /> class represents an attribute of a Windows Management Instrumentation (WMI) client protocol.</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocolPropertyCollection">
+      <summary>The <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocolPropertyCollection" /> class represents a collection of <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocolProperty" /> objects that represent all the attributes of the client protocol defined on the parent object.</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.Wmi.IPAddressProperty">
+      <summary>The <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.IPAddressProperty" /> class represents an attribute of a Windows Management Instrumentation (WMI) IP address.</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.Wmi.IPAddressPropertyCollection">
+      <summary>The <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.IPAddressPropertyCollection" /> class represents a collection of <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.IPAddressProperty" /> objects that represent all the attributes of the IP address defined on the parent object.</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer">
+      <summary>The <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer" /> class represents a Windows Management Instrumentation (WMI) installation on an instance of Microsoft SQL Server.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer" /> class.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer.#ctor(System.String)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer" /> class with the specified computer name.</summary>
+      <param name="machineName">A <see cref="T:System.String" /> value that specifies the name of the computer.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer.#ctor(System.String,System.String,System.String)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer" /> class with the specified computer name and the specified login and password.</summary>
+      <param name="machineName">A <see cref="T:System.String" /> value that specifies the name of the computer.</param>
+      <param name="userName">A <see cref="T:System.String" /> value that specifies the user name.</param>
+      <param name="password">A <see cref="T:System.String" /> value that specifies the password.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer.#ctor(System.String,System.String,System.String,Microsoft.SqlServer.Management.Smo.Wmi.ProviderArchitecture)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer" /> class with the specified computer name the specified login, password and the specified <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ProviderArchitecture" />.</summary>
+      <param name="machineName">A <see cref="T:System.String" /> value that specifies the name of the computer.</param>
+      <param name="userName">A <see cref="T:System.String" /> value that specifies the user name.</param>
+      <param name="password">A <see cref="T:System.String" /> value that specifies the password.</param>
+      <param name="providerArchitecture">The <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ProviderArchitecture" /> value that specifies the provider architecture type.</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer.ClientProtocols">
+      <summary>Represents a collection of <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocol" /> objects. Each <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocol" /> object represents a client protocol defined on the WMI installation.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocolCollection" /> object that represents all the client protocols defined on the WMI installation. </returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer.ConnectionSettings">
+      <summary>Gets the connection settings for the referenced WMI installation.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.WmiConnectionInfo" /> object that represents all the connection settings defined on the WMI installation. </returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer.GetSmoObject(Microsoft.SqlServer.Management.Sdk.Sfc.Urn)">
+      <summary>Gets the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject" /> object with the specified Uniform Resource Name (URN) address.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject" /> object that represents the object with the specified URN address.</returns>
+      <param name="urn">A <see cref="T:Microsoft.SqlServer.Management.Smo.Urn" /> object with the specified URN address.</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer.ServerAliases">
+      <summary>Represents a collection of <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerAlias" /> objects. Each <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerAlias" /> object represents a server alias defined on the WMI installation.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerAliasCollection" /> object that represents all the server aliases defined on the WMI installation. </returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer.ServerInstances">
+      <summary>Represents a collection of <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstance" /> objects. Each <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstance" /> object represents an instance of SQL Server defined on the WMI installation.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstanceCollection" /> object that represents all the server instances defined on the WMI installation. </returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer.Services">
+      <summary>Represents a collection of <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.Service" /> objects. Each <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.Service" /> object represents a SQL Server service defined on the WMI installation.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServiceCollection" /> object that represents all the SQL Server services defined on the WMI installation. </returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.Wmi.NetLibInfo">
+      <summary>The <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.NetLibInfo" /> object represents information regarding a network library file.</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.NetLibInfo.Date">
+      <summary>Gets the date and time when the network library file was created.</summary>
+      <returns>A <see cref="T:System.DateTime" /> system object value that specifies the date and time when the network library file was created.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.NetLibInfo.FileName">
+      <summary>Gets the name of the network library file.</summary>
+      <returns>A <see cref="T:System.String" /> value that specifies the name of the network library file.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.NetLibInfo.Size">
+      <summary>Gets the size of the network library file in bytes.</summary>
+      <returns>An <see cref="T:System.Int32" /> value that specifies the size of the network library file in bytes.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.NetLibInfo.Version">
+      <summary>Gets the version information for the network library file.</summary>
+      <returns>A <see cref="T:System.String" /> value that specifies version information for the network library file.</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolBase">
+      <summary>The <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolBase" /> class represents a protocol used on a SQL Server client or a server that is running SQL Server.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolBase.Alter">
+      <summary>Updates any <see cref="T:Microsoft.SqlServer.Management.Smo.Protocol" /> object property changes on an instance of SQL Server. </summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolBase.GetManagementObject">
+      <summary>Returns the object that manages the referenced protocol object.</summary>
+      <returns>A <see cref="T:System.Management.ManagementObject" /> system object value that specifies the management object.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolBase.ProtocolProperties">
+      <summary>Represents a collection of <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolProperty" /> objects. Each <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolProperty" /> object represents an attribute defined on the referenced protocol.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolPropertyCollection" /> object that represents all the attributes defined on the referenced protocol. </returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolBase.Refresh">
+      <summary>Refreshes the properties of the referenced object.</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolProperty">
+      <summary>The <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolProperty" /> class represents an attribute of a protocol on the Windows Management Instrumentation (WMI) installation.</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolPropertyCollection">
+      <summary>The <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolPropertyCollection" /> class represents a collection of <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolProperty" /> objects that represent all the attributes of the protocol defined on the parent object.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolPropertyCollection.Contains(System.String)">
+      <summary>Checks whether the specified key value exists in the collection.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that specifies whether the key value exists in the collection.If True, the key value exists in the collection.If False, the key value does not exist in the collection.</returns>
+      <param name="name">A <see cref="T:System.String" /> value that specifies the key value to check the existence of in the collection.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolPropertyCollection.CopyTo(Microsoft.SqlServer.Management.Smo.Wmi.ProtocolProperty[],System.Int32)">
+      <summary>Copies the collection objects to a one-dimensional array beginning at the index value specified.</summary>
+      <param name="array">An array of <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolProperty" /> objects.</param>
+      <param name="index">An <see cref="T:System.Int32" /> value that specifies the index position to start the copy.</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolPropertyCollection.Count">
+      <summary>Gets the number of <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolProperty" /> objects in the referenced collection. </summary>
+      <returns>An <see cref="T:System.Int32" /> value that specifies the number of <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolProperty" /> objects in the referenced collection. </returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolPropertyCollection.GetEnumerator">
+      <summary>Returns an <see cref="T:System.Collections.IEnumerator" /> interface that allows you to iterate through the objects in the collection.</summary>
+      <returns>An <see cref="T:System.Collections.IEnumerator" /> system interface for the referenced collection object.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolPropertyCollection.IsSynchronized">
+      <summary>Gets the <see cref="T:System.Boolean" /> property value that specifies whether access to the collection is synchronized and therefore thread-safe.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that specifies whether the access to the collection is synchronized. If True, access to the collection is synchronized. If False (false), access to the collection is not synchronized.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolPropertyCollection.Item(System.Int32)">
+      <summary>Gets a <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolPropertyCollection" /> object in the collection by index number.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolProperty" /> object value that represents an attribute of the protocol.</returns>
+      <param name="index">An <see cref="T:System.Int32" /> value that specifies the position of the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolProperty" /> object in the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolPropertyCollection" /> collection.</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolPropertyCollection.Item(System.String)">
+      <summary>Gets a <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolProperty" /> object in the collection by name.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolProperty" /> object value that represents an attribute of the protocol.</returns>
+      <param name="name">A <see cref="T:System.String" /> value that specifies the name of the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolProperty" /> object in the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolPropertyCollection" /> collection.</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolPropertyCollection.SyncRoot">
+      <summary>Gets an object that can be used to synchronize access to the collection.</summary>
+      <returns>An <see cref="T:System.Object" /> system object value that specifies the object that is used to synchronize access to the collection.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolPropertyCollection.System#Collections#ICollection#CopyTo(System.Array,System.Int32)">
+      <summary>Copies the collection objects to a one-dimensional array beginning at the index value specified.</summary>
+      <param name="array">An array of <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolProperty" /> objects.</param>
+      <param name="index">An <see cref="T:System.Int32" /> value that specifies the index position to start the copy.</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.Wmi.ProviderArchitecture">
+      <summary>The <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ProviderArchitecture" /> enumeration contains values that are used to specify the Windows Management Instrumentation (WMI) provider architecture. </summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.Wmi.ProviderArchitecture.Default">
+      <summary>Default architecture.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.Wmi.ProviderArchitecture.Use32bit">
+      <summary>The WMI provider architecture is 32-bit.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.Wmi.ProviderArchitecture.Use64bit">
+      <summary>The WMI Provider architecture is 64-bit.</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerAlias">
+      <summary>The <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerAlias" /> class represents an alias for a server connection on the Windows Management Instrumentation (WMI) installation.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ServerAlias.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerAlias" /> class.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ServerAlias.#ctor(Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer,System.String)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerAlias" /> class on the specified WMI installation and with the specified name.</summary>
+      <param name="managedComputer">A <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer" /> object value that specifies the WMI installation for which the server connection alias is used.</param>
+      <param name="name">A <see cref="T:System.String" /> value that specifies the name of the server connection alias.</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ServerAlias.ConnectionString">
+      <summary>Gets or sets the connection string that the alias uses to connect to the server.</summary>
+      <returns>A <see cref="T:System.String" /> value that specifies the connection string.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ServerAlias.Create">
+      <summary>Creates a server connection alias on the WMI installation as defined by the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerAlias" /> object.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ServerAlias.Drop">
+      <summary>Removes the server connection alias from the WMI installation.</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ServerAlias.Parent">
+      <summary>Gets or sets the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer" /> object that is the parent of the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerAlias" /> object.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer" /> object that specifies the parent of the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerAlias" /> object.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ServerAlias.ProtocolName">
+      <summary>Gets or sets the name of the protocol used by the server connection alias.</summary>
+      <returns>A <see cref="T:System.String" /> value that specifies the name of the protocol used by the server connection alias.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ServerAlias.ServerName">
+      <summary>Gets or sets the name of the instance of SQL Server to which the server alias connects.</summary>
+      <returns>A <see cref="T:System.String" /> value that specifies the name of the instance of SQL Server to which the server alias connects.</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerAliasCollection">
+      <summary>The <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerAliasCollection" /> class represents a collection of <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerAlias" /> objects that represent all the SQL Server aliases defined on the parent object.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ServerAliasCollection.Contains(System.String)">
+      <summary>Checks whether the specified key value exists in the collection.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that specifies whether the key value exists in the collection.If True, the key value exists in the collection.If False, the key value does not exist in the collection.</returns>
+      <param name="key">A <see cref="T:System.String" /> value that specifies the key value to check the existence of in the collection.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ServerAliasCollection.CopyTo(Microsoft.SqlServer.Management.Smo.Wmi.ServerAlias[],System.Int32)">
+      <summary>Copies the collection objects to a one-dimensional array beginning at the index value specified.</summary>
+      <param name="array">An array of <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerAlias" /> objects.</param>
+      <param name="index">An <see cref="T:System.Int32" /> value that specifies the index position to start the copy.</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ServerAliasCollection.Count">
+      <summary>Gets the number of <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerAlias" /> objects in the referenced collection. </summary>
+      <returns>An <see cref="T:System.Int32" /> value that specifies the number of <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerAlias" /> objects in the referenced collection. </returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ServerAliasCollection.GetEnumerator">
+      <summary>Returns an <see cref="T:System.Collections.IEnumerator" /> interface that allows you to iterate through the objects in the collection.</summary>
+      <returns>An <see cref="T:System.Collections.IEnumerator" /> system interface for the referenced collection object.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ServerAliasCollection.Item(System.Int32)">
+      <summary>Gets a <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerAlias" /> object in the collection by index number.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerAlias" /> object value that represents a SQL Server alias.</returns>
+      <param name="index">An <see cref="T:System.Int32" /> value that specifies the position of the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerAlias" /> object in the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerAliasCollection" /> collection.</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ServerAliasCollection.Item(System.String)">
+      <summary>Gets a <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerAlias" /> object in the collection by name.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerAlias" /> object value that represents a SQL Server alias.</returns>
+      <param name="name">A <see cref="T:System.String" /> value that specifies the name of the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerAlias" /> object in the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerAliasCollection" /> collection.</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ServerAliasCollection.Parent">
+      <summary>Gets the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer" /> object that is the parent of the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerAliasCollection" /> object.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer" /> object that owns the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerAliasCollection" /> object.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ServerAliasCollection.System#Collections#ICollection#CopyTo(System.Array,System.Int32)">
+      <summary>Copies the collection objects to a one-dimensional array beginning at the index value specified.</summary>
+      <param name="array">An array of <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerAlias" /> objects.</param>
+      <param name="index">An <see cref="T:System.Int32" /> value that specifies the index position to start the copy.</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstance">
+      <summary>The <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstance" /> class represents an instance of Microsoft SQL Server.</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstance.Parent">
+      <summary>Gets the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer" /> object that is the parent of the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstance" /> object.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer" /> object that is the parent of the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstance" /> object.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstance.ServerProtocols">
+      <summary>Represents a collection of <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocol" /> objects. Each <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocol" /> object represents a server protocol defined on the Microsoft Management Instrumentation (WMI) installation.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocolCollection" /> object that represents all the server protocols defined on the WMI installation. </returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstanceCollection">
+      <summary>The <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstanceCollection" /> class represents a collection of <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstance" /> objects that represent all the instances of SQL Server defined on the parent object.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstanceCollection.Contains(System.String)">
+      <summary>Checks whether the specified key value exists in the collection.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that specifies whether the key value exists in the collection.If True, the key value exists in the collection.If False, the key value does not exist in the collection.</returns>
+      <param name="key">A <see cref="T:System.String" /> value that specifies the key value to check the existence of in the collection.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstanceCollection.CopyTo(Microsoft.SqlServer.Management.Smo.Wmi.ServerInstance[],System.Int32)">
+      <summary>Copies the collection objects to a one-dimensional array beginning at the index value specified.</summary>
+      <param name="array">An array of <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstance" /> objects.</param>
+      <param name="index">An <see cref="T:System.Int32" /> value that specifies the index position to start the copy.</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstanceCollection.Count">
+      <summary>Gets the number of <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstance" /> objects in the referenced collection. </summary>
+      <returns>An int32 value that specifies the number of <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstance" /> objects in the referenced collection. </returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstanceCollection.GetEnumerator">
+      <summary>Returns an <see cref="T:System.Collections.IEnumerator" /> interface that allows you to iterate through the objects in the collection.</summary>
+      <returns>An <see cref="T:System.Collections.IEnumerator" /> system interface for the referenced collection object.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstanceCollection.Item(System.Int32)">
+      <summary>Gets a <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstance" /> object in the collection by index number.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstance" /> object value that represents an instance of SQL Server.</returns>
+      <param name="index">An <see cref="T:System.Int32" /> value that specifies the position of the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstance" /> object in the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstanceCollection" /> collection.</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstanceCollection.Item(System.String)">
+      <summary>Gets a <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstance" /> object in the collection by name.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstance" /> object value that represents an instance of SQL Server.</returns>
+      <param name="name">A <see cref="T:System.String" /> value that specifies the name of the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstance" /> object in the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstanceCollection" /> collection.</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstanceCollection.Parent">
+      <summary>Gets the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer" /> object that is the parent of the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstanceCollection" /> object.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer" /> object that is the parent of the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstanceCollection" /> object.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstanceCollection.System#Collections#ICollection#CopyTo(System.Array,System.Int32)">
+      <summary>Copies the collection objects to a one-dimensional array beginning at the index value specified.</summary>
+      <param name="array">An array of <see cref="T:System.Object" />.</param>
+      <param name="index">An <see cref="T:System.Int32" /> value that specifies the index position to start the copy.</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddress">
+      <summary>The <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddress" /> class represents the IP address of the server protocol defined on the Windows Management Instrumentation (WMI) installation. </summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddress.IPAddress">
+      <summary>Gets the IP address associated with the server.</summary>
+      <returns>An <see cref="T:System.Net.IPAddress" /> system object value that specifies the IP address of the server.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddress.IPAddressProperties">
+      <summary>Represents a collection of <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.IPAddressProperty" /> objects. Each <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.IPAddressProperty" /> object represents an attribute of the IP address.</summary>
+      <returns>An <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.IPAddressPropertyCollection" /> object that represents all the attributes of the IP address. </returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddress.Parent">
+      <summary>Gets the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocol" /> object that is the parent of the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddress" /> object.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocol" /> object that is the parent of the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddress" /> object</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddressCollection">
+      <summary>The <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddressCollection" /> class represents a collection of <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddress" /> objects that represent all the server IP addresses defined on the parent object.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddressCollection.Contains(System.String)">
+      <summary>Checks whether the specified key value exists in the collection.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that specifies whether the key value exists in the collection.If True, the key value exists in the collection.If False, the key value does not exist in the collection.</returns>
+      <param name="key">A <see cref="T:System.String" /> value that specifies the key value to check the existence of in the collection.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddressCollection.CopyTo(Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddress[],System.Int32)">
+      <summary>Copies the collection objects to a one-dimensional array beginning at the index value specified.</summary>
+      <param name="array">An array of <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddress" /> objects.</param>
+      <param name="index">An <see cref="T:System.Int32" /> value that specifies the index position to start the copy.</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddressCollection.Count">
+      <summary>Gets the number of <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddress" /> objects in the referenced collection. </summary>
+      <returns>An <see cref="T:System.Int32" /> value that specifies the number of <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddress" /> objects in the referenced collection. </returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddressCollection.GetEnumerator">
+      <summary>Returns an <see cref="T:System.Collections.IEnumerator" /> interface that allows you to iterate through the objects in the collection.</summary>
+      <returns>An <see cref="T:System.Collections.IEnumerator" /> system interface for the referenced collection object.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddressCollection.Item(System.Int32)">
+      <summary>Gets a <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddress" /> object in the collection by index number.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddress" /> object value that represents the server IP address.</returns>
+      <param name="index">An <see cref="T:System.Int32" /> value that specifies the position of the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddress" /> object in the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddressCollection" /> collection.</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddressCollection.Item(System.String)">
+      <summary>Gets a <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddress" /> object in the collection by name.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddress" /> object value that represents the server IP address.</returns>
+      <param name="name">A <see cref="T:System.String" /> value that specifies the name of the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddress" /> object in the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddressCollection" /> collection.</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddressCollection.Parent">
+      <summary>Gets the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocol" /> object that is the parent of the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddressCollection" /> object.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocol" /> object that is the parent of the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddressCollection" /> object.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddressCollection.System#Collections#ICollection#CopyTo(System.Array,System.Int32)">
+      <summary>Copies the collection objects to a one-dimensional array beginning at the index value specified.</summary>
+      <param name="array">An array of <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddress" /> objects.</param>
+      <param name="index">An <see cref="T:System.Int32" /> value that specifies the index position to start the copy.</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocol">
+      <summary>The <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocol" /> class represents a network protocol installed on a server instance that allows communication with SQL Server clients over a network.</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocol.DisplayName">
+      <summary>Gets or sets the display name of the referenced protocol.</summary>
+      <returns>A <see cref="T:System.String" /> value that specifies the display name of the protocol.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocol.HasMultiIPAddresses">
+      <summary>Gets the <see cref="T:System.Boolean" /> property that specifies whether there are multiple IP addresses associated with the server protocol. </summary>
+      <returns>A <see cref="T:System.Boolean" /> value that specifies whether the server protocol has multiple IP addresses associated with it.If True, the server protocol has multiple IP addresses.If False (default), the server protocol has a single IP address.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocol.IPAddresses">
+      <summary>Represents a collection of <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddress" /> objects. Each <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddress" /> object represents an IP address defined on the server protocol.</summary>
+      <returns>An <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddressCollection" /> object that represents all the IP addresses defined on the server protocol. </returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocol.IsEnabled">
+      <summary>Gets or sets the <see cref="T:System.Boolean" /> property that specifies whether the server network protocol is enabled or disabled.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that specifies whether the server network protocol is enabled or disabled.If True, the server network protocol is enabled.If False (default), the server network protocol is disabled.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocol.Parent">
+      <summary>Gets the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer" /> object that is the parent of the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocol" /> object.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer" /> object that is the parent of the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocol" /> object.</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocolCollection">
+      <summary>The <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocolCollection" /> class represents a collection of <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocol" /> objects that represent all the server protocols defined on the parent object.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocolCollection.Contains(System.String)">
+      <summary>Checks whether the specified key value exists in the collection.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that specifies whether the key value exists in the collection.If True, the key value exists in the collection.If False, the key value does not exist in the collection.</returns>
+      <param name="key">A <see cref="T:System.String" /> value that specifies the key value to check the existence of in the collection.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocolCollection.CopyTo(Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocol[],System.Int32)">
+      <summary>Copies the collection objects to a one-dimensional array beginning at the index value specified.</summary>
+      <param name="array">An array of <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocol" /> objects.</param>
+      <param name="index">An <see cref="T:System.Int32" /> value that specifies the index position to start the copy.</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocolCollection.Count">
+      <summary>Gets the number of <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocol" /> objects in the referenced collection. </summary>
+      <returns>An int32 value that specifies the number of <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocol" /> objects in the referenced collection. </returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocolCollection.GetEnumerator">
+      <summary>Returns an <see cref="T:System.Collections.IEnumerator" /> interface that allows you to iterate through the objects in the collection.</summary>
+      <returns>An <see cref="T:System.Collections.IEnumerator" /> system interface for the referenced collection object.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocolCollection.Item(System.Int32)">
+      <summary>Gets a <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocol" /> object in the collection by index number.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocol" /> object value that represents the server protocol.</returns>
+      <param name="index">An <see cref="T:System.Int32" /> value that specifies the position of the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocol" /> object in the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocolCollection" /> collection.</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocolCollection.Item(System.String)">
+      <summary>Gets a <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocol" /> object in the collection by name.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocol" /> object value that represents the server protocol.</returns>
+      <param name="name">A <see cref="T:System.STring" /> value that specifies the name of the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocol" /> object in the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocolCollection" /> collection.</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocolCollection.Parent">
+      <summary>Gets the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstance" /> object that is the parent of the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocolCollection" /> object.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstance" /> object that owns the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocolCollection" /> object.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocolCollection.System#Collections#ICollection#CopyTo(System.Array,System.Int32)">
+      <summary>Copies the collection objects to a one-dimensional array beginning at the index value specified.</summary>
+      <param name="array">An array of <see cref="T:System.Object" />.</param>
+      <param name="index">An <see cref="T:System.Int32" /> value that specifies the index position to start the copy.</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocolProperty">
+      <summary>The <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocolProperty" /> class represents an attribute of a Windows Management Instrumentation (WMI) server protocol.</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocolPropertyCollection">
+      <summary>The <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocolPropertyCollection" /> class represents a collection of <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocolProperty" /> objects that represent all the attributes of the server protocol defined on the parent object.</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.Wmi.Service">
+      <summary>The <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.Service" /> class represents an instance of the SQL Server service.</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.Service.AcceptsPause">
+      <summary>Gets the <see cref="T:System.Boolean" /> property value that specifies whether the SQL Server service can be paused.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that specifies whether the SQL Server service can be paused.If True, the service can be paused.If False (default), the service cannot be paused.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.Service.AcceptsStop">
+      <summary>Gets the <see cref="T:System.Boolean" /> property value that specifies whether the SQL Server service can be stopped.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that specifies whether the SQL Server service can be stopped.If True, the service can be stopped.If False (default), the service cannot be stopped.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.Service.AdvancedProperties">
+      <summary>Represents a collection of <see cref="T:Microsoft.SqlServer.Management.Smo.Property" /> objects. Each <see cref="T:Microsoft.SqlServer.Management.Smo.Property" /> object represents an advanced property defined on the SQL Server service.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Smo.PropertyCollection" /> object that represents all the advanced properties defined on the SQL Server service. </returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.Service.Alter">
+      <summary>Updates any <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.Service" /> object property changes on an instance of SQL Server. </summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.Service.ChangeHadrServiceSetting(System.Boolean)">
+      <summary>Changes the HA/DR service settings.</summary>
+      <param name="enable">The status of the HA/DR service settings.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.Service.ChangePassword(System.String,System.String)">
+      <summary>Changes the password for the system account under which the SQL Server service is running.</summary>
+      <param name="oldPassword">A <see cref="T:System.String" /> value that specifies the existing password.</param>
+      <param name="newPassword">A <see cref="T:System.String" /> value that specifies the new password.</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.Service.Dependencies">
+      <summary>Returns a list of services that are dependent on the referenced SQL Server service.</summary>
+      <returns>A <see cref="T:System.Collections.Specialized.StringCollection" /> system object value that specifies the services associated with the SQL Server service.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.Service.Description">
+      <summary>Gets a textual description of the SQL Server service.</summary>
+      <returns>A <see cref="T:System.String" /> value that contains a textual description of the SQL Server service.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.Service.DisplayName">
+      <summary>Gets the display name of the SQL Server service.</summary>
+      <returns>A <see cref="T:System.String" /> value that specifies the display name of the SQL Server service.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.Service.ErrorControl">
+      <summary>Gets the severity of the error if the SQL Server service fails to start during startup.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServiceErrorControl" /> object value that specifies the severity of the error if the service fails to start during Microsoft SQL Server startup.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.Service.ExitCode">
+      <summary>Gets the Win32 error code that defines problems encountered when starting and stopping the SQL Server service.</summary>
+      <returns>An <see cref="T:System.Int32" /> value that specifies the Win32 error code that defines problems encountered when starting and stopping the service.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.Service.IsHadrEnabled">
+      <summary>Gets whether the High Availability/Disaster Recovery is enabled.</summary>
+      <returns>True if the HA/DR id enabled; otherwise, false.</returns>
+    </member>
+    <member name="E:Microsoft.SqlServer.Management.Smo.Wmi.Service.ManagementStateChange">
+      <summary>An event that occurs when the management state changes.</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.Service.Parent">
+      <summary>Gets the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer" /> object that is the parent of the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.Service" /> object.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer" /> object that is the parent of the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.Service" /> object.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.Service.PathName">
+      <summary>Gets the path and file name of the binary file that implements the SQL Server service.</summary>
+      <returns>A <see cref="T:System.String" /> value that specifies the path and file name of the binary file that implements the service.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.Service.Pause">
+      <summary>Pauses the SQL Server service.</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.Service.ProcessId">
+      <summary>Gets the process ID that uniquely identifies the SQL Server service.</summary>
+      <returns>An <see cref="T:System.Int32" /> value that specifies the ID value that uniquely identifies the service.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.Service.Refresh">
+      <summary>Refreshes the SQL Server service.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.Service.Resume">
+      <summary>Resumes the SQL Server service.</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.Service.ServiceAccount">
+      <summary>Gets the system account under which the SQL Server service is running.</summary>
+      <returns>A <see cref="T:System.String" /> value that specifies the system account under which the service is running.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.Service.ServiceState">
+      <summary>Gets the state of the SQL Server service, such as running, stopped, or paused.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServiceState" /> object value that specifies the state of the SQL Server service.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.Service.SetServiceAccount(System.String,System.String)">
+      <summary>Sets the account under which the SQL Server service runs.</summary>
+      <param name="userName">A <see cref="T:System.String" /> value that specifies the system account under which the SQL Server service runs.</param>
+      <param name="password">A <see cref="T:System.String" /> value that specifies the password for the system account.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.Service.Start">
+      <summary>Starts the SQL Server service.</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.Service.StartMode">
+      <summary>Gets or sets the method by which the SQL Server service is started.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServiceStartMode" /> object value that specifies the method by which the service is started.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.Service.StartupParameters">
+      <summary>Gets or sets any startup parameters for the SQL Server service.</summary>
+      <returns>A <see cref="T:System.String" /> value that specifies the startup parameters for the SQL Server service.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.Service.Stop">
+      <summary>Stops the SQL Server service.</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.Service.Type">
+      <summary>Gets the type of service, such as Microsoft Search service, SQL Server Agent service, or SQL Server service.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ManagedServiceType" /> object that specifies the type of SQL Server service.</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.Wmi.ServiceCollection">
+      <summary>The <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServiceCollection" /> class represents a collection of <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.Service" /> objects that represent all SQL Server services defined on the parent object.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ServiceCollection.Contains(System.String)">
+      <summary>Checks whether the specified key value exists in the collection.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that specifies whether the key value exists in the collection.If True, the key value exists in the collection.If False, the key value does not exist in the collection.</returns>
+      <param name="key">A <see cref="T:System.String" /> value that specifies the key value to check the existence of in the collection.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ServiceCollection.CopyTo(Microsoft.SqlServer.Management.Smo.Wmi.Service[],System.Int32)">
+      <summary>Copies the collection objects to a one-dimensional array beginning at the index value specified.</summary>
+      <param name="array">An array of <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.Service" /> objects.</param>
+      <param name="index">An <see cref="T:System.Int32" /> value that specifies the index position to start the copy.</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ServiceCollection.Count">
+      <summary>Gets the number of <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.Service" /> objects in the referenced collection. </summary>
+      <returns>An <see cref="T:System.Int32" /> value that specifies the number of <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.Service" /> objects in the referenced collection. </returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ServiceCollection.GetEnumerator">
+      <summary>Returns an <see cref="T:System.Collections.IEnumerator" /> interface that allows you to iterate through the objects in the collection.</summary>
+      <returns>An <see cref="T:System.Collections.IEnumerator" /> system interface for the referenced collection object.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ServiceCollection.Item(System.Int32)">
+      <summary>Gets a <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.Service" /> object in the collection by index number.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.Service" /> object value that represents a SQL Server service.</returns>
+      <param name="index">An <see cref="T:System.Int32" /> value that specifies the position of the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.Service" /> object in the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServiceCollection" /> collection.</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ServiceCollection.Item(System.String)">
+      <summary>Gets a <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.Service" /> object in the collection by name.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.Service" /> object value that represents a SQL Server service.</returns>
+      <param name="name">A <see cref="T:System.String" /> value that specifies the name of the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.Service" /> object in the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServiceCollection" /> collection.</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ServiceCollection.Parent">
+      <summary>Gets the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer" /> object that is the parent of the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServiceCollection" /> object.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer" /> object that is the parent of the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServiceCollection" /> object.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ServiceCollection.System#Collections#ICollection#CopyTo(System.Array,System.Int32)">
+      <summary>Copies the collection objects to a one-dimensional array beginning at the index value specified.</summary>
+      <param name="array">An array of objects.</param>
+      <param name="index">An <see cref="T:System.Int32" /> value that specifies the index position to start the copy.</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.Wmi.WmiCollectionBase">
+      <summary>The <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.WmiCollectionBase" /> class represents all collection objects in the Windows Management Instrumentation (WMI) object reference.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.WmiCollectionBase.Add(Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject)">
+      <summary>Adds the specified object to the referenced collection.</summary>
+      <param name="wmiObj">A <see cref="T:System.String" /> value that specifies the name of the object to add to the collection</param>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.Wmi.WmiCollectionBase.initialized">
+      <summary>Defines a boolean method that initializes the collection of objects in the Windows Management Instrumentation (WMI) object preference. Do not reference this member directly in your code. It supports the SQL Server infrastructure.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.Wmi.WmiCollectionBase.innerColl">
+      <summary>Identified for informational purposes only. Not supported. Future compatibility is not guaranteed.</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.WmiCollectionBase.IsSynchronized">
+      <summary>Gets the <see cref="T:System.Boolean" /> property value that specifies whether access to the collection is synchronized (thread safe).</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that specifies whether access to the collection is thread safe.If True, access to the collection is synchronized.If False (default), access to the collection is not synchronized.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.WmiCollectionBase.Remove(System.String)">
+      <summary>Removes the specified object from the referenced collection.</summary>
+      <param name="objname">A <see cref="T:System.String" /> value that specifies the name of the object to remove from the collection.</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.WmiCollectionBase.SyncRoot">
+      <summary>Gets an object that can be used to synchronize access to the collection.</summary>
+      <returns>An <see cref="T:System.Object" /> value that can be used to synchronize access to the collection.</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.Wmi.WmiConnectionInfo">
+      <summary>The <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.WmiConnectionInfo" /> class represents connection information used by the installation of Windows Management Instrumentation (WMI).</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.WmiConnectionInfo.MachineName">
+      <summary>Gets or sets the name of the computer on which Windows Management Instrumentation (WMI) is installed.</summary>
+      <returns>A <see cref="T:System.String" /> value that specifies the name of the computer on which WMI is installed.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.WmiConnectionInfo.ProviderArchitecture">
+      <summary>Gets or sets the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.WmiConnectionInfo.ProviderArchitecture" /> value which represents the provider architecture of this instance.</summary>
+      <returns>The  <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.WmiConnectionInfo.ProviderArchitecture" /> value which represents the provider architecture of this instance.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.WmiConnectionInfo.SetPassword(System.String)">
+      <summary>Sets the password for the account that is used to establish the connection.</summary>
+      <param name="password">A <see cref="T:System.String" /> value that specifies the password.</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.WmiConnectionInfo.Timeout">
+      <summary>Gets or sets the period after which the Windows Management Instrumentation (WMI) connection times out in seconds.</summary>
+      <returns>An <see cref="T:System.Int32" /> value that specifies the period after which the WMI connection times out in seconds.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.WmiConnectionInfo.Username">
+      <summary>Gets the name of the account used to establish the connection.</summary>
+      <returns>A <see cref="T:System.String" /> value that specifies the name of the account used to establish the connection.</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject">
+      <summary>The <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject" /> class represents the fundamental Windows Management Instrumentation (WMI) object from which all WMI objects are constructed.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject" /> class.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject.#ctor(Microsoft.SqlServer.Management.Smo.Wmi.WmiCollectionBase,System.String)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject" /> class with the specified name and collection base class.</summary>
+      <param name="parentColl">A <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.WmiCollectionBase" /> object on which the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject" /> object is based.</param>
+      <param name="name">A <see cref="T:System.String" /> value that specifies the name of the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject" /> object.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject.#ctor(System.String)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject" /> class with the specified name.</summary>
+      <param name="name">A <see cref="T:System.String" /> value that specifies the name of the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject" /> object.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject.AlterProtocolProperties(Microsoft.SqlServer.Management.Smo.Wmi.ProtocolPropertyCollection)">
+      <summary>Updates any protocol object property changes on the Windows Management Instrumentation (WMI) installation. </summary>
+      <param name="protocolProperties">A <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolPropertyCollection" /> object that specifies the properties to update.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject.CheckObjectState">
+      <summary>Checks the state of the referenced object.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject.CreateProtocolPropertyCollection">
+      <summary>Creates a set of protocol attributes for the referenced object.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolPropertyCollection" /> object that specifies the set of protocol attributes.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject.GetPropertyManagementObject(Microsoft.SqlServer.Management.Smo.Wmi.ProtocolProperty)">
+      <summary>Gets the management object for the specified protocol property.</summary>
+      <returns>A <see cref="T:System.Management.ManagementObject" /> system object that specifies the object that manages the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolProperty" /> object.</returns>
+      <param name="pp">A <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolProperty" /> object that specifies the protocol property.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject.GetPropertyObject(Microsoft.SqlServer.Management.Smo.PropertyCollection,System.Data.DataRow,System.Object)">
+      <summary>Gets the property from the specified collection with the specified position and value.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolProperty" /> object that specifies the protocol property.</returns>
+      <param name="properties">A <see cref="T:Microsoft.SqlServer.Management.Smo.PropertyCollection" /> object that specifies the property collection that contains the property.</param>
+      <param name="dr">A <see cref="T:System.Data.DataRow" /> system object value that specifies the position of the property in the property collection.</param>
+      <param name="propValue">An <see cref="T:System.Object" /> value that specifies the property value.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject.GetProtocolPropertyCollection">
+      <summary>Returns the protocol property collection for the referenced object.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolPropertyCollection" /> object that specifies the protocol property collection for the referenced object.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject.ImplInitialize(System.String[],Microsoft.SqlServer.Management.Sdk.Sfc.OrderBy[])">
+      <summary>Initializes the fields of the <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject" /> object.</summary>
+      <returns>A Boolean value, true if the method succeeds, otherwise false.</returns>
+      <param name="fields">An array of string values that specify the fields to initialize.</param>
+      <param name="orderby">An array of <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.OrderBy" /> objects that specify the ordering of fields.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject.Initialize">
+      <summary>Initializes the referenced object.</summary>
+      <returns>An <see cref="T:Microsoft.SqlServer.Management.Smo.OrderBy" /> object array value that specifies the initialized object order information.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject.InvokeMgmtMethod(System.Management.ManagementObject,System.Management.ManagementOperationObserver,System.String,System.Object[])">
+      <summary>Invokes the management method for the referenced object with the specified management object, observer, method name, and parameters.</summary>
+      <param name="mo">A <see cref="T:System.Management.ManagementObject" /> system object value that specifies the management object for the referenced object.</param>
+      <param name="observer">A <see cref="T:System.Management.ManagementOperationObserver" /> system object value that specifies the observer of the management method for the referenced object.</param>
+      <param name="methodName">A <see cref="T:System.String" /> value that specifies the name of the management method.</param>
+      <param name="parameters">An <see cref="T:System.Object" /> system object array value that specifies the parameters for the management method.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject.InvokeMgmtMethod(System.Management.ManagementObject,System.String,System.Object[])">
+      <summary>Invokes the management method for the referenced object with the specified management object, method name, and parameters.</summary>
+      <param name="mo">A <see cref="T:System.Management.ManagementObject" /> value that specifies the management object for the referenced object.</param>
+      <param name="methodName">A <see cref="T:System.String" /> value that specifies the name of the management method.</param>
+      <param name="parameters">An <see cref="T:System.Object" /> array value that specifies the parameters for the management method.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject.IsObjectInitialized">
+      <summary>Specifies whether the referenced object is initialized.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that specifies whether the referenced object is initialized.If True, the object is initialized.If False, the object is not initialized.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject.Name">
+      <summary>Gets or sets the name of the referenced Windows Management Instrumentation (WMI) object.</summary>
+      <returns>A <see cref="T:System.String" /> value that specifies the name of the referenced WMI object.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject.Properties">
+      <summary>Represents a collection of <see cref="T:Microsoft.SqlServer.Management.Smo.Property" /> objects. Each <see cref="T:Microsoft.SqlServer.Management.Smo.Property" /> object represents a property defined on the Windows Management Instrumentation (WMI) object.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Smo.PropertyCollection" /> that represents the properties defined on the WMI object.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject.Refresh">
+      <summary>Refreshes the referenced object and its properties.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject.SetName(System.String)">
+      <summary>Sets the name of the referenced object.</summary>
+      <param name="name">A <see cref="T:System.String" /> value that specifies the name of the referenced object.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject.SetParentImpl(Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject)">
+      <summary>Sets the parent of the referenced object.</summary>
+      <param name="newParent">A <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject" /> that is the parent of the referenced object.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject.Trace(System.String)">
+      <summary>Creates a trace of the referenced object.</summary>
+      <param name="traceText">A <see cref="T:System.String" /> value that specifies the buffer in which to store the trace output.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject.UpdateObjectState">
+      <summary>Updates the object state.</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject.Urn">
+      <summary>Gets the Uniform Resource Name (URN) address that represents the Windows Management Instrumentation (WMI) object.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Management.Smo.Urn" /> object value that specifies the WMI object.</returns>
+    </member>
+  </members>
+</doc>
