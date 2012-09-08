@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            CSS is Awesomesauce
+        </title>
+        <style>
+            body {
+                background-color: #FCD89E;
+            }
+            .outerblock {
+                background-color: #C42402;
+            }
+            .inlinemarginborderpadding {
+                background-color: #9EAA00;
+                margin: 5px;
+                border: solid 1px black;
+                padding: 10px;
+            }
+            .insideblock {
+                background-color: #68A796;
+            }
+            .insideblockmarginborderpadding {
+                background-color: #1F7E5E;
+                margin: 5px;
+                border: solid 1px black;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="outerblock">
+            block
+            <span class="inline">
+                inline</span>
+                <span class="inlinemarginborderpadding">
+                    inline with margin, border and padding
+                </span>
+            <span class="inline">
+                inline</span>
+            <div class="insideblockmarginborderpadding">
+                block with margin, border and padding
+            </div>
+            <div class="insideblock">
+                block
+            </div>
+        </div>
+    </body>
+</html>

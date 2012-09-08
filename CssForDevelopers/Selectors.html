@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <style type="text/css">
+* { margin: 0; padding: 0; }
+        #container { width: 960px; margin: auto; }
+        #container * { border: 1px solid black; }
+        .error { color: red; }
+        a { color: red; }
+        li a { text-decoration: none; }
+        a:visited { color: purple; }
+        a:hover { background-color: yellow; }
+        ul + p { color: red; }
+        ul ~ p { color: red; }
+        div#container > ul { border: 1px solid black; }  
+        a[href="#"] { color: #1f6053; }
+        a[href*="news"] { color: #b0b0b0; } /* contains */
+        a[href^="http"] { background-color: yellow } /* begins with */
+        a[href$="jpg"] {color: red; } /* ends with */
+        </style>
+        <title></title>
+    </head>
+    <body>
+        <div id="container">
+            <p>
+                My paragraph here.
+            </p>
+            <ul>
+                <li>List Item
+                    <ul>
+                        <li>Child
+                        </li>
+                    </ul>
+                </li>
+                <li>List Item
+                </li>
+                <li>List Item
+                </li>
+                <li>List Item
+                </li>
+            </ul>
+            <p>
+                My paragraph here.
+            </p>
+            <p>
+                My paragraph here.
+            </p>
+            <ul>
+                <li class="error">Something went Wrong
+                </li>
+                <li>
+                    <a href="http://news.ycombinator.com">List Item 4</a>
+                </li>
+            </ul>
+            <a href="#">Home</a>
+        </div>
+    </body>
+</html>

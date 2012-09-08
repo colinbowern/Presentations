@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            My Awesome App
+        </title>
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" type="text/css">
+        <style type="text/css">
+            html,body {
+            min-width:700px;
+            font-family:'Open Sans', Arial, sans-serif;
+            margin:0;
+            padding:0;
+            }
+
+            body > * {
+            position:absolute;
+            overflow:hidden;
+            }
+
+            header {
+            height:75px;
+            top:0;
+            left:0;
+            right:0;
+            border-left:10px solid #06d;
+            }
+
+            header ul {
+            display:inline;
+            list-style:none;
+            margin:0;
+            padding:0;
+            }
+
+            header #PrimaryNavigation {
+            display:inline;
+            position:relative;
+            top:40px;
+            left:30px;
+            text-transform:lowercase;
+            }
+
+            header #UserTools {
+            float:right;
+            display:inline;
+            position:relative;
+            top:20px;
+            right:5px;
+            font-size:10px;
+            text-transform:uppercase;
+            }
+
+            section {
+            top:75px;
+            bottom:26px;
+            left:0;
+            right:0;
+            overflow-y:auto;
+            }
+
+            section > h1 {
+            padding-left:40px;
+            font-weight:400;
+            text-transform:lowercase;
+            }
+
+            section h2 {
+            background-color:#e6e6e6;
+            text-transform:uppercase;
+            font-size:14px;
+            padding:3px;
+            }
+
+            aside {
+            position:absolute;
+            overflow:hidden;
+            left:40px;
+            width:210px;
+            }
+
+            article {
+            position:absolute;
+            overflow:hidden;
+            left:260px;
+            right:10px;
+            }
+
+            .Placeholder {
+            text-align:center;
+            border:1px solid #333;
+            border-radius:5px;
+            background-color:#eee;
+            margin:10px;
+            padding:50px;
+            }
+
+            article ul {
+            list-style:none;
+            margin:10px 0;
+            padding:0;
+            }
+
+            article a i {
+            display:inline-block;
+            height:16px;
+            width:16px;
+            background-image:url(new.svg);
+            background-size:22px;
+            margin-right:5px;
+            background-position:center center;
+            background-repeat:no-repeat;
+            }
+
+            .new {
+            background-image:url(new.svg);
+            }
+
+            .refresh {
+            background-image:url(refresh.svg);
+            }
+
+            .settings {
+            background-image:url(settings.svg);
+            background-size:12px;
+            }
+
+            table {
+            width:100%;
+            background-color:#efefef;
+            border-spacing:0;
+            border-collapse:collapse;
+            border-width:0 0 1px 1px;
+            }
+
+            table,td,th {
+            border-color:#e6e6e6;
+            border-style:solid;
+            }
+
+            td,th {
+            border-width:1px 1px 0 0;
+            padding:5px;
+            }
+
+            th {
+            text-align:left;
+            }
+
+            footer {
+            height:20px;
+            bottom:0;
+            left:0;
+            right:0;
+            padding-top: 5px;
+            border-top:1px solid #e6e6e6;
+            }
+
+            footer li {
+            float:left;
+            font-size:14px;
+            display:inline;
+            padding-right:10px;
+            margin:0 5px;
+            }
+
+            footer li:first-child {
+            margin-left:10px;
+            }
+
+            footer li:last-child {
+            float:right;
+            margin-right:0;
+            }
+
+            header li,article li {
+            display:inline;
+            padding-right:10px;
+            }
+
+            header a,aside ul a,article a,footer a {
+            text-decoration:none;
+            }
+
+            header a:hover,article a:hover,footer:hover {
+            text-decoration:underline;
+            }
+
+            aside ul,footer ul {
+            list-style:none;
+            margin:0;
+            padding:0;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav id="UserTools">
+                <ul>
+                    <li>Hello, <strong>Chuck Norris</strong>!
+                    </li>
+                    <li>
+                        <a href="#">Settings</a>
+                    </li>
+                    <li>
+                        <a href="#">Logout</a>
+                    </li>
+                </ul>
+            </nav>
+            <nav id="PrimaryNavigation">
+                <ul>
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li class="selected">
+                        <a href="#">Orders</a>
+                    </li>
+                    <li>
+                        <a href="#">Customers</a>
+                    </li>
+                    <li>
+                        <a href="#">Catalog</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <section>
+            <h1>
+                Customers
+            </h1>
+            <aside>
+                <div>
+                    <h2>
+                        Filter By
+                    </h2>
+                    <ul>
+                        <li>
+                            <a href="#">Recently Added</a>
+                        </li>
+                        <li>
+                            <a href="#">Active within 60 Days</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>
+                        Preview Pane
+                    </h2>Name<br>
+                    Email<br>
+                    Phone Number<br>
+                    Orders<br>
+                </div>
+            </aside>
+            <article>
+                <h2>
+                    Results
+                </h2>
+                <ul>
+                    <li>
+                        <a href="#"><i class="new"></i>New Customer</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="refresh"></i>Refresh</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="settings"></i>Column Options</a>
+                    </li>
+                </ul>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>
+                                Name
+                            </th>
+                            <th>
+                                Joined
+                            </th>
+                            <th>
+                                Last Ordered
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                James Walton
+                            </td>
+                            <td>
+                                15-Jan-2005
+                            </td>
+                            <td>
+                                09-Dec-2010
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Sarah Mendez
+                            </td>
+                            <td>
+                                15-Jan-2005
+                            </td>
+                            <td>
+                                09-Dec-2010
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+<!-- 
+            <div class="Placeholder">
+                Your Application Content Here
+            </div>
+ -->
+        </section>
+        <footer>
+            <ul>
+                <li>Fabrikam Widgets
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">Creative Commons Attribution 2.5 Canada License</a>
+                </li>
+            </ul>
+        </footer>
+    </body>
+</html>

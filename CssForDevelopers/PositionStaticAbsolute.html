@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+    <head>
+        <style>
+            #outer {
+                position: static;
+                margin: 50px;
+                border: solid 1px brown;
+                text-align: center;
+                font-size: 1.4em;
+                height: 300px;
+            }
+            div > div {
+                background-color: brown;
+                color: white;
+                width: 100px;
+            }
+            #one {
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            #two {
+                position: absolute;
+                bottom: 5%;
+                left: 10%;
+            }
+            #three {
+                position: absolute;
+                top: 30%;
+                right: -5%;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="outer">
+            position: static;
+        <div id="one">
+            position: absolute;<br />
+            top: 0;<br />
+            left: 0;
+        </div>
+        <div id="two">
+            position: absolute;<br />
+            bottom: 5%; <br />
+            left: 10%;
+        </div>
+        <div id="three">
+            position absolute;<br />
+            top: 30%;<br />
+            right: -5%;
+        </div>
+        </div>
+    </body>
+</html>
