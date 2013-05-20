@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Modernizr.full</id>
+    <version>2.6.2.1</version>
+    <title>Modernizr.full</title>
+    <authors>Faruk Ates, Paul Irish, Alex Sexton</authors>
+    <owners>Faruk Ates, Paul Irish, Alex Sexton</owners>
+    <licenseUrl>http://www.modernizr.com/license/</licenseUrl>
+    <projectUrl>http://www.modernizr.com/</projectUrl>
+    <iconUrl>http://www.modernizr.com/i/logo.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>I created this nuget package so that there would be a version available for NuGet that has everything including yepnope.js so that Modernizr.load works.
+
+Modernizr adds classes to the &lt;html&gt; element which allow you to target specific browser functionality in your stylesheet. You don't actually need to write any Javascript to use it.
+        Modernizr is a small and simple JavaScript library that helps you take advantage of emerging web technologies (CSS3, HTML5) while still maintaining a fine level of control over older browsers that may not yet support these new technologies.</description>
+    <summary>Modernizr is a small and simple JavaScript library that helps you take advantage of emerging web technologies (CSS3, HTML 5) while still maintaining a fine level of control over older browsers that may not yet support these new technologies.</summary>
+    <releaseNotes />
+    <copyright />
+    <language>en-US</language>
+    <tags>JavaScript HTML HTML5 CSS CSS3 SVG</tags>
+  </metadata>
+</package>
