@@ -1,0 +1,108 @@
+﻿@{ ViewBag.Title = "My Tasks"; }
+<section id="todoapp">
+    <header id="header">
+        <input id="new-todo" placeholder="What needs to be done?" autofocus data-bind="enter: create" />
+    </header>
+    <section id="main" data-bind="visible: isVisible">
+        <ul id="todo-list" data-role="listview" data-template="item-template" data-bind="source: data"></ul>
+    </section>
+</section>
+
+@section PageScripts {
+    <script type="text/template" id="item-template">
+        <li data-bind="attr: { class: itemClass }">
+            <div class="view">
+                <input class="toggle" type="checkbox" data-bind="checked: Completed, events: { change: sync }" />
+                <label data-bind="text: Title, events: { dblclick: startEdit } "></label>
+                <button class="destroy" data-bind="click: destroy"></button>
+            </div>
+            <div class="edit">
+                <input class="edit" data-bind="value: Title, events: { change: endEdit, blur: endEdit }, enter: endEdit" />
+            </div>
+        </li>
+    </script>
+    <script>
+        var app = app || {};
+
+        (function ($, kendo) {
+            app.model = kendo.data.Model.define({
+                id: 'Id',
+                fields: {
+                    Id: { editable: false, nullable: true },
+                    Title: { type: 'string' },
+                    Completed: { type: 'boolean', nullable: false, defaultValue: false },
+                    Edit: { type: 'boolean', nullable: false, defaultValue: false }
+                }
+            });
+
+            //var apiUrl = '@Url.Action("Index", "Tasks")';
+            var apiUrl = '@Url.RouteUrl("DefaultApi", new { httproute = "", version = "2", controller = "Tasks" })';
+            app.data = new kendo.data.DataSource({
+                transport: {
+                    create: { url: apiUrl, type: 'POST' },
+                    read: { url: apiUrl, type: 'GET' },
+                    update: { url: function (data) { return apiUrl + '/' + data.Id; }, type: 'PUT' },
+                    destroy: { url: function(data) { return apiUrl + '/' + data.Id; }, type: 'DELETE' }//,
+                },
+                schema: {
+                    model: app.model
+                }
+            });
+
+            app.viewModel = kendo.observable({
+                data: app.data,
+                sync: function () {
+                    this.data.sync();
+                },
+                isVisible: function () {
+                    return this.get('data').data().length;
+                },
+                create: function () {
+                    var data = this.get('data');
+                    var title = $('#new-todo');
+
+                    var item = new app.model({
+                        Title: title.val().trim(),
+                        Completed: false,
+                        Edit: false//,
+                    });
+
+                    data.add(item);
+                    data.sync();
+                    title.val('');
+                },
+                startEdit: function (e) {
+                    e.data.set('Edit', true);
+                    $('li[data-uid=' + e.data.uid + ']').find('input').focus();
+                },
+                endEdit: function (e) {
+                    var editData = e;
+                    if (e.data) {
+                        editData = e.data;
+                        if (editData.Title.trim()) {
+                            editData.set('Edit', false);
+                        } else {
+                            this.destroy(e);
+                        }
+                    }
+                    editData.set('Edit', false);
+                    this.data.sync();
+                },
+                destroy: function (e) {
+                    var data = this.get('data');
+                    data.remove(e.data);
+                    data.sync();
+                },
+                itemClass: function (item) {
+                    if (item.get('Edit')) {
+                        return 'editing';
+                    }
+                    return (item.get('Completed') ? 'completed' : 'active');
+                }//,
+            });
+
+            kendo.bind($('#todoapp'), app.viewModel);
+
+        }($, kendo));
+    </script>
+}

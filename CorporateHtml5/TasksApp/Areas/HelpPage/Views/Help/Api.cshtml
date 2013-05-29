@@ -1,0 +1,13 @@
+@using System.Web.Http
+@using TasksApp.Areas.HelpPage.Models
+@model HelpPageApiModel
+
+@{
+    var description = Model.ApiDescription;
+    ViewBag.Title = description.HttpMethod.Method + " " + description.RelativePath;
+}
+       @Html.DisplayFor(m => Model)
+
+@section PageScripts {
+    <link type="text/css" href="~/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+}
