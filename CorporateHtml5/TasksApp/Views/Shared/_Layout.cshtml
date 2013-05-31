@@ -46,31 +46,12 @@
     @Scripts.Render("~/Scripts/Layout")
     @RenderSection("PageScripts", required: false)
     <script>
+
         Modernizr.load({
             test: Modernizr.input.placeholder,
-            nope: [
-                '/Scripts/placeholder_polyfill.jquery.js'
-            ],
-            complete: function () {
+            nope: ['/Scripts/placeholder_polyfill.jquery.js'],
+            complete: function() {
                 $('input, textarea').placeholder();
-            }
-
-        });
-        Modernizr.load({
-            test: Modernizr.localstorage,
-            nope: [
-                'http://cdnjs.cloudflare.com/ajax/libs/json2/20110223/json2.js',
-                'https://raw.github.com/andris9/jStorage/master/jstorage.js',
-            ],
-            complete: function () {
-                var value = $.jStorage.get("key");
-                if (!value) {
-                    alert('saving new value');
-                    value = 'bar';
-                    $.jStorage.set("key", value);
-                } else {
-                    alert('found data in local storage');
-                }
             }
         });
 

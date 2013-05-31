@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<authority>
+  <tenants>
+    <tenant id="1fbcde23-184c-4eaf-986c-d6412bc9c155" />
+  </tenants>
+  <keys>
+    <key id="3464C5BDD2BE7F2B6112E2F08E9C0024E33D9FE0" />
+  </keys>
+</authority>

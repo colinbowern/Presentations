@@ -1,4 +1,6 @@
 ﻿@{ ViewBag.Title = "My Tasks"; }
+
+
 <section id="todoapp">
     <header id="header">
         <input id="new-todo" placeholder="What needs to be done?" autofocus data-bind="enter: create" />
@@ -79,7 +81,7 @@
                     var editData = e;
                     if (e.data) {
                         editData = e.data;
-                        if ($.trim(editData.Title.trim)) {
+                        if ($.trim(editData.Title)) {
                             editData.set('Edit', false);
                         } else {
                             this.destroy(e);
