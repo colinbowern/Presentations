@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@(String.IsNullOrWhiteSpace(ViewBag.Title as string) ? String.Empty : ViewBag.Title + " | ")TasksApp</title>
+    <meta name="viewport" content="width=device-width" />
+    @Styles.Render("~/Styles/Layout")
+    @*<!--[if lt IE 7]>@Styles.Render("~/Styles/LayoutIE6")<![endif]-->*@
+    @Scripts.Render("~/Scripts/modernizr")
+    @RenderSection("PageHead", required: false)
+</head>
+<body>
+    <header>
+        <div class="content-wrapper">
+            <div class="float-left">
+                <p class="site-title">@Html.ActionLink("TasksApp", "Index", "Home")</p>
+            </div>
+            <div class="float-right">
+                <section id="login">
+                    @Html.Partial("_LoginPartial")
+                </section>
+                <nav>
+                    <ul id="menu">
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div id="body">
+        <section class="content-wrapper main-content clear-fix">
+            @RenderBody()
+        </section>
+    </div>
+    <footer>
+        <div class="content-wrapper">
+            <div class="float-left">
+                <p><a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_CA">
+                    <img alt="Creative Commons Licence" style="border-width: 0" src="http://i.creativecommons.org/l/by/3.0/80x15.png" /></a><br />
+                    This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_CA">Creative Commons Attribution 3.0 Unported License</a>.</p>
+            </div>
+        </div>
+    </footer>
+    @Scripts.Render("~/Scripts/Layout")
+    @RenderSection("PageScripts", required: false)
+</body>
+</html>

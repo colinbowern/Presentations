@@ -1,0 +1,179 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SDammann.WebApi.Versioning</name>
+    </assembly>
+    <members>
+        <member name="T:SDammann.WebApi.Versioning.AcceptHeaderVersionedControllerSelector">
+            <summary>
+            Version controller that enables version by MIME type in the accept header
+            </summary>
+        </member>
+        <member name="T:SDammann.WebApi.Versioning.AcceptHeaderVersionedControllerSelectorBase">
+            <summary>
+              Represents an <see cref="T:System.Web.Http.Dispatcher.IHttpControllerSelector"/> implementation that supports versioning and selects an controller based on versioning by convention (namespace.Api.Version1.xxxController). The controller to invoke is determined by the "version" key in the "Accept" HTTP header.
+            </summary>
+            <remarks>
+            Derived classes must implement <see cref="M:SDammann.WebApi.Versioning.AcceptHeaderVersionedControllerSelectorBase.GetVersion(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue)"/>
+            </remarks>
+        </member>
+        <member name="T:SDammann.WebApi.Versioning.VersionedControllerSelector">
+            <summary>
+              Represents an <see cref="T:System.Web.Http.Dispatcher.IHttpControllerSelector"/> implementation that supports versioning and selects an controller based on versioning by convention (namespace.Api.Version1.xxxController).
+              How the actual controller to be invoked is determined, is up to the derived class to implement.
+            </summary>
+        </member>
+        <member name="M:SDammann.WebApi.Versioning.VersionedControllerSelector.#ctor(System.Web.Http.HttpConfiguration)">
+            <summary>
+              Initializes a new instance of the <see cref="T:System.Web.Http.Dispatcher.DefaultHttpControllerSelector"/> class.
+            </summary>
+            <param name="configuration"> The configuration. </param>
+        </member>
+        <member name="M:SDammann.WebApi.Versioning.VersionedControllerSelector.GetControllerNameFromRequest(System.Net.Http.HttpRequestMessage)">
+            <summary>
+            Gets the name of the controller from the request route date
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="P:SDammann.WebApi.Versioning.VersionedControllerSelector.ControllerSuffix">
+            <summary>
+            Gets the suffix in the Controller <see cref="T:System.Type"/>s <see cref="!:Type.Name"/>
+            </summary>
+        </member>
+        <member name="P:SDammann.WebApi.Versioning.VersionedControllerSelector.VersionPrefix">
+            <summary>
+            Gets the prefix used for identifying a controller version in a <see cref="T:System.Type"/>.<see cref="P:System.Type.FullName"/>. Examples and usage in remarks.
+            </summary>
+            <remarks>
+             <para>
+                Make sure to set this property in the Application_Start method.
+            </para>
+            
+             <para>
+                For example, when this is set to "V", a controller in the namespace of Company.V1.ProductController will identify the ProductController as being version 1, but will not identify 
+                Company.Version1.ProductController as being a version 1 controller.
+            </para>
+            </remarks>
+        </member>
+        <member name="M:SDammann.WebApi.Versioning.AcceptHeaderVersionedControllerSelectorBase.#ctor(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SDammann.WebApi.Versioning.AcceptHeaderVersionedControllerSelector"/> class.
+            </summary>
+            <param name="configuration">The configuration.</param>
+        </member>
+        <member name="M:SDammann.WebApi.Versioning.AcceptHeaderVersionedControllerSelectorBase.GetVersionFromHeader(System.Collections.Generic.IEnumerable{System.Net.Http.Headers.MediaTypeWithQualityHeaderValue})">
+            <summary>
+            Returns the API version from the collection with accept header values. Derived classes may override this.
+            </summary>
+            <param name="acceptHeader"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SDammann.WebApi.Versioning.AcceptHeaderVersionedControllerSelectorBase.GetVersion(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue)">
+            <summary>
+            Derived classes implement this to return an API version from the specified mime type string
+            </summary>
+            <param name="mimeType"></param>
+            <returns></returns>
+        </member>
+        <member name="F:SDammann.WebApi.Versioning.AcceptHeaderVersionedControllerSelector.AcceptMediaType">
+            <summary>
+            Specifies the media type to accept. Set this in your Application_Start or before.
+            </summary>
+        </member>
+        <member name="M:SDammann.WebApi.Versioning.AcceptHeaderVersionedControllerSelector.#ctor(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Initializes the <see cref="T:SDammann.WebApi.Versioning.AcceptHeaderVersionedControllerSelector"/> instance
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="T:SDammann.WebApi.Versioning.Resources.ExceptionStrings">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:SDammann.WebApi.Versioning.Resources.ExceptionStrings.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:SDammann.WebApi.Versioning.Resources.ExceptionStrings.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:SDammann.WebApi.Versioning.Resources.ExceptionStrings.CannotSetEmptyValue">
+            <summary>
+              Looks up a localized string similar to Cannot set an empty value as {0}..
+            </summary>
+        </member>
+        <member name="P:SDammann.WebApi.Versioning.Resources.ExceptionStrings.ControllerDiscoveryProcessAlreadyRun">
+            <summary>
+              Looks up a localized string similar to The controller discovery process has already run and the {0} cannot be changed anymore..
+            </summary>
+        </member>
+        <member name="T:SDammann.WebApi.Versioning.RouteVersionedControllerSelector">
+            <summary>
+              Represents an <see cref="T:System.Web.Http.Dispatcher.IHttpControllerSelector"/> implementation that supports versioning and selects an controller based on versioning by convention (namespace.Api.Version1.xxxController). The controller to invoke is determined by the "version" key in the routing dictionary.
+            </summary>
+        </member>
+        <member name="M:SDammann.WebApi.Versioning.RouteVersionedControllerSelector.#ctor(System.Web.Http.HttpConfiguration)">
+            <summary>
+              Initializes a new instance of the <see cref="T:SDammann.WebApi.Versioning.RouteVersionedControllerSelector"/> class.
+            </summary>
+            <param name="configuration"> The configuration. </param>
+        </member>
+        <member name="T:SDammann.WebApi.Versioning.ControllerIdentification">
+            <summary>
+            Represents a controller name with an associated version
+            </summary>
+        </member>
+        <member name="M:SDammann.WebApi.Versioning.ControllerIdentification.#ctor(System.String,System.Nullable{System.Int32})">
+            <summary>
+            Initializes a new instance of the <see cref="T:SDammann.WebApi.Versioning.ControllerIdentification"/> struct.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="version">The version.</param>
+        </member>
+        <member name="P:SDammann.WebApi.Versioning.ControllerIdentification.Comparer">
+            <summary>
+            Gets an comparer for comparing <see cref="T:SDammann.WebApi.Versioning.ControllerIdentification"/> instances
+            </summary>
+        </member>
+        <member name="P:SDammann.WebApi.Versioning.ControllerIdentification.Name">
+            <summary>
+            Gets or sets the name of the controller
+            </summary>
+            <value>
+            The name.
+            </value>
+        </member>
+        <member name="P:SDammann.WebApi.Versioning.ControllerIdentification.Version">
+            <summary>
+            Gets or sets the associated version
+            </summary>
+        </member>
+        <member name="T:SDammann.WebApi.Versioning.HttpControllerTypeCache">
+            <summary>
+              Manages a cache of <see cref="T:System.Web.Http.Controllers.IHttpController"/> types detected in the system.
+            </summary>
+        </member>
+        <member name="T:SDammann.WebApi.Versioning.VersionHeaderVersionedControllerSelector">
+            <summary>
+              Represents an <see cref="T:System.Web.Http.Dispatcher.IHttpControllerSelector"/> implementation that supports versioning and selects an controller based on versioning by convention (namespace.Api.Version1.xxxController). The controller to invoke is determined by the number in the "X-Api-Version" HTTP header.
+            </summary>
+        </member>
+        <member name="F:SDammann.WebApi.Versioning.VersionHeaderVersionedControllerSelector.ApiVersionHeaderName">
+            <summary>
+              Defines the name of the HTTP header that selects the API version
+            </summary>
+        </member>
+        <member name="M:SDammann.WebApi.Versioning.VersionHeaderVersionedControllerSelector.#ctor(System.Web.Http.HttpConfiguration)">
+            <summary>
+              Initializes a new instance of the <see cref="T:SDammann.WebApi.Versioning.VersionHeaderVersionedControllerSelector"/> class.
+            </summary>
+            <param name="configuration"> The configuration. </param>
+        </member>
+    </members>
+</doc>
